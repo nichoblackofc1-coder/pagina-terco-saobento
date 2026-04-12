@@ -39,11 +39,11 @@ export function ProductInfo() {
         </div>
         <div className="flex items-baseline gap-0.5 sm:gap-1 mt-1">
           <span className="text-xs sm:text-sm font-medium text-foreground">R$</span>
-          <span className="text-3xl sm:text-4xl font-extrabold text-destructive">79</span>
-          <span className="text-lg sm:text-xl font-bold text-destructive">,90</span>
+          <span className="text-3xl sm:text-4xl font-extrabold text-destructive">47</span>
+          <span className="text-lg sm:text-xl font-bold text-destructive">,83</span>
         </div>
         <p className="text-[10px] sm:text-xs text-muted-foreground mt-1">
-          ou 3x de R$ 26,63 sem juros
+          ou 3x de R$ 15,94 sem juros
         </p>
       </div>
 
