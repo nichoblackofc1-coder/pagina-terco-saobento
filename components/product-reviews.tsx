@@ -6,43 +6,39 @@ import Image from "next/image"
 const reviews = [
   {
     name: "Maria S.",
-    avatar: "M",
+    avatar: "/images/review-1.png",
     rating: 5,
     date: "há 2 dias",
     verified: true,
     text: "Produto incrível! Minhas manchas de axilas clarearam muito em apenas 2 semanas. Super recomendo!",
     likes: 234,
-    images: []
   },
   {
     name: "Ana Paula",
-    avatar: "A",
+    avatar: "/images/review-2.png",
     rating: 5,
     date: "há 5 dias",
     verified: true,
     text: "Comprei com medo, mas valeu muito a pena! Estou na segunda semana e já vejo diferença nas manchas de acne. Textura ótima, não é oleoso.",
     likes: 189,
-    images: []
   },
   {
     name: "Juliana C.",
-    avatar: "J",
+    avatar: "/images/review-3.png",
     rating: 5,
     date: "há 1 semana",
     verified: true,
     text: "Melhor investimento que fiz! Clareia de verdade e a pele fica super hidratada. Já é meu terceiro pote!",
     likes: 156,
-    images: []
   },
   {
     name: "Fernanda M.",
-    avatar: "F",
+    avatar: "/images/review-4.png",
     rating: 4,
     date: "há 2 semanas",
     verified: true,
     text: "Gostei bastante do resultado nos cotovelos. Demora um pouco mas funciona. Entrega foi rápida!",
     likes: 98,
-    images: []
   }
 ]
 
@@ -67,8 +63,13 @@ export function ProductReviews() {
         {reviews.map((review, index) => (
           <div key={index} className="bg-card border border-border rounded-lg sm:rounded-xl p-3 sm:p-4">
             <div className="flex items-start gap-2.5 sm:gap-3">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0 text-sm sm:text-base">
-                {review.avatar}
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden flex-shrink-0 relative">
+                <Image
+                  src={review.avatar}
+                  alt={review.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
