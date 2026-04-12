@@ -13,13 +13,8 @@ export function ProductInfo() {
 
       {/* Título */}
       <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground leading-tight text-balance">
-        Cicatribem Clareador Dérmico 60g
+        Cicatribem Clareador Dérmico 60g - Hidratante Uniformizador e Revitalizante Facial e Corporal.
       </h1>
-
-      {/* Subtítulo */}
-      <p className="text-muted-foreground text-xs sm:text-sm">
-        Hidratante Uniformizador e Revitalizante Facial e Corporal
-      </p>
 
       {/* Avaliações */}
       <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
