@@ -8,7 +8,11 @@ import { ProductFAQ } from "@/components/product-faq"
 import { StickyBuyBar } from "@/components/sticky-buy-bar"
 
 const productImages = [
-  "/images/cicatribem-produto.png"
+  "/images/cicatribem-produto.png",
+  "/images/cicatribem-comparacao.png",
+  "/images/cicatribem-como-usar.png",
+  "/images/cicatribem-composicao.png",
+  "/images/cicatribem-depoimentos.png"
 ]
 
 export default function ProductPage() {
