@@ -4,11 +4,11 @@ export function MarqueeBanner() {
   const text = "loja oficial CICATRIBEM • loja oficial CICATRIBEM • loja oficial CICATRIBEM • loja oficial CICATRIBEM • "
   
   return (
-    <div className="bg-[#0066cc] text-white py-2 overflow-hidden">
+    <div className="bg-[#0066cc] text-white py-1.5 sm:py-2 overflow-hidden">
       <div className="flex animate-marquee whitespace-nowrap">
-        <span className="mx-4 text-sm font-semibold tracking-wide">{text}</span>
-        <span className="mx-4 text-sm font-semibold tracking-wide">{text}</span>
-        <span className="mx-4 text-sm font-semibold tracking-wide">{text}</span>
+        <span className="mx-2 sm:mx-4 text-xs sm:text-sm font-semibold tracking-wide">{text}</span>
+        <span className="mx-2 sm:mx-4 text-xs sm:text-sm font-semibold tracking-wide">{text}</span>
+        <span className="mx-2 sm:mx-4 text-xs sm:text-sm font-semibold tracking-wide">{text}</span>
       </div>
       <style jsx>{`
         @keyframes marquee {

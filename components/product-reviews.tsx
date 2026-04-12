@@ -48,52 +48,53 @@ const reviews = [
 
 export function ProductReviews() {
   return (
-    <section className="py-8">
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-bold">Avaliações dos Clientes</h2>
-        <div className="flex items-center gap-2">
+    <section className="py-6 sm:py-8">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0 mb-4 sm:mb-6">
+        <h2 className="text-lg sm:text-xl font-bold">Avaliações dos Clientes</h2>
+        <div className="flex items-center gap-1.5 sm:gap-2">
           <div className="flex">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              <Star key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" />
             ))}
           </div>
-          <span className="font-bold">4.9</span>
-          <span className="text-muted-foreground text-sm">(2.847)</span>
+          <span className="font-bold text-sm sm:text-base">4.9</span>
+          <span className="text-muted-foreground text-xs sm:text-sm">(2.847)</span>
         </div>
       </div>
 
       {/* Lista de avaliações */}
-      <div className="space-y-4">
+      <div className="space-y-3 sm:space-y-4">
         {reviews.map((review, index) => (
-          <div key={index} className="bg-card border border-border rounded-xl p-4">
-            <div className="flex items-start gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0">
+          <div key={index} className="bg-card border border-border rounded-lg sm:rounded-xl p-3 sm:p-4">
+            <div className="flex items-start gap-2.5 sm:gap-3">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold flex-shrink-0 text-sm sm:text-base">
                 {review.avatar}
               </div>
               <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 flex-wrap">
-                  <span className="font-medium">{review.name}</span>
+                <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                  <span className="font-medium text-sm sm:text-base">{review.name}</span>
                   {review.verified && (
-                    <span className="flex items-center gap-1 text-xs text-green-600">
-                      <CheckCircle2 className="w-3 h-3" />
-                      Compra verificada
+                    <span className="flex items-center gap-0.5 sm:gap-1 text-[10px] sm:text-xs text-green-600">
+                      <CheckCircle2 className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+                      <span className="hidden xs:inline">Compra verificada</span>
+                      <span className="xs:hidden">Verificado</span>
                     </span>
                   )}
                 </div>
-                <div className="flex items-center gap-2 mt-1">
+                <div className="flex items-center gap-1.5 sm:gap-2 mt-0.5 sm:mt-1">
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (
                       <Star 
                         key={i} 
-                        className={`w-3 h-3 ${i < review.rating ? 'fill-yellow-400 text-yellow-400' : 'text-muted'}`} 
+                        className={`w-2.5 h-2.5 sm:w-3 sm:h-3 ${i < review.rating ? 'fill-yellow-400 text-yellow-400' : 'text-muted'}`} 
                       />
                     ))}
                   </div>
-                  <span className="text-xs text-muted-foreground">{review.date}</span>
+                  <span className="text-[10px] sm:text-xs text-muted-foreground">{review.date}</span>
                 </div>
-                <p className="text-sm mt-2 text-foreground">{review.text}</p>
-                <button className="flex items-center gap-1 mt-3 text-xs text-muted-foreground hover:text-foreground transition-colors">
-                  <ThumbsUp className="w-3 h-3" />
+                <p className="text-xs sm:text-sm mt-1.5 sm:mt-2 text-foreground leading-relaxed">{review.text}</p>
+                <button className="flex items-center gap-1 mt-2 sm:mt-3 text-[10px] sm:text-xs text-muted-foreground hover:text-foreground transition-colors">
+                  <ThumbsUp className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                   <span>Útil ({review.likes})</span>
                 </button>
               </div>
@@ -103,7 +104,7 @@ export function ProductReviews() {
       </div>
 
       {/* Ver mais */}
-      <button className="w-full mt-4 py-3 text-primary font-medium hover:bg-primary/5 rounded-xl transition-colors">
+      <button className="w-full mt-3 sm:mt-4 py-2.5 sm:py-3 text-primary font-medium hover:bg-primary/5 rounded-lg sm:rounded-xl transition-colors text-sm sm:text-base">
         Ver todas as avaliações
       </button>
     </section>

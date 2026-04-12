@@ -11,27 +11,38 @@ export function ProductGallery({ images }: ProductGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState(0)
 
   return (
-    <div className="flex flex-col gap-3">
-      <div className="relative aspect-square bg-white rounded-xl overflow-hidden border border-border">
+    <div className="flex flex-col gap-2 sm:gap-3">
+      <div className="relative aspect-square bg-white rounded-lg sm:rounded-xl overflow-hidden border border-border">
         <Image
           src={images[selectedIndex]}
           alt="Cicatribem Clareador Dérmico"
           fill
-          className="object-contain p-4"
+          className="object-contain p-2 sm:p-4"
           priority
         />
-        <div className="absolute top-3 left-3 bg-destructive text-destructive-foreground text-xs font-bold px-2 py-1 rounded-full">
+        <div className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-destructive text-destructive-foreground text-[10px] sm:text-xs font-bold px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full">
           -50% OFF
+        </div>
+        {/* Indicador de slide no mobile */}
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 sm:hidden">
+          {images.map((_, index) => (
+            <span
+              key={index}
+              className={`w-1.5 h-1.5 rounded-full transition-colors ${
+                selectedIndex === index ? "bg-primary" : "bg-muted-foreground/30"
+              }`}
+            />
+          ))}
         </div>
       </div>
       
       {images.length > 1 && (
-        <div className="flex gap-2 overflow-x-auto pb-2">
+        <div className="flex gap-1.5 sm:gap-2 overflow-x-auto pb-1 sm:pb-2 scrollbar-hide -mx-1 px-1">
           {images.map((image, index) => (
             <button
               key={index}
               onClick={() => setSelectedIndex(index)}
-              className={`relative w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all ${
+              className={`relative w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 rounded-md sm:rounded-lg overflow-hidden border-2 transition-all ${
                 selectedIndex === index 
                   ? "border-primary ring-2 ring-primary/30" 
                   : "border-border hover:border-muted-foreground"
@@ -41,7 +52,7 @@ export function ProductGallery({ images }: ProductGalleryProps) {
                 src={image}
                 alt={`Imagem ${index + 1}`}
                 fill
-                className="object-contain p-1"
+                className="object-contain p-0.5 sm:p-1"
               />
             </button>
           ))}
