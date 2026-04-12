@@ -7,7 +7,7 @@ export function ProductInfo() {
   return (
     <div className="flex flex-col gap-3 sm:gap-4">
       {/* Badge TikTok */}
-      <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-[#00f2ea] to-[#ff0050] text-white text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full w-fit">
+      <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-[#0066CC] text-white text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full w-fit">
         <span>O MAIS VENDIDO DO TIKTOK</span>
       </div>
 
