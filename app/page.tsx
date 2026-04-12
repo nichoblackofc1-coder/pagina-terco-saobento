@@ -50,7 +50,7 @@ export default function ProductPage() {
         {/* Footer info */}
         <footer className="py-6 sm:py-8 text-center text-xs sm:text-sm text-muted-foreground border-t border-border mt-6 sm:mt-8">
           <p className="font-medium text-foreground mb-1.5 sm:mb-2">Loja Oficial Cicatribem</p>
-          <p>CNPJ: 00.000.000/0001-00</p>
+          <p>CNPJ: 84.099.429/0001-78</p>
           <p className="mt-3 sm:mt-4">
             Dúvidas? Entre em contato pelo WhatsApp
           </p>
