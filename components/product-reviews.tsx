@@ -10,7 +10,7 @@ const reviews = [
     rating: 5,
     date: "há 2 dias",
     verified: true,
-    text: "Produto incrível! Minhas manchas de axilas clarearam muito em apenas 2 semanas. Super recomendo!",
+    text: "Produto incrível! Minhas estrias do pós-parto diminuíram muito em apenas 3 semanas. A pele ficou muito mais firme. Super recomendo!",
     likes: 234,
   },
   {
@@ -19,7 +19,7 @@ const reviews = [
     rating: 5,
     date: "há 5 dias",
     verified: true,
-    text: "Comprei com medo, mas valeu muito a pena! Estou na segunda semana e já vejo diferença nas manchas de acne. Textura ótima, não é oleoso.",
+    text: "Comprei com medo, mas valeu muito a pena! A celulite das coxas reduziu bastante, a pele está mais lisa. Textura ótima, absorve rápido!",
     likes: 189,
   },
   {
@@ -28,7 +28,7 @@ const reviews = [
     rating: 5,
     date: "há 1 semana",
     verified: true,
-    text: "Melhor investimento que fiz! Clareia de verdade e a pele fica super hidratada. Já é meu terceiro pote!",
+    text: "Melhor investimento que fiz! As estrias antigas ficaram bem menos visíveis e a celulite do bumbum diminuiu muito. Já é meu terceiro pote!",
     likes: 156,
   },
   {
@@ -37,7 +37,7 @@ const reviews = [
     rating: 4,
     date: "há 2 semanas",
     verified: true,
-    text: "Gostei bastante do resultado nos cotovelos. Demora um pouco mas funciona. Entrega foi rápida!",
+    text: "Usei para as estrias da barriga e celulite das pernas. Resultado demora um pouco mas funciona de verdade! Entrega foi rápida!",
     likes: 98,
   }
 ]
