@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import Script from 'next/script'
 import './globals.css'
 
 const inter = Inter({ 
@@ -44,6 +45,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="bg-background">
+      <head>
+        <Script id="utmify-pixel" strategy="afterInteractive">
+          {`
+            window.pixelId = "69dc4648e55c012f0860327d";
+            var a = document.createElement("script");
+            a.setAttribute("async", "");
+            a.setAttribute("defer", "");
+            a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+            document.head.appendChild(a);
+          `}
+        </Script>
+      </head>
       <body className={`${inter.variable} ${poppins.variable} font-sans antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
