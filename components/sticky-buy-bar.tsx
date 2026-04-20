@@ -17,6 +17,7 @@ export function StickyBuyBar() {
         <Button 
           size="lg"
           className="bg-[#00D133] hover:bg-[#00B82D] text-white font-bold px-4 sm:px-6 py-3 sm:py-3.5 rounded-xl shadow-lg shadow-[#00D133]/30 text-sm sm:text-base whitespace-nowrap active:scale-95 transition-transform"
+          onClick={() => window.open("https://seguropagamentos.com.br/popozuda2", "_blank")}
         >
           <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2" />
           COMPRAR

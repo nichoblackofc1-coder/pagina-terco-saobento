@@ -12,6 +12,7 @@ const pricingOptions = [
     originalPrice: 75.68,
     price: 37.84,
     badge: null,
+    checkoutUrl: "https://seguropagamentos.com.br/popozuda",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const pricingOptions = [
     originalPrice: 151.36,
     price: 57.00,
     badge: "Mais vendido",
+    checkoutUrl: "https://seguropagamentos.com.br/popozuda2",
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const pricingOptions = [
     originalPrice: 227.04,
     price: 77.00,
     badge: null,
+    checkoutUrl: "https://seguropagamentos.com.br/popozuda3",
   },
 ]
 
@@ -144,6 +147,7 @@ export function ProductInfo() {
         <Button 
           size="lg" 
           className="w-full bg-[#00D133] hover:bg-[#00B82D] text-white font-bold text-base sm:text-lg py-5 sm:py-6 rounded-lg sm:rounded-xl shadow-lg shadow-[#00D133]/30"
+          onClick={() => window.open(currentOption.checkoutUrl, "_blank")}
         >
           COMPRAR AGORA
         </Button>
