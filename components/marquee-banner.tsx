@@ -1,3 +1,5 @@
+"use client"
+
 export function MarqueeBanner() {
   const text = "loja oficial POPOZUDA • loja oficial POPOZUDA • loja oficial POPOZUDA • loja oficial POPOZUDA • "
   
