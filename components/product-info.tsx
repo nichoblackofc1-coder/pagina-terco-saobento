@@ -3,9 +3,11 @@
 import { Star, ShieldCheck, Truck, Clock, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { usePricing, pricingOptions } from "@/contexts/pricing-context"
+import { useUtmParams } from "@/hooks/use-utm"
 
 export function ProductInfo() {
   const { selectedOption, setSelectedOption, currentOption } = usePricing()
+  const { appendUtmToUrl } = useUtmParams()
 
   return (
     <div className="flex flex-col gap-3 sm:gap-4">
@@ -99,7 +101,7 @@ export function ProductInfo() {
         <Button 
           size="lg" 
           className="w-full bg-[#00D133] hover:bg-[#00B82D] text-white font-bold text-base sm:text-lg py-5 sm:py-6 rounded-lg sm:rounded-xl shadow-lg shadow-[#00D133]/30"
-          onClick={() => window.open(currentOption.checkoutUrl, "_blank")}
+          onClick={() => window.open(appendUtmToUrl(currentOption.checkoutUrl), "_blank")}
         >
           COMPRAR AGORA
         </Button>
