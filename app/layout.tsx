@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import Script from 'next/script'
@@ -6,18 +6,22 @@ import './globals.css'
 
 const inter = Inter({ 
   subsets: ["latin"],
-  variable: '--font-inter'
+  variable: '--font-inter',
+  display: 'swap',
+  preload: true,
 });
 
 const poppins = Poppins({ 
   subsets: ["latin"],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-poppins'
+  weight: ['600', '700', '800'],
+  variable: '--font-poppins',
+  display: 'swap',
+  preload: true,
 });
 
 export const metadata: Metadata = {
-  title: 'Cicatribem - Clareador Dérmico | Loja Oficial',
-  description: 'Cicatribem Clareador Dérmico 60g - O clareador mais vendido do TikTok. Clareia manchas de axilas, virilhas, joelhos, cotovelos, acnes e melasma.',
+  title: 'POPOZUDA - Creme Redutor de Estrias e Celulite | Loja Oficial',
+  description: 'POPOZUDA Creme 200g - Reduz estrias, celulite e ativa a circulacao. Resultados visiveis em semanas. Compre agora com desconto!',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -38,6 +42,13 @@ export const metadata: Metadata = {
   },
 }
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#fe9a00',
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -46,7 +57,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="bg-background">
       <head>
-        <Script id="utmify-pixel" strategy="afterInteractive">
+        <link rel="preconnect" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" />
+        <link rel="dns-prefetch" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" />
+        <link rel="preconnect" href="https://cdn.utmify.com.br" />
+        <link rel="dns-prefetch" href="https://cdn.utmify.com.br" />
+        <Script id="utmify-pixel" strategy="lazyOnload">
           {`
             window.pixelId = "69dc4648e55c012f0860327d";
             var a = document.createElement("script");

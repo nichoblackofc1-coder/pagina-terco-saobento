@@ -1,5 +1,3 @@
-"use client"
-
 import { Sparkles, Droplets, Clock, ShieldCheck } from "lucide-react"
 
 const benefits = [

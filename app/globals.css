@@ -378,3 +378,37 @@ html {
     padding-right: 0.75rem;
   }
 }
+
+/* Performance optimizations */
+img {
+  content-visibility: auto;
+}
+
+/* Reduce layout shift */
+.aspect-square {
+  aspect-ratio: 1/1;
+}
+
+/* GPU acceleration for animations */
+.animate-marquee {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Optimized transitions */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -53,7 +53,9 @@ export function ProductGallery({ images }: ProductGalleryProps) {
           alt="POPOZUDA Cream"
           fill
           className="object-contain p-2 sm:p-4 pointer-events-none select-none"
-          priority
+          priority={selectedIndex === 0}
+          loading={selectedIndex === 0 ? "eager" : "lazy"}
+          sizes="(max-width: 768px) 100vw, 50vw"
           draggable={false}
         />
 
@@ -77,6 +79,8 @@ export function ProductGallery({ images }: ProductGalleryProps) {
                 alt={`Imagem ${index + 1}`}
                 fill
                 className="object-contain p-0.5 sm:p-1"
+                loading="lazy"
+                sizes="80px"
               />
             </button>
           ))}
