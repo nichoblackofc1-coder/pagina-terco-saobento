@@ -21,6 +21,13 @@ export default function ProductPage() {
       {/* Banner marquee */}
       <MarqueeBanner />
       
+      {/* Faixa de urgência */}
+      <div className="bg-[#fe9a00] text-white py-2 sm:py-3 text-center">
+        <p className="text-sm sm:text-base font-bold tracking-wide">
+          Restam apenas <span className="underline">7 unidades</span> em estoque!
+        </p>
+      </div>
+      
       {/* Conteúdo principal */}
       <div className="max-w-6xl mx-auto px-3 sm:px-4 py-4 sm:py-6">
         <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
