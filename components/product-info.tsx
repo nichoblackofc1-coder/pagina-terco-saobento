@@ -100,7 +100,7 @@ export function ProductInfo() {
       <div className="flex flex-col gap-2 sm:gap-3 mt-1 sm:mt-2">
         <Button 
           size="lg" 
-          className="w-full bg-[#00D133] hover:bg-[#00B82D] text-white font-bold text-base sm:text-lg py-5 sm:py-6 rounded-lg sm:rounded-xl shadow-lg shadow-[#00D133]/30"
+          className="w-full bg-[#00D133] hover:bg-[#00B82D] text-white font-bold text-base sm:text-lg py-6 sm:py-7 rounded-md shadow-lg shadow-[#00D133]/30"
           onClick={() => window.open(appendUtmToUrl(currentOption.checkoutUrl), "_blank")}
         >
           COMPRAR AGORA
