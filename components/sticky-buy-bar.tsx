@@ -15,7 +15,7 @@ export function StickyBuyBar() {
         {/* Coluna esquerda: Badge em cima, precos embaixo */}
         <div className="flex-1 min-w-0">
           {/* Badge de quantidade */}
-          <div className="bg-[#00D133] text-white text-[10px] xs:text-xs sm:text-sm font-bold px-2.5 xs:px-3 sm:px-4 py-1 xs:py-1.5 rounded-md inline-block mb-1 xs:mb-1.5">
+          <div className="bg-[#fe9a00] text-white text-[10px] xs:text-xs sm:text-sm font-bold px-2.5 xs:px-3 sm:px-4 py-1 xs:py-1.5 rounded inline-block mb-1 xs:mb-1.5">
             {currentOption.quantity} {currentOption.quantity === 1 ? "Unidade" : "Unidades"}
           </div>
           
