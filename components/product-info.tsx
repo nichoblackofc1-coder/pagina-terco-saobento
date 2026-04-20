@@ -9,27 +9,35 @@ export function ProductInfo() {
 
   return (
     <div className="flex flex-col gap-3 sm:gap-4">
-      {/* Badge TikTok */}
-      <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-[#9C00A3] text-white text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full w-fit">
-        <span>O MAIS VENDIDO DO TIKTOK</span>
+      {/* Preco principal */}
+      <div className="flex flex-col gap-1">
+        <div className="flex items-center gap-2">
+          <span className="bg-[#E63946] text-white text-[10px] sm:text-xs font-bold px-1.5 py-0.5 rounded">
+            -40%
+          </span>
+          <span className="text-xl sm:text-2xl font-bold text-foreground">
+            R$ 37,84
+          </span>
+          <span className="text-sm sm:text-base text-muted-foreground line-through">
+            R$ 97,43
+          </span>
+        </div>
+        <p className="text-xs sm:text-sm text-muted-foreground">
+          3x de R$ 12,61 <span className="text-green-600 font-medium">sem juros</span>
+        </p>
       </div>
 
       {/* Título */}
-      <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground leading-tight text-balance">
-        POPOZUDA Cream 200g - Creme para um bumbum mais firme e uniforme
+      <h1 className="text-base sm:text-lg font-medium text-foreground leading-snug">
+        Popozuda Crem - Cuidado Corporal Avancado para a Pele.
       </h1>
 
       {/* Avaliações */}
       <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
-        <div className="flex">
-          {[...Array(5)].map((_, i) => (
-            <Star key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" />
-          ))}
-        </div>
-        <span className="text-xs sm:text-sm font-medium text-foreground">4.9</span>
-        <span className="text-xs sm:text-sm text-muted-foreground">(2.847)</span>
-        <span className="text-xs sm:text-sm text-muted-foreground hidden sm:inline">•</span>
-        <span className="text-xs sm:text-sm text-green-600 font-medium">12.5k vendidos</span>
+        <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+        <span className="text-xs sm:text-sm font-medium text-foreground">4.6</span>
+        <span className="text-xs sm:text-sm text-muted-foreground">(3,9 mil)</span>
+        <span className="text-xs sm:text-sm text-muted-foreground">39mil vendidos</span>
       </div>
 
       {/* Seletor de Quantidade/Preco */}
