@@ -1,9 +1,41 @@
 "use client"
 
+import { useState } from "react"
 import { Star, ShieldCheck, Truck, Clock, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+const pricingOptions = [
+  {
+    id: 1,
+    quantity: 1,
+    label: "1 Unidade",
+    originalPrice: 75.68,
+    price: 37.84,
+    badge: null,
+  },
+  {
+    id: 2,
+    quantity: 2,
+    label: "2 Unidades",
+    originalPrice: 151.36,
+    price: 57.00,
+    badge: "Mais vendido",
+  },
+  {
+    id: 3,
+    quantity: 3,
+    label: "3 Unidades",
+    originalPrice: 227.04,
+    price: 77.00,
+    badge: null,
+  },
+]
+
 export function ProductInfo() {
+  const [selectedOption, setSelectedOption] = useState(2)
+
+  const currentOption = pricingOptions.find(opt => opt.id === selectedOption) || pricingOptions[1]
+
   return (
     <div className="flex flex-col gap-3 sm:gap-4">
       {/* Badge TikTok */}
@@ -29,21 +61,61 @@ export function ProductInfo() {
         <span className="text-xs sm:text-sm text-green-600 font-medium">12.5k vendidos</span>
       </div>
 
-      {/* Preço */}
-      <div className="bg-gradient-to-r from-destructive/10 to-orange-100 p-3 sm:p-4 rounded-lg sm:rounded-xl">
+      {/* Seletor de Quantidade/Preco */}
+      <div className="flex flex-col gap-2">
+        {pricingOptions.map((option) => (
+          <button
+            key={option.id}
+            onClick={() => setSelectedOption(option.id)}
+            className={`relative flex items-center justify-between p-3 sm:p-4 rounded-lg border-2 transition-all ${
+              selectedOption === option.id
+                ? "border-[#fe9a00] bg-[#fe9a00]/5"
+                : "border-border hover:border-muted-foreground/50"
+            }`}
+          >
+            <div className="flex items-center gap-2 sm:gap-3">
+              <span className="text-sm sm:text-base font-semibold text-foreground">
+                {option.label}
+              </span>
+              {option.badge && (
+                <span className="bg-[#fe9a00] text-white text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full">
+                  {option.badge}
+                </span>
+              )}
+            </div>
+            <div className="flex items-center gap-2 sm:gap-3">
+              <span className="text-xs sm:text-sm text-muted-foreground line-through">
+                R$ {option.originalPrice.toFixed(2).replace(".", ",")}
+              </span>
+              <span className="text-base sm:text-lg font-bold text-[#fe9a00]">
+                R$ {option.price.toFixed(2).replace(".", ",")}
+              </span>
+            </div>
+          </button>
+        ))}
+      </div>
+
+      {/* Preco selecionado destacado */}
+      <div className="bg-gradient-to-r from-[#fe9a00]/10 to-orange-100 p-3 sm:p-4 rounded-lg sm:rounded-xl">
         <div className="flex items-baseline gap-1.5 sm:gap-2">
-          <span className="text-xs sm:text-sm text-muted-foreground line-through">R$ 159,90</span>
-          <span className="bg-destructive text-destructive-foreground text-[10px] sm:text-xs font-bold px-1.5 sm:px-2 py-0.5 rounded">
-            -50%
+          <span className="text-xs sm:text-sm text-muted-foreground line-through">
+            R$ {currentOption.originalPrice.toFixed(2).replace(".", ",")}
+          </span>
+          <span className="bg-[#fe9a00] text-white text-[10px] sm:text-xs font-bold px-1.5 sm:px-2 py-0.5 rounded">
+            -{Math.round((1 - currentOption.price / currentOption.originalPrice) * 100)}%
           </span>
         </div>
         <div className="flex items-baseline gap-0.5 sm:gap-1 mt-1">
           <span className="text-xs sm:text-sm font-medium text-foreground">R$</span>
-          <span className="text-3xl sm:text-4xl font-extrabold text-destructive">47</span>
-          <span className="text-lg sm:text-xl font-bold text-destructive">,83</span>
+          <span className="text-3xl sm:text-4xl font-extrabold text-[#fe9a00]">
+            {Math.floor(currentOption.price)}
+          </span>
+          <span className="text-lg sm:text-xl font-bold text-[#fe9a00]">
+            ,{(currentOption.price % 1).toFixed(2).substring(2)}
+          </span>
         </div>
         <p className="text-[10px] sm:text-xs text-muted-foreground mt-1">
-          ou 3x de R$ 15,94 sem juros
+          ou 3x de R$ {(currentOption.price / 3).toFixed(2).replace(".", ",")} sem juros
         </p>
       </div>
 
@@ -64,16 +136,6 @@ export function ProductInfo() {
         <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
           <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
           <span>Original</span>
-        </div>
-      </div>
-
-      {/* Quantidade */}
-      <div className="flex items-center gap-3 sm:gap-4">
-        <span className="text-xs sm:text-sm font-medium">Quantidade:</span>
-        <div className="flex items-center border border-border rounded-lg">
-          <button className="px-3 sm:px-4 py-1.5 sm:py-2 hover:bg-muted transition-colors text-sm sm:text-base">-</button>
-          <span className="px-3 sm:px-4 py-1.5 sm:py-2 border-x border-border font-medium text-sm sm:text-base">1</span>
-          <button className="px-3 sm:px-4 py-1.5 sm:py-2 hover:bg-muted transition-colors text-sm sm:text-base">+</button>
         </div>
       </div>
 
