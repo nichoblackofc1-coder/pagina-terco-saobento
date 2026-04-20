@@ -14,7 +14,7 @@ export function StickyBuyBar() {
         <div className="flex-1 min-w-0">
           {/* Badge de quantidade */}
           <div className="bg-[#00D133] text-white text-[9px] xs:text-[10px] sm:text-xs font-bold px-1.5 xs:px-2 sm:px-2.5 py-0.5 xs:py-1 rounded-md inline-block mb-0.5 xs:mb-1">
-            {currentOption.quantity} {currentOption.quantity === 1 ? "Un." : "Un."}
+            {currentOption.quantity} {currentOption.quantity === 1 ? "Unidade" : "Unidades"}
           </div>
           
           {/* Precos */}
