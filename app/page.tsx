@@ -8,7 +8,7 @@ import { ProductFAQ } from "@/components/product-faq"
 import { StickyBuyBar } from "@/components/sticky-buy-bar"
 
 const productImages = [
-  "/images/cicatribem-produto.png",
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner1-f4TX1mgPjhXF4yBQtwq8VK2FnZhoJK.webp",
   "/images/cicatribem-comparacao.png",
   "/images/cicatribem-como-usar.png",
   "/images/cicatribem-composicao.png",
