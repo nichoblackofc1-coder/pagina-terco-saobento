@@ -12,8 +12,7 @@ const productImages = [
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner1-f4TX1mgPjhXF4yBQtwq8VK2FnZhoJK.webp",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner2-aIut77aLvzZMksyJzukHyThICwTwZZ.webp",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner3-WSTV9vHsAFboaHXjdyyChSnNzCm3ll.webp",
-  "/images/cicatribem-composicao.png",
-  "/images/cicatribem-depoimentos.png"
+  "/images/banner4.webp"
 ]
 
 export default function ProductPage() {
