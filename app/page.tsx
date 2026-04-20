@@ -6,6 +6,7 @@ import { TrustBadges } from "@/components/trust-badges"
 import { ProductReviews } from "@/components/product-reviews"
 import { ProductFAQ } from "@/components/product-faq"
 import { StickyBuyBar } from "@/components/sticky-buy-bar"
+import { PricingProvider } from "@/contexts/pricing-context"
 
 const productImages = [
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner1-f4TX1mgPjhXF4yBQtwq8VK2FnZhoJK.webp",
@@ -17,6 +18,7 @@ const productImages = [
 
 export default function ProductPage() {
   return (
+    <PricingProvider>
     <main className="min-h-screen bg-background pb-20 sm:pb-24 md:pb-8">
       {/* Banner marquee */}
       <MarqueeBanner />
@@ -70,5 +72,6 @@ export default function ProductPage() {
       {/* Barra fixa de compra (mobile) */}
       <StickyBuyBar />
     </main>
+    </PricingProvider>
   )
 }

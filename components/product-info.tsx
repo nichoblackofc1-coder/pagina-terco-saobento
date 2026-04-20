@@ -1,43 +1,11 @@
 "use client"
 
-import { useState } from "react"
 import { Star, ShieldCheck, Truck, Clock, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
-const pricingOptions = [
-  {
-    id: 1,
-    quantity: 1,
-    label: "1 Unidade",
-    originalPrice: 75.68,
-    price: 37.84,
-    badge: null,
-    checkoutUrl: "https://seguropagamentos.com.br/popozuda",
-  },
-  {
-    id: 2,
-    quantity: 2,
-    label: "2 Unidades",
-    originalPrice: 151.36,
-    price: 57.00,
-    badge: "Mais vendido",
-    checkoutUrl: "https://seguropagamentos.com.br/popozuda2",
-  },
-  {
-    id: 3,
-    quantity: 3,
-    label: "3 Unidades",
-    originalPrice: 227.04,
-    price: 77.00,
-    badge: null,
-    checkoutUrl: "https://seguropagamentos.com.br/popozuda3",
-  },
-]
+import { usePricing, pricingOptions } from "@/contexts/pricing-context"
 
 export function ProductInfo() {
-  const [selectedOption, setSelectedOption] = useState(2)
-
-  const currentOption = pricingOptions.find(opt => opt.id === selectedOption) || pricingOptions[1]
+  const { selectedOption, setSelectedOption, currentOption } = usePricing()
 
   return (
     <div className="flex flex-col gap-3 sm:gap-4">
