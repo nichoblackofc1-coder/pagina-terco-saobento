@@ -56,13 +56,13 @@ export default function ProductPage() {
 
         {/* Footer info */}
         <footer className="py-6 sm:py-8 text-center text-xs sm:text-sm text-muted-foreground border-t border-border mt-6 sm:mt-8">
-          <p className="font-medium text-foreground mb-1.5 sm:mb-2">Loja Oficial Cicatribem</p>
+          <p className="font-medium text-foreground mb-1.5 sm:mb-2">Loja Oficial POPOZUDA</p>
           <p>CNPJ: 84.099.429/0001-78</p>
           <p className="mt-3 sm:mt-4">
             Dúvidas? Entre em contato pelo WhatsApp
           </p>
           <p className="mt-3 sm:mt-4 text-[10px] sm:text-xs">
-            2024 Cicatribem Dermocosméticos. Todos os direitos reservados.
+            2024 POPOZUDA Cosméticos. Todos os direitos reservados.
           </p>
         </footer>
       </div>

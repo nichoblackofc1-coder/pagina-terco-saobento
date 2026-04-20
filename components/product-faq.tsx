@@ -6,27 +6,27 @@ import { ChevronDown } from "lucide-react"
 const faqs = [
   {
     question: "Em quanto tempo vejo resultados?",
-    answer: "Os primeiros resultados podem ser notados a partir de 2 a 4 semanas de uso contínuo. Resultados mais expressivos são observados após 8 a 12 semanas, dependendo do tipo de mancha e da área tratada."
+    answer: "Os primeiros resultados podem ser notados a partir de 2 a 4 semanas de uso continuo. Resultados mais expressivos sao observados apos 8 a 12 semanas, dependendo da area tratada e do uso regular."
   },
   {
-    question: "Posso usar em todas as áreas do corpo?",
-    answer: "Sim! O Cicatribem pode ser usado em rosto, axilas, virilhas, joelhos, cotovelos e outras áreas com manchas. Evite apenas a região dos olhos e mucosas."
+    question: "Posso usar em todas as areas do corpo?",
+    answer: "Sim! O POPOZUDA Cream pode ser usado em bumbum, coxas, barriga, quadril e outras areas com celulite ou estrias. Evite apenas regioes sensiveis e mucosas."
   },
   {
-    question: "É indicado para todos os tipos de pele?",
-    answer: "Sim, a fórmula foi desenvolvida para todos os tipos de pele, incluindo peles sensíveis. É dermatologicamente testado e não causa irritação."
+    question: "E indicado para todos os tipos de pele?",
+    answer: "Sim, a formula foi desenvolvida para todos os tipos de pele. E dermatologicamente testado e nao causa irritacao."
   },
   {
     question: "Como devo aplicar o produto?",
-    answer: "Aplique uma pequena quantidade na área desejada, massageando suavemente até completa absorção. Use 2x ao dia, de manhã e à noite, preferencialmente após o banho."
+    answer: "Aplique uma quantidade generosa na area desejada, massageando com movimentos circulares ate completa absorcao. Use 2x ao dia, de manha e a noite, preferencialmente apos o banho."
   },
   {
-    question: "O produto é original?",
-    answer: "Sim! Somos a loja oficial Cicatribem no TikTok Shop. Todos os produtos são 100% originais, lacrados e com nota fiscal."
+    question: "O produto e original?",
+    answer: "Sim! Somos a loja oficial POPOZUDA no TikTok Shop. Todos os produtos sao 100% originais, lacrados e com nota fiscal."
   },
   {
     question: "Qual o prazo de entrega?",
-    answer: "O envio é realizado em até 24h após a confirmação do pagamento. O prazo de entrega varia de 3 a 12 dias úteis, dependendo da sua região. Frete grátis para todo o Brasil!"
+    answer: "O envio e realizado em ate 24h apos a confirmacao do pagamento. O prazo de entrega varia de 3 a 12 dias uteis, dependendo da sua regiao. Frete gratis para todo o Brasil!"
   }
 ]
 

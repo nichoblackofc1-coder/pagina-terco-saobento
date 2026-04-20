@@ -5,44 +5,44 @@ import { Sparkles, Droplets, Clock, ShieldCheck } from "lucide-react"
 const benefits = [
   {
     icon: Sparkles,
-    title: "EFICÁCIA",
-    description: "comprovada!",
-    color: "bg-blue-500"
+    title: "ATIVA",
+    description: "a circulacao!",
+    color: "bg-[#9C00A3]"
   },
   {
     icon: Droplets,
-    title: "CLAREIA",
-    description: "manchas de acne!",
-    color: "bg-cyan-500"
+    title: "REDUZ",
+    description: "estrias e celulites!",
+    color: "bg-[#c300ae]"
   },
   {
     icon: Clock,
-    title: "REDUZ",
-    description: "sinais de envelhecimento!",
-    color: "bg-teal-500"
+    title: "ALIVIA",
+    description: "sintomas do lipedema!",
+    color: "bg-[#9C00A3]"
   },
   {
     icon: ShieldCheck,
-    title: "TESTADO",
-    description: "dermatologicamente!",
-    color: "bg-green-500"
+    title: "AUXILIA",
+    description: "na perda de gordura!",
+    color: "bg-[#c300ae]"
   }
 ]
 
 const areas = [
-  "Axilas",
-  "Virilhas", 
-  "Joelhos",
-  "Cotovelos",
-  "Acnes",
-  "Melasma"
+  "Bumbum",
+  "Coxas", 
+  "Barriga",
+  "Quadril",
+  "Celulite",
+  "Estrias"
 ]
 
 export function ProductBenefits() {
   return (
     <section className="py-6 sm:py-8">
       <h2 className="text-lg sm:text-xl font-bold text-center mb-4 sm:mb-6">
-        Clareia Manchas em Diversas Áreas
+        Resultados em Diversas Areas do Corpo
       </h2>
       
       {/* Áreas de aplicação */}

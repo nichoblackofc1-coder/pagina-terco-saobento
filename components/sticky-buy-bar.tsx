@@ -5,20 +5,20 @@ import { Button } from "@/components/ui/button"
 
 export function StickyBuyBar() {
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-card border-t border-border p-3 sm:p-4 z-50 md:hidden safe-area-bottom">
-      <div className="flex items-center gap-2 sm:gap-3">
+    <div className="fixed bottom-0 left-0 right-0 bg-card/95 backdrop-blur-sm border-t border-border p-2.5 sm:p-4 z-50 md:hidden safe-area-bottom shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
+      <div className="flex items-center gap-2 sm:gap-3 max-w-lg mx-auto">
         <div className="flex-1 min-w-0">
-          <div className="flex items-baseline gap-1">
+          <div className="flex items-baseline gap-1 flex-wrap">
             <span className="text-[10px] sm:text-xs text-muted-foreground line-through">R$ 159,90</span>
-            <span className="text-base sm:text-lg font-bold text-destructive">R$ 79,90</span>
+            <span className="text-lg sm:text-xl font-bold text-destructive">R$ 47,83</span>
           </div>
-          <p className="text-[10px] sm:text-xs text-muted-foreground">ou 3x de R$ 26,63</p>
+          <p className="text-[10px] sm:text-xs text-muted-foreground truncate">ou 3x de R$ 15,94</p>
         </div>
         <Button 
           size="lg"
-          className="bg-destructive hover:bg-destructive/90 text-destructive-foreground font-bold px-4 sm:px-8 rounded-lg sm:rounded-xl shadow-lg text-sm sm:text-base"
+          className="bg-destructive hover:bg-destructive/90 text-destructive-foreground font-bold px-4 sm:px-6 py-3 sm:py-3.5 rounded-xl shadow-lg shadow-destructive/30 text-sm sm:text-base whitespace-nowrap active:scale-95 transition-transform"
         >
-          <ShoppingCart className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
+          <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2" />
           COMPRAR
         </Button>
       </div>
