@@ -24,7 +24,7 @@ export default function ProductPage() {
       {/* Faixa de urgência */}
       <div className="bg-[#fe9a00] text-white py-2 sm:py-3 text-center">
         <p className="text-sm sm:text-base font-bold tracking-wide">
-          Restam apenas <span className="underline">7 unidades</span> em estoque!
+          Restam apenas <span className="font-extrabold">7 unidades</span> em estoque!
         </p>
       </div>
       
