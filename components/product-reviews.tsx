@@ -27,7 +27,10 @@ const reviews = [
     verified: true,
     text: "Comprei com medo, mas valeu muito a pena! A celulite das coxas reduziu bastante, a pele está mais lisa. Textura ótima, absorve rápido!",
     likes: 189,
-    photos: [],
+    photos: [
+      "/images/review2-photo-1.webp",
+      "/images/review2-photo-2.webp",
+    ],
   },
   {
     name: "Juliana C.",
