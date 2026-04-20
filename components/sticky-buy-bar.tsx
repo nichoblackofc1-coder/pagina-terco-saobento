@@ -9,20 +9,21 @@ export function StickyBuyBar() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-border p-2.5 sm:p-3 z-50 md:hidden safe-area-bottom shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
-      <div className="flex items-center gap-2 sm:gap-3 max-w-lg mx-auto">
-        {/* Badge de quantidade */}
-        <div className="bg-[#00D133] text-white text-[10px] sm:text-xs font-bold px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-md whitespace-nowrap">
-          {currentOption.quantity} {currentOption.quantity === 1 ? "Unidade" : "Unidades"}
-        </div>
-        
-        {/* Precos */}
+      <div className="flex items-center gap-3 sm:gap-4 max-w-lg mx-auto">
+        {/* Coluna esquerda: Badge em cima, precos embaixo */}
         <div className="flex-1 min-w-0">
-          <div className="flex items-baseline gap-1.5 flex-wrap">
-            <span className="text-[10px] sm:text-xs text-muted-foreground line-through">
-              R$ {currentOption.originalPrice.toFixed(2).replace(".", ",")}
-            </span>
+          {/* Badge de quantidade */}
+          <div className="bg-[#00D133] text-white text-[10px] sm:text-xs font-bold px-2 sm:px-2.5 py-1 rounded-md inline-block mb-1">
+            {currentOption.quantity} {currentOption.quantity === 1 ? "Unidade" : "Unidades"}
+          </div>
+          
+          {/* Precos */}
+          <div className="flex items-center gap-2">
             <span className="text-base sm:text-lg font-bold text-[#E63946]">
               R$ {currentOption.price.toFixed(2).replace(".", ",")}
+            </span>
+            <span className="text-[10px] sm:text-xs text-muted-foreground line-through">
+              R$ {currentOption.originalPrice.toFixed(2).replace(".", ",")}
             </span>
           </div>
           <p className="text-[10px] sm:text-xs text-muted-foreground">
