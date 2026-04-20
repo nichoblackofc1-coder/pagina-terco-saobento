@@ -16,7 +16,7 @@ export function StickyBuyBar() {
         </div>
         <Button 
           size="lg"
-          className="bg-destructive hover:bg-destructive/90 text-destructive-foreground font-bold px-4 sm:px-6 py-3 sm:py-3.5 rounded-xl shadow-lg shadow-destructive/30 text-sm sm:text-base whitespace-nowrap active:scale-95 transition-transform"
+          className="bg-[#00D133] hover:bg-[#00B82D] text-white font-bold px-4 sm:px-6 py-3 sm:py-3.5 rounded-xl shadow-lg shadow-[#00D133]/30 text-sm sm:text-base whitespace-nowrap active:scale-95 transition-transform"
         >
           <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2" />
           COMPRAR

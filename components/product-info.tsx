@@ -81,7 +81,7 @@ export function ProductInfo() {
       <div className="flex flex-col gap-2 sm:gap-3 mt-1 sm:mt-2">
         <Button 
           size="lg" 
-          className="w-full bg-destructive hover:bg-destructive/90 text-destructive-foreground font-bold text-base sm:text-lg py-5 sm:py-6 rounded-lg sm:rounded-xl shadow-lg shadow-destructive/30"
+          className="w-full bg-[#00D133] hover:bg-[#00B82D] text-white font-bold text-base sm:text-lg py-5 sm:py-6 rounded-lg sm:rounded-xl shadow-lg shadow-[#00D133]/30"
         >
           COMPRAR AGORA
         </Button>
