@@ -77,20 +77,13 @@ export function ProductInfo() {
         </div>
       </div>
 
-      {/* Botões de ação */}
+      {/* Botão de ação */}
       <div className="flex flex-col gap-2 sm:gap-3 mt-1 sm:mt-2">
         <Button 
           size="lg" 
           className="w-full bg-destructive hover:bg-destructive/90 text-destructive-foreground font-bold text-base sm:text-lg py-5 sm:py-6 rounded-lg sm:rounded-xl shadow-lg shadow-destructive/30"
         >
           COMPRAR AGORA
-        </Button>
-        <Button 
-          size="lg" 
-          variant="outline"
-          className="w-full border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold py-5 sm:py-6 rounded-lg sm:rounded-xl text-sm sm:text-base"
-        >
-          ADICIONAR AO CARRINHO
         </Button>
       </div>
 
