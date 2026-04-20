@@ -29,10 +29,6 @@ export function ProductGallery({ images }: ProductGalleryProps) {
           className="object-contain p-2 sm:p-4"
           priority
         />
-        <div className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-destructive text-destructive-foreground text-[10px] sm:text-xs font-bold px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full">
-          -50% OFF
-        </div>
-        
         {/* Navegacao mobile com setas */}
         <button 
           onClick={handlePrevious}
