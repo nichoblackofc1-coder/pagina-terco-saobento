@@ -1,7 +1,7 @@
 "use client"
 
 export function MarqueeBanner() {
-  const text = "loja oficial CICATRIBEM • loja oficial CICATRIBEM • loja oficial CICATRIBEM • loja oficial CICATRIBEM • "
+  const text = "loja oficial POPOZUDA • loja oficial POPOZUDA • loja oficial POPOZUDA • loja oficial POPOZUDA • "
   
   return (
     <div className="bg-[#9C00A3] text-white py-1.5 sm:py-2 overflow-hidden">
