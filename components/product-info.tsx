@@ -46,13 +46,13 @@ export function ProductInfo() {
           <button
             key={option.id}
             onClick={() => setSelectedOption(option.id)}
-            className={`relative flex items-center justify-between p-3 sm:p-4 rounded-lg border-2 transition-all ${
+            className={`relative flex flex-col xs:flex-row xs:items-center xs:justify-between p-3 sm:p-4 rounded-lg border-2 transition-all ${
               selectedOption === option.id
                 ? "border-[#fe9a00] bg-[#fe9a00]/5"
                 : "border-border hover:border-muted-foreground/50"
             }`}
           >
-            <div className="flex items-center gap-2 sm:gap-3">
+            <div className="flex items-center gap-2 sm:gap-3 mb-1 xs:mb-0">
               <span className="text-sm sm:text-base font-semibold text-foreground">
                 {option.label}
               </span>

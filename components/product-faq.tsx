@@ -34,10 +34,10 @@ export function ProductFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section className="py-6 sm:py-8">
-      <h2 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6">Perguntas Frequentes</h2>
+    <section className="py-5 sm:py-8">
+      <h2 className="text-base xs:text-lg sm:text-xl font-bold mb-3 xs:mb-4 sm:mb-6">Perguntas Frequentes</h2>
       
-      <div className="space-y-2 sm:space-y-3">
+      <div className="space-y-1.5 xs:space-y-2 sm:space-y-3">
         {faqs.map((faq, index) => (
           <div 
             key={index}
@@ -45,9 +45,9 @@ export function ProductFAQ() {
           >
             <button
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              className="w-full flex items-center justify-between p-3 sm:p-4 text-left hover:bg-muted/50 transition-colors"
+              className="w-full flex items-center justify-between p-2.5 xs:p-3 sm:p-4 text-left hover:bg-muted/50 transition-colors"
             >
-              <span className="font-medium pr-3 sm:pr-4 text-sm sm:text-base">{faq.question}</span>
+              <span className="font-medium pr-2 xs:pr-3 sm:pr-4 text-xs xs:text-sm sm:text-base leading-snug">{faq.question}</span>
               <ChevronDown 
                 className={`w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground flex-shrink-0 transition-transform ${
                   openIndex === index ? 'rotate-180' : ''
@@ -55,7 +55,7 @@ export function ProductFAQ() {
               />
             </button>
             {openIndex === index && (
-              <div className="px-3 sm:px-4 pb-3 sm:pb-4 text-xs sm:text-sm text-muted-foreground leading-relaxed">
+              <div className="px-2.5 xs:px-3 sm:px-4 pb-2.5 xs:pb-3 sm:pb-4 text-[11px] xs:text-xs sm:text-sm text-muted-foreground leading-relaxed">
                 {faq.answer}
               </div>
             )}

@@ -44,17 +44,17 @@ const reviews = [
 
 export function ProductReviews() {
   return (
-    <section className="py-6 sm:py-8">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0 mb-4 sm:mb-6">
-        <h2 className="text-lg sm:text-xl font-bold">Avaliações dos Clientes</h2>
-        <div className="flex items-center gap-1.5 sm:gap-2">
+    <section className="py-5 sm:py-8">
+      <div className="flex flex-col xs:flex-row xs:items-center xs:justify-between gap-1.5 xs:gap-2 sm:gap-0 mb-3 xs:mb-4 sm:mb-6">
+        <h2 className="text-base xs:text-lg sm:text-xl font-bold">Avaliações dos Clientes</h2>
+        <div className="flex items-center gap-1 xs:gap-1.5 sm:gap-2">
           <div className="flex">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" />
+              <Star key={i} className="w-3 h-3 xs:w-3.5 xs:h-3.5 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" />
             ))}
           </div>
-          <span className="font-bold text-sm sm:text-base">4.9</span>
-          <span className="text-muted-foreground text-xs sm:text-sm">(2.847)</span>
+          <span className="font-bold text-xs xs:text-sm sm:text-base">4.9</span>
+          <span className="text-muted-foreground text-[10px] xs:text-xs sm:text-sm">(2.847)</span>
         </div>
       </div>
 
@@ -76,9 +76,9 @@ export function ProductReviews() {
                   <span className="font-medium text-sm sm:text-base">{review.name}</span>
                   {review.verified && (
                     <span className="flex items-center gap-0.5 sm:gap-1 text-[10px] sm:text-xs text-green-600">
-                      <CheckCircle2 className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
-                      <span className="hidden xs:inline">Compra verificada</span>
-                      <span className="xs:hidden">Verificado</span>
+                      <CheckCircle2 className="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" />
+                      <span className="hidden sm:inline">Compra verificada</span>
+                      <span className="sm:hidden">Verificado</span>
                     </span>
                   )}
                 </div>
