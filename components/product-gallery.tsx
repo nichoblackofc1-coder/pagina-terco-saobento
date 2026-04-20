@@ -1,8 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 
 interface ProductGalleryProps {
   images: string[]
@@ -10,40 +9,53 @@ interface ProductGalleryProps {
 
 export function ProductGallery({ images }: ProductGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState(0)
+  const touchStartX = useRef<number | null>(null)
+  const touchEndX = useRef<number | null>(null)
 
-  const handlePrevious = () => {
-    setSelectedIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
+  const minSwipeDistance = 50
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX
+    touchEndX.current = null
   }
 
-  const handleNext = () => {
-    setSelectedIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX
+  }
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return
+    
+    const distance = touchStartX.current - touchEndX.current
+    const isLeftSwipe = distance > minSwipeDistance
+    const isRightSwipe = distance < -minSwipeDistance
+
+    if (isLeftSwipe) {
+      setSelectedIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
+    } else if (isRightSwipe) {
+      setSelectedIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
+    }
+
+    touchStartX.current = null
+    touchEndX.current = null
   }
 
   return (
     <div className="flex flex-col gap-2 sm:gap-3">
-      <div className="relative aspect-square bg-white rounded-lg sm:rounded-xl overflow-hidden border border-border">
+      <div 
+        className="relative aspect-square bg-white rounded-lg sm:rounded-xl overflow-hidden border border-border cursor-grab active:cursor-grabbing"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <Image
           src={images[selectedIndex]}
           alt="POPOZUDA Cream"
           fill
-          className="object-contain p-2 sm:p-4"
+          className="object-contain p-2 sm:p-4 pointer-events-none select-none"
           priority
+          draggable={false}
         />
-        {/* Navegacao mobile com setas */}
-        <button 
-          onClick={handlePrevious}
-          className="absolute left-1 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-black/40 hover:bg-black/60 rounded-full flex items-center justify-center text-white transition-colors md:hidden"
-          aria-label="Imagem anterior"
-        >
-          <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
-        </button>
-        <button 
-          onClick={handleNext}
-          className="absolute right-1 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-black/40 hover:bg-black/60 rounded-full flex items-center justify-center text-white transition-colors md:hidden"
-          aria-label="Próxima imagem"
-        >
-          <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
-        </button>
 
         {/* Indicadores de posicao mobile */}
         <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 md:hidden">
