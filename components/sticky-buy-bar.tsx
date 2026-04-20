@@ -11,24 +11,24 @@ export function StickyBuyBar() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-border p-2 xs:p-2.5 sm:p-3 z-50 md:hidden shadow-[0_-4px_20px_rgba(0,0,0,0.1)]" style={{ paddingBottom: 'max(0.5rem, env(safe-area-inset-bottom))' }}>
-      <div className="flex items-center gap-2 xs:gap-3 sm:gap-4 max-w-lg mx-auto">
+      <div className="flex items-center gap-3 xs:gap-4 sm:gap-5 max-w-lg mx-auto">
         {/* Coluna esquerda: Badge em cima, precos embaixo */}
         <div className="flex-1 min-w-0">
           {/* Badge de quantidade */}
-          <div className="bg-[#00D133] text-white text-[9px] xs:text-[10px] sm:text-xs font-bold px-1.5 xs:px-2 sm:px-2.5 py-0.5 xs:py-1 rounded-md inline-block mb-0.5 xs:mb-1">
+          <div className="bg-[#00D133] text-white text-[10px] xs:text-xs sm:text-sm font-bold px-2.5 xs:px-3 sm:px-4 py-1 xs:py-1.5 rounded-md inline-block mb-1 xs:mb-1.5">
             {currentOption.quantity} {currentOption.quantity === 1 ? "Unidade" : "Unidades"}
           </div>
           
           {/* Precos */}
-          <div className="flex items-center gap-1.5 xs:gap-2">
-            <span className="text-sm xs:text-base sm:text-lg font-bold text-[#E63946]">
+          <div className="flex items-center gap-2 xs:gap-3">
+            <span className="text-base xs:text-lg sm:text-xl font-bold text-[#E63946]">
               R$ {currentOption.price.toFixed(2).replace(".", ",")}
             </span>
-            <span className="text-[9px] xs:text-[10px] sm:text-xs text-muted-foreground line-through">
+            <span className="text-[10px] xs:text-xs sm:text-sm text-muted-foreground line-through">
               R$ {currentOption.originalPrice.toFixed(2).replace(".", ",")}
             </span>
           </div>
-          <p className="text-[9px] xs:text-[10px] sm:text-xs text-muted-foreground">
+          <p className="text-[10px] xs:text-xs sm:text-sm text-muted-foreground">
             3x R$ {(currentOption.price / 3).toFixed(2).replace(".", ",")}
           </p>
         </div>
