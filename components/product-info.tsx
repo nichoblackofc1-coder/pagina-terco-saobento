@@ -66,30 +66,6 @@ export function ProductInfo() {
         ))}
       </div>
 
-      {/* Preco selecionado destacado */}
-      <div className="bg-gradient-to-r from-[#fe9a00]/10 to-orange-100 p-3 sm:p-4 rounded-lg sm:rounded-xl">
-        <div className="flex items-baseline gap-1.5 sm:gap-2">
-          <span className="text-xs sm:text-sm text-muted-foreground line-through">
-            R$ {currentOption.originalPrice.toFixed(2).replace(".", ",")}
-          </span>
-          <span className="bg-[#fe9a00] text-white text-[10px] sm:text-xs font-bold px-1.5 sm:px-2 py-0.5 rounded">
-            -{Math.round((1 - currentOption.price / currentOption.originalPrice) * 100)}%
-          </span>
-        </div>
-        <div className="flex items-baseline gap-0.5 sm:gap-1 mt-1">
-          <span className="text-xs sm:text-sm font-medium text-foreground">R$</span>
-          <span className="text-3xl sm:text-4xl font-extrabold text-[#fe9a00]">
-            {Math.floor(currentOption.price)}
-          </span>
-          <span className="text-lg sm:text-xl font-bold text-[#fe9a00]">
-            ,{(currentOption.price % 1).toFixed(2).substring(2)}
-          </span>
-        </div>
-        <p className="text-[10px] sm:text-xs text-muted-foreground mt-1">
-          ou 3x de R$ {(currentOption.price / 3).toFixed(2).replace(".", ",")} sem juros
-        </p>
-      </div>
-
       {/* Benefícios rápidos */}
       <div className="grid grid-cols-2 gap-2 sm:gap-3">
         <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
