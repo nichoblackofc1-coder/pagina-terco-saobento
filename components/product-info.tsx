@@ -74,7 +74,7 @@ export function ProductInfo() {
           <button
             key={option.id}
             onClick={() => setSelectedOption(option.id)}
-            className={`relative flex flex-col xs:flex-row xs:items-center xs:justify-between p-3 sm:p-4 rounded-lg border-2 transition-all ${
+            className={`relative flex flex-col xs:flex-row xs:items-center xs:justify-between px-4 sm:px-5 py-3 sm:py-4 rounded-lg border-2 transition-all ${
               selectedOption === option.id
                 ? "border-[#fe9a00] bg-[#fe9a00]/5"
                 : "border-border hover:border-muted-foreground/50"
@@ -94,7 +94,7 @@ export function ProductInfo() {
               <span className="text-xs sm:text-sm text-muted-foreground line-through">
                 R$ {option.originalPrice.toFixed(2).replace(".", ",")}
               </span>
-              <span className="text-base sm:text-lg font-bold text-[#fe9a00]">
+              <span className="text-lg sm:text-xl font-bold text-[#fe9a00]">
                 R$ {option.price.toFixed(2).replace(".", ",")}
               </span>
             </div>
