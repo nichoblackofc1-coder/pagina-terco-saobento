@@ -119,21 +119,13 @@ export function ExitIntentPopup() {
             </span>
           </div>
 
-          {/* Botões */}
-          <div className="space-y-1.5 xs:space-y-2">
-            <Button
-              onClick={handleAcceptOffer}
-              className="w-full bg-[#00D133] hover:bg-[#00B82D] text-white font-bold py-4 xs:py-5 text-sm xs:text-base rounded-md"
-            >
-              QUERO APROVEITAR
-            </Button>
-            <button
-              onClick={handleClose}
-              className="w-full text-xs xs:text-sm text-muted-foreground hover:text-foreground py-1.5 xs:py-2 transition-colors"
-            >
-              Nao, obrigado
-            </button>
-          </div>
+          {/* Botão */}
+          <Button
+            onClick={handleAcceptOffer}
+            className="w-full bg-[#00D133] hover:bg-[#00B82D] text-white font-bold py-4 xs:py-5 text-sm xs:text-base rounded-md"
+          >
+            QUERO APROVEITAR
+          </Button>
         </div>
       </div>
 
