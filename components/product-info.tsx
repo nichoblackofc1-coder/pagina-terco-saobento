@@ -1,13 +1,39 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { Star, ShieldCheck, Truck, Clock, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { usePricing, pricingOptions } from "@/contexts/pricing-context"
 import { useUtmParams } from "@/hooks/use-utm"
 
+// Tempo inicial do contador (2 horas, 45 minutos, 33 segundos)
+const INITIAL_TIME = 2 * 3600 + 45 * 60 + 33
+
 export function ProductInfo() {
   const { selectedOption, setSelectedOption, currentOption } = usePricing()
   const { appendUtmToUrl } = useUtmParams()
+  
+  const [timeLeft, setTimeLeft] = useState(INITIAL_TIME)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          // Reinicia o contador quando chega a zero
+          return INITIAL_TIME
+        }
+        return prev - 1
+      })
+    }, 1000)
+
+    return () => clearInterval(timer)
+  }, [])
+
+  const hours = Math.floor(timeLeft / 3600)
+  const minutes = Math.floor((timeLeft % 3600) / 60)
+  const seconds = timeLeft % 60
+
+  const formatTime = (num: number) => num.toString().padStart(2, "0")
 
   return (
     <div className="flex flex-col gap-3 sm:gap-4">
@@ -111,11 +137,11 @@ export function ProductInfo() {
       <div className="bg-muted/50 p-2.5 sm:p-3 rounded-lg sm:rounded-xl flex items-center justify-center gap-2 sm:gap-4 flex-wrap">
         <span className="text-xs sm:text-sm text-muted-foreground">Oferta termina em:</span>
         <div className="flex gap-1">
-          <span className="bg-foreground text-background px-1.5 sm:px-2 py-0.5 sm:py-1 rounded font-mono font-bold text-xs sm:text-sm">02</span>
+          <span className="bg-foreground text-background px-1.5 sm:px-2 py-0.5 sm:py-1 rounded font-mono font-bold text-xs sm:text-sm">{formatTime(hours)}</span>
           <span className="font-bold text-sm">:</span>
-          <span className="bg-foreground text-background px-1.5 sm:px-2 py-0.5 sm:py-1 rounded font-mono font-bold text-xs sm:text-sm">45</span>
+          <span className="bg-foreground text-background px-1.5 sm:px-2 py-0.5 sm:py-1 rounded font-mono font-bold text-xs sm:text-sm">{formatTime(minutes)}</span>
           <span className="font-bold text-sm">:</span>
-          <span className="bg-foreground text-background px-1.5 sm:px-2 py-0.5 sm:py-1 rounded font-mono font-bold text-xs sm:text-sm">33</span>
+          <span className="bg-foreground text-background px-1.5 sm:px-2 py-0.5 sm:py-1 rounded font-mono font-bold text-xs sm:text-sm">{formatTime(seconds)}</span>
         </div>
       </div>
     </div>
