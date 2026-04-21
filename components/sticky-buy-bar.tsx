@@ -10,7 +10,7 @@ export function StickyBuyBar() {
   const { appendUtmToUrl } = useUtmParams()
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-border p-2 xs:p-2.5 sm:p-3 z-50 md:hidden shadow-[0_-4px_20px_rgba(0,0,0,0.1)]" style={{ paddingBottom: 'max(0.5rem, env(safe-area-inset-bottom))' }}>
+    <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-border px-4 xs:px-5 sm:px-6 py-2 xs:py-2.5 sm:py-3 z-50 md:hidden shadow-[0_-4px_20px_rgba(0,0,0,0.1)]" style={{ paddingBottom: 'max(0.5rem, env(safe-area-inset-bottom))' }}>
       <div className="flex items-center gap-3 xs:gap-4 sm:gap-5 max-w-lg mx-auto">
         {/* Coluna esquerda: Badge em cima, precos embaixo */}
         <div className="flex-1 min-w-0">
