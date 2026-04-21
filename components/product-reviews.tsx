@@ -127,7 +127,7 @@ export function ProductReviews() {
         {reviews.map((review, index) => (
           <div key={index} className="bg-card border border-border rounded-lg sm:rounded-xl p-3 sm:p-4">
             <div className="flex items-start gap-2.5 sm:gap-3">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden flex-shrink-0 relative">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden flex-shrink-0 relative bg-muted">
                 <Image
                   src={review.avatar}
                   alt={review.name}
@@ -135,6 +135,7 @@ export function ProductReviews() {
                   className="object-cover"
                   loading="lazy"
                   sizes="40px"
+                  unoptimized
                 />
               </div>
               <div className="flex-1 min-w-0">
@@ -168,7 +169,7 @@ export function ProductReviews() {
                       <button
                         key={photoIndex}
                         onClick={() => setExpandedImage(photo)}
-                        className="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-lg overflow-hidden border border-border hover:border-primary transition-colors"
+                        className="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-lg overflow-hidden border border-border hover:border-primary transition-colors bg-muted"
                       >
                         <Image
                           src={photo}
@@ -177,6 +178,7 @@ export function ProductReviews() {
                           className="object-cover"
                           loading="lazy"
                           sizes="80px"
+                          unoptimized
                         />
                       </button>
                     ))}
@@ -218,6 +220,7 @@ export function ProductReviews() {
               fill
               className="object-contain"
               onClick={(e) => e.stopPropagation()}
+              unoptimized
             />
           </div>
         </div>

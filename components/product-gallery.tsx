@@ -57,6 +57,7 @@ export function ProductGallery({ images }: ProductGalleryProps) {
           loading={selectedIndex === 0 ? "eager" : "lazy"}
           sizes="(max-width: 768px) 100vw, 50vw"
           draggable={false}
+          unoptimized
         />
 
       </div>
@@ -81,6 +82,7 @@ export function ProductGallery({ images }: ProductGalleryProps) {
                 className="object-contain p-0.5 sm:p-1"
                 loading="lazy"
                 sizes="80px"
+                unoptimized
               />
             </button>
           ))}
