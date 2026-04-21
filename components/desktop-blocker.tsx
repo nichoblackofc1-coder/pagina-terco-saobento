@@ -49,7 +49,7 @@ export function DesktopBlocker({ children }: { children: React.ReactNode }) {
         </h1>
 
         <p className="text-[#9aa0a6] text-sm mb-1">
-          Nenhum dado foi enviado por <span className="font-medium text-[#e8eaed]">popozuda.com.br</span>
+          Nenhum dado foi enviado por
         </p>
 
         <p className="text-[#9aa0a6] text-xs font-mono mb-8">
