@@ -6,7 +6,6 @@ import { TrustBadges } from "@/components/trust-badges"
 import { ProductReviews } from "@/components/product-reviews"
 import { ProductFAQ } from "@/components/product-faq"
 import { StickyBuyBar } from "@/components/sticky-buy-bar"
-import { ExitIntentPopup } from "@/components/exit-intent-popup"
 import { DesktopBlocker } from "@/components/desktop-blocker"
 import { PricingProvider } from "@/contexts/pricing-context"
 
@@ -74,8 +73,7 @@ export default function ProductPage() {
       {/* Barra fixa de compra (mobile) */}
       <StickyBuyBar />
 
-      {/* Popup de exit intent */}
-      <ExitIntentPopup />
+
     </main>
     </PricingProvider>
     </DesktopBlocker>
