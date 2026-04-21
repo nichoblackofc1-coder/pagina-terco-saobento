@@ -56,7 +56,7 @@ export function ProductInfo() {
       </div>
 
       {/* Título */}
-      <h1 className="text-base sm:text-lg font-medium text-foreground leading-snug">
+      <h1 className="text-base sm:text-lg font-bold text-foreground leading-snug">
         Popozuda Crem - Cuidado Corporal Avancado para a Pele.
       </h1>
 
