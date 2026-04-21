@@ -36,7 +36,7 @@ export function StickyBuyBar() {
         {/* Botao comprar */}
         <Button 
           size="lg"
-          className="bg-[#02b019] hover:bg-[#029a16] text-white font-bold px-3 xs:px-4 sm:px-5 py-2 xs:py-2.5 sm:py-3 rounded-lg shadow-md text-xs xs:text-sm sm:text-base whitespace-nowrap active:scale-95 transition-transform"
+          className="bg-[#02b019] hover:bg-[#029a16] text-white font-bold px-3 xs:px-4 sm:px-5 py-2 xs:py-2.5 sm:py-3 rounded-sm shadow-md text-xs xs:text-sm sm:text-base whitespace-nowrap active:scale-95 transition-transform"
           onClick={() => window.open(appendUtmToUrl(currentOption.checkoutUrl), "_blank")}
         >
           <ShoppingCart className="w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-5 sm:h-5 mr-1 xs:mr-1.5" />
