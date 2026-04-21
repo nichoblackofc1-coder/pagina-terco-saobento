@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { useUtmParams } from "@/hooks/use-utm"
 
-const SPECIAL_OFFER_URL = "https://seguropagamentos.com.br/popozuda-especial"
+const SPECIAL_OFFER_URL = "https://seguropagamentos.com.br/popozudaa"
 
 export function ExitIntentPopup() {
   const [showPopup, setShowPopup] = useState(false)
