@@ -43,9 +43,9 @@ interface PricingContextType {
 const PricingContext = createContext<PricingContextType | undefined>(undefined)
 
 export function PricingProvider({ children }: { children: ReactNode }) {
-  const [selectedOption, setSelectedOption] = useState(2)
+  const [selectedOption, setSelectedOption] = useState(1)
   
-  const currentOption = pricingOptions.find(opt => opt.id === selectedOption) || pricingOptions[1]
+  const currentOption = pricingOptions.find(opt => opt.id === selectedOption) || pricingOptions[0]
 
   return (
     <PricingContext.Provider value={{ selectedOption, setSelectedOption, currentOption }}>
