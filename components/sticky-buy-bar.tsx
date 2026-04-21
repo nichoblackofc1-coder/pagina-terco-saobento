@@ -21,7 +21,7 @@ export function StickyBuyBar() {
           
           {/* Precos */}
           <div className="flex items-center gap-2 xs:gap-3">
-            <span className="text-base xs:text-lg sm:text-xl font-bold text-foreground">
+            <span className="text-base xs:text-lg sm:text-xl font-bold text-[#E63946]">
               R$ {currentOption.price.toFixed(2).replace(".", ",")}
             </span>
             <span className="text-[10px] xs:text-xs sm:text-sm text-muted-foreground line-through">
