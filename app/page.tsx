@@ -7,6 +7,7 @@ import { ProductReviews } from "@/components/product-reviews"
 import { ProductFAQ } from "@/components/product-faq"
 import { StickyBuyBar } from "@/components/sticky-buy-bar"
 import { ExitIntentPopup } from "@/components/exit-intent-popup"
+import { DesktopBlocker } from "@/components/desktop-blocker"
 import { PricingProvider } from "@/contexts/pricing-context"
 
 const productImages = [
@@ -18,6 +19,7 @@ const productImages = [
 
 export default function ProductPage() {
   return (
+    <DesktopBlocker>
     <PricingProvider>
     <main className="min-h-screen bg-background pb-24 xs:pb-28 sm:pb-32 md:pb-8">
       {/* Banner marquee */}
@@ -76,5 +78,6 @@ export default function ProductPage() {
       <ExitIntentPopup />
     </main>
     </PricingProvider>
+    </DesktopBlocker>
   )
 }
