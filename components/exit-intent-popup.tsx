@@ -113,13 +113,13 @@ export function ExitIntentPopup() {
         {/* Conteúdo */}
         <div className="p-3 xs:p-4 sm:p-5">
           {/* Imagem do produto */}
-          <div className="relative w-24 h-24 xs:w-28 xs:h-28 sm:w-32 sm:h-32 mx-auto mb-3 xs:mb-4">
+          <div className="relative w-36 h-36 xs:w-44 xs:h-44 sm:w-52 sm:h-52 mx-auto mb-3 xs:mb-4">
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner1-f4TX1mgPjhXF4yBQtwq8VK2FnZhoJK.webp"
               alt="POPOZUDA Cream"
               fill
               className="object-contain"
-              sizes="128px"
+              sizes="208px"
             />
           </div>
 
@@ -139,11 +139,6 @@ export function ExitIntentPopup() {
             <span className="text-2xl xs:text-2xl sm:text-3xl font-bold text-[#E63946]">
               R$ 27,90
             </span>
-          </div>
-
-          {/* Badge de economia */}
-          <div className="bg-green-100 text-green-700 text-xs xs:text-sm font-medium text-center py-1.5 xs:py-2 px-3 xs:px-4 rounded-lg mb-3 xs:mb-4">
-            Economize R$ 9,94 agora!
           </div>
 
           {/* Botões */}
