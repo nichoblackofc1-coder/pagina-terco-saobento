@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 
 interface ProductGalleryProps {
@@ -9,8 +9,19 @@ interface ProductGalleryProps {
 
 export function ProductGallery({ images }: ProductGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState(0)
+  const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set([0]))
   const touchStartX = useRef<number | null>(null)
   const touchEndX = useRef<number | null>(null)
+
+  // Preload das próximas imagens
+  useEffect(() => {
+    const preloadNext = () => {
+      const nextIndex = (selectedIndex + 1) % images.length
+      const prevIndex = (selectedIndex - 1 + images.length) % images.length
+      setLoadedImages(prev => new Set([...prev, nextIndex, prevIndex]))
+    }
+    preloadNext()
+  }, [selectedIndex, images.length])
 
   const minSwipeDistance = 50
 
@@ -53,11 +64,11 @@ export function ProductGallery({ images }: ProductGalleryProps) {
           alt="POPOZUDA Cream"
           fill
           className="object-contain p-2 sm:p-4 pointer-events-none select-none"
-          priority={selectedIndex === 0}
-          loading={selectedIndex === 0 ? "eager" : "lazy"}
+          priority
+          loading="eager"
           sizes="(max-width: 768px) 100vw, 50vw"
           draggable={false}
-          unoptimized
+          quality={85}
         />
 
       </div>
@@ -80,9 +91,9 @@ export function ProductGallery({ images }: ProductGalleryProps) {
                 alt={`Imagem ${index + 1}`}
                 fill
                 className="object-contain p-0.5 sm:p-1"
-                loading="lazy"
+                loading={index < 3 ? "eager" : "lazy"}
                 sizes="80px"
-                unoptimized
+                quality={60}
               />
             </button>
           ))}

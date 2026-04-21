@@ -61,6 +61,8 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" />
         <link rel="preconnect" href="https://cdn.utmify.com.br" />
         <link rel="dns-prefetch" href="https://cdn.utmify.com.br" />
+        <link rel="preload" as="image" href="/images/product-banner.png" />
+        <link rel="preload" as="image" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner1-f4TX1mgPjhXF4yBQtwq8VK2FnZhoJK.webp" />
         <Script id="utmify-pixel" strategy="lazyOnload">
           {`
             window.pixelId = "69dc4648e55c012f0860327d";

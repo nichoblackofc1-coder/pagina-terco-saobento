@@ -133,9 +133,9 @@ export function ProductReviews() {
                   alt={review.name}
                   fill
                   className="object-cover"
-                  loading="lazy"
+                  loading={index < 3 ? "eager" : "lazy"}
                   sizes="40px"
-                  unoptimized
+                  quality={60}
                 />
               </div>
               <div className="flex-1 min-w-0">
@@ -176,9 +176,9 @@ export function ProductReviews() {
                           alt={`Foto ${photoIndex + 1} de ${review.name}`}
                           fill
                           className="object-cover"
-                          loading="lazy"
+                          loading={index < 2 ? "eager" : "lazy"}
                           sizes="80px"
-                          unoptimized
+                          quality={70}
                         />
                       </button>
                     ))}
@@ -220,7 +220,8 @@ export function ProductReviews() {
               fill
               className="object-contain"
               onClick={(e) => e.stopPropagation()}
-              unoptimized
+              priority
+              quality={90}
             />
           </div>
         </div>
