@@ -94,7 +94,7 @@ export function ProductInfo() {
               <span className="text-xs sm:text-sm text-muted-foreground line-through">
                 R$ {option.originalPrice.toFixed(2).replace(".", ",")}
               </span>
-              <span className="text-lg sm:text-xl font-bold text-[#fe9a00]">
+              <span className="text-lg sm:text-xl font-bold text-foreground">
                 R$ {option.price.toFixed(2).replace(".", ",")}
               </span>
             </div>
