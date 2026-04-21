@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Smartphone } from "lucide-react"
 
 export function DesktopBlocker({ children }: { children: React.ReactNode }) {
   const [isMobile, setIsMobile] = useState(true)
@@ -9,7 +8,6 @@ export function DesktopBlocker({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const checkDevice = () => {
-      // Considera mobile se a largura for menor que 768px
       const mobile = window.innerWidth < 768
       setIsMobile(mobile)
       setIsLoading(false)
@@ -21,49 +19,46 @@ export function DesktopBlocker({ children }: { children: React.ReactNode }) {
     return () => window.removeEventListener("resize", checkDevice)
   }, [])
 
-  // Mostra nada enquanto carrega para evitar flash
   if (isLoading) {
     return null
   }
 
-  // Se for mobile, mostra o conteúdo normal
   if (isMobile) {
     return <>{children}</>
   }
 
-  // Se for desktop, mostra a tela de bloqueio
+  // Desktop: tela de erro como se a página estivesse fora do ar
   return (
-    <div className="min-h-screen bg-[#1a1a1a] flex flex-col items-center justify-center p-8">
-      <div className="text-center max-w-md">
-        {/* Ícone */}
-        <div className="mb-8 flex justify-center">
-          <div className="w-16 h-16 border-2 border-gray-500 rounded-lg flex items-center justify-center">
-            <Smartphone className="w-8 h-8 text-gray-500" />
-          </div>
+    <div className="min-h-screen bg-[#202124] flex flex-col items-center justify-center p-8">
+      <div className="text-center">
+        {/* Ícone de página quebrada */}
+        <div className="mb-6 flex justify-center">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="12" y="8" width="40" height="48" rx="2" stroke="#9AA0A6" strokeWidth="2" fill="none"/>
+            <path d="M20 8V4C20 2.89543 20.8954 2 22 2H42C43.1046 2 44 2.89543 44 4V8" stroke="#9AA0A6" strokeWidth="2"/>
+            <line x1="20" y1="20" x2="44" y2="20" stroke="#9AA0A6" strokeWidth="2"/>
+            <line x1="20" y1="28" x2="44" y2="28" stroke="#9AA0A6" strokeWidth="2"/>
+            <line x1="20" y1="36" x2="36" y2="36" stroke="#9AA0A6" strokeWidth="2"/>
+            <circle cx="48" cy="48" r="12" fill="#202124" stroke="#9AA0A6" strokeWidth="2"/>
+            <path d="M44 44L52 52M52 44L44 52" stroke="#9AA0A6" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
         </div>
 
-        {/* Título */}
-        <h1 className="text-xl text-gray-300 font-light mb-4">
+        <h1 className="text-[#e8eaed] text-xl font-normal mb-3">
           Esta página não está funcionando
         </h1>
 
-        {/* Descrição */}
-        <p className="text-gray-500 text-sm mb-2">
-          Esta página está disponível apenas para dispositivos móveis.
-        </p>
-        <p className="text-gray-500 text-sm mb-8">
-          Acesse pelo seu celular para continuar.
+        <p className="text-[#9aa0a6] text-sm mb-1">
+          Nenhum dado foi enviado por <span className="font-medium text-[#e8eaed]">popozuda.com.br</span>
         </p>
 
-        {/* Código de erro simulado */}
-        <p className="text-gray-600 text-xs mb-6 font-mono">
-          ERR_DESKTOP_NOT_SUPPORTED
+        <p className="text-[#9aa0a6] text-xs font-mono mb-8">
+          ERR_EMPTY_RESPONSE
         </p>
 
-        {/* Botão recarregar */}
         <button
           onClick={() => window.location.reload()}
-          className="px-6 py-2 bg-[#3b82f6]/20 text-[#60a5fa] rounded-full text-sm hover:bg-[#3b82f6]/30 transition-colors"
+          className="px-6 py-2 bg-[#8ab4f8]/10 text-[#8ab4f8] border border-[#8ab4f8]/30 rounded-full text-sm hover:bg-[#8ab4f8]/20 transition-colors"
         >
           Recarregar
         </button>
