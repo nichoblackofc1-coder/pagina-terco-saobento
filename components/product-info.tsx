@@ -74,7 +74,7 @@ export function ProductInfo() {
           <button
             key={option.id}
             onClick={() => setSelectedOption(option.id)}
-            className={`relative flex flex-col xs:flex-row xs:items-center xs:justify-between px-4 sm:px-5 py-3 sm:py-4 rounded-lg border-2 transition-all ${
+            className={`relative flex flex-col xs:flex-row xs:items-center xs:justify-between px-5 sm:px-6 py-3 sm:py-4 rounded-lg border-2 transition-all ${
               selectedOption === option.id
                 ? "border-[#fe9a00] bg-[#fe9a00]/5"
                 : "border-border hover:border-muted-foreground/50"
