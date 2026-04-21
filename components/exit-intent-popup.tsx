@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect } from "react"
 import { X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
@@ -10,29 +10,13 @@ const SPECIAL_OFFER_URL = "https://seguropagamentos.com.br/popozuda-especial"
 
 export function ExitIntentPopup() {
   const [showPopup, setShowPopup] = useState(false)
-  const [hasShown, setHasShown] = useState(false)
   const { appendUtmToUrl } = useUtmParams()
 
-  const triggerPopup = useCallback(() => {
-    if (!hasShown) {
-      setShowPopup(true)
-      setHasShown(true)
-      sessionStorage.setItem("exitPopupShown", "true")
-    }
-  }, [hasShown])
-
   useEffect(() => {
-    // Verificar se já mostrou o popup nesta sessão
-    const alreadyShown = sessionStorage.getItem("exitPopupShown")
-    if (alreadyShown) {
-      setHasShown(true)
-      return
-    }
-
     // Desktop: detecta quando o mouse sai pela parte superior
     const handleMouseLeave = (e: MouseEvent) => {
       if (e.clientY <= 0) {
-        triggerPopup()
+        setShowPopup(true)
       }
     }
 
@@ -47,7 +31,8 @@ export function ExitIntentPopup() {
       if (currentScrollY < lastScrollY && currentScrollY < 100) {
         scrollUpCount++
         if (scrollUpCount >= 3) {
-          triggerPopup()
+          setShowPopup(true)
+          scrollUpCount = 0
         }
       } else {
         scrollUpCount = 0
@@ -56,25 +41,18 @@ export function ExitIntentPopup() {
       lastScrollY = currentScrollY
     }
 
-    // Mobile: detecta quando o usuário tenta sair via botão voltar
-    const handleBeforeUnload = () => {
-      triggerPopup()
-    }
-
     // Adiciona um delay antes de ativar os detectores
     const timer = setTimeout(() => {
       document.addEventListener("mouseleave", handleMouseLeave)
       window.addEventListener("scroll", handleScroll, { passive: true })
-      window.addEventListener("beforeunload", handleBeforeUnload)
-    }, 5000)
+    }, 3000)
 
     return () => {
       clearTimeout(timer)
       document.removeEventListener("mouseleave", handleMouseLeave)
       window.removeEventListener("scroll", handleScroll)
-      window.removeEventListener("beforeunload", handleBeforeUnload)
     }
-  }, [hasShown, triggerPopup])
+  }, [])
 
   const handleClose = () => {
     setShowPopup(false)
@@ -128,7 +106,7 @@ export function ExitIntentPopup() {
             Leve 1 Unidade com Desconto Especial!
           </h2>
           <p className="text-xs xs:text-sm text-center text-muted-foreground mb-3 xs:mb-4">
-            Essa oferta exclusiva so aparece uma vez. Aproveite agora!
+            Aproveite essa oferta exclusiva agora!
           </p>
 
           {/* Preços */}
