@@ -44,14 +44,14 @@ export function ProductInfo() {
             -40%
           </span>
           <span className="text-xl sm:text-2xl font-bold text-foreground">
-            R$ 37,84
+            R$ 43,64
           </span>
           <span className="text-sm sm:text-base text-muted-foreground line-through">
-            R$ 97,43
+            R$ 87,84
           </span>
         </div>
         <p className="text-xs sm:text-sm text-muted-foreground">
-          3x de R$ 12,61 <span className="text-green-600 font-medium">sem juros</span>
+          3x de R$ 14,55 <span className="text-green-600 font-medium">sem juros</span>
         </p>
       </div>
 
