@@ -25,7 +25,7 @@ export const pricingOptions = [
     id: 3,
     quantity: 3,
     label: "3 Unidades",
-    originalPrice: 292.29,
+    originalPrice: 184.29,
     price: 97.84,
     badge: null,
     checkoutUrl: "https://seguropagamentos.com.br/popozuda3",
