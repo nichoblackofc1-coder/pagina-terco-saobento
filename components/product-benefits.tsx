@@ -5,7 +5,7 @@ const benefits = [
     icon: Sparkles,
     title: "ATIVA",
     description: "a circulacao!",
-    color: "bg-primary"
+    color: "bg-foreground"
   },
   {
     icon: Droplets,
@@ -17,7 +17,7 @@ const benefits = [
     icon: Clock,
     title: "ALIVIA",
     description: "sintomas do lipedema!",
-    color: "bg-primary"
+    color: "bg-foreground"
   },
   {
     icon: ShieldCheck,
