@@ -48,7 +48,7 @@ export function ProductBenefits() {
         {areas.map((area, index) => (
           <span 
             key={index}
-            className="bg-accent text-accent-foreground px-2 xs:px-2.5 sm:px-4 py-1 xs:py-1.5 sm:py-2 rounded-full text-[11px] xs:text-xs sm:text-sm font-medium"
+            className="bg-accent text-white px-2 xs:px-2.5 sm:px-4 py-1 xs:py-1.5 sm:py-2 rounded-full text-[11px] xs:text-xs sm:text-sm font-medium"
           >
             {area}
           </span>
