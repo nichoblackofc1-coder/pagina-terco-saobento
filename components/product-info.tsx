@@ -40,7 +40,7 @@ export function ProductInfo() {
       {/* Preco principal */}
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-2">
-          <span className="bg-[#E63946] text-white text-[10px] sm:text-xs font-bold px-1.5 py-0.5 rounded">
+          <span className="bg-primary text-primary-foreground text-[10px] sm:text-xs font-bold px-1.5 py-0.5 rounded">
             -40%
           </span>
           <span className="text-xl sm:text-2xl font-bold text-foreground">
@@ -76,7 +76,7 @@ export function ProductInfo() {
             onClick={() => setSelectedOption(option.id)}
             className={`relative flex flex-col xs:flex-row xs:items-center xs:justify-between p-3 sm:p-4 rounded-lg border-2 transition-all ${
               selectedOption === option.id
-                ? "border-[#fe9a00] bg-[#fe9a00]/5"
+                ? "border-primary bg-primary/5"
                 : "border-border hover:border-muted-foreground/50"
             }`}
           >
@@ -85,7 +85,7 @@ export function ProductInfo() {
                 {option.label}
               </span>
               {option.badge && (
-                <span className="bg-[#fe9a00] text-white text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full">
+                <span className="bg-primary text-primary-foreground text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full">
                   {option.badge}
                 </span>
               )}
@@ -94,7 +94,7 @@ export function ProductInfo() {
               <span className="text-xs sm:text-sm text-muted-foreground line-through">
                 R$ {option.originalPrice.toFixed(2).replace(".", ",")}
               </span>
-              <span className="text-lg sm:text-xl font-bold text-[#fe9a00]">
+              <span className="text-lg sm:text-xl font-bold text-primary">
                 R$ {option.price.toFixed(2).replace(".", ",")}
               </span>
             </div>
@@ -126,7 +126,7 @@ export function ProductInfo() {
       <div className="flex flex-col gap-2 sm:gap-3 mt-1 sm:mt-2">
         <Button 
           size="lg" 
-          className="w-full bg-[#02b019] hover:bg-[#029a16] text-white font-bold text-base sm:text-lg py-7 sm:py-8 rounded-sm shadow-lg shadow-[#02b019]/30"
+          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base sm:text-lg py-7 sm:py-8 rounded-sm shadow-lg shadow-primary/30"
           onClick={() => window.open(appendUtmToUrl(currentOption.checkoutUrl), "_blank")}
         >
           COMPRAR AGORA

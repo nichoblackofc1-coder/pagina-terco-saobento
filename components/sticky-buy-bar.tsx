@@ -15,13 +15,13 @@ export function StickyBuyBar() {
         {/* Coluna esquerda: Badge em cima, precos embaixo */}
         <div className="flex-1 min-w-0">
           {/* Badge de quantidade */}
-          <div className="bg-[#fe9a00] text-white text-[10px] xs:text-xs sm:text-sm font-bold px-2.5 xs:px-3 sm:px-4 py-1 xs:py-1.5 rounded inline-block mb-1 xs:mb-1.5">
+          <div className="bg-primary text-primary-foreground text-[10px] xs:text-xs sm:text-sm font-bold px-2.5 xs:px-3 sm:px-4 py-1 xs:py-1.5 rounded inline-block mb-1 xs:mb-1.5">
             {currentOption.quantity} {currentOption.quantity === 1 ? "Unidade" : "Unidades"}
           </div>
           
           {/* Precos */}
           <div className="flex items-center gap-2 xs:gap-3">
-            <span className="text-base xs:text-lg sm:text-xl font-bold text-[#E63946]">
+            <span className="text-base xs:text-lg sm:text-xl font-bold text-primary">
               R$ {currentOption.price.toFixed(2).replace(".", ",")}
             </span>
             <span className="text-[10px] xs:text-xs sm:text-sm text-muted-foreground line-through">
@@ -36,7 +36,7 @@ export function StickyBuyBar() {
         {/* Botao comprar */}
         <Button 
           size="lg"
-          className="bg-[#02b019] hover:bg-[#029a16] text-white font-bold px-3 xs:px-4 sm:px-5 py-2 xs:py-2.5 sm:py-3 rounded-sm shadow-md text-xs xs:text-sm sm:text-base whitespace-nowrap active:scale-95 transition-transform"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-3 xs:px-4 sm:px-5 py-2 xs:py-2.5 sm:py-3 rounded-sm shadow-md text-xs xs:text-sm sm:text-base whitespace-nowrap active:scale-95 transition-transform"
           onClick={() => window.open(appendUtmToUrl(currentOption.checkoutUrl), "_blank")}
         >
           <ShoppingCart className="w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-5 sm:h-5 mr-1 xs:mr-1.5" />

@@ -5,25 +5,25 @@ const benefits = [
     icon: Sparkles,
     title: "ATIVA",
     description: "a circulacao!",
-    color: "bg-[#9C00A3]"
+    color: "bg-primary"
   },
   {
     icon: Droplets,
     title: "REDUZ",
     description: "estrias e celulites!",
-    color: "bg-[#c300ae]"
+    color: "bg-foreground"
   },
   {
     icon: Clock,
     title: "ALIVIA",
     description: "sintomas do lipedema!",
-    color: "bg-[#9C00A3]"
+    color: "bg-primary"
   },
   {
     icon: ShieldCheck,
     title: "AUXILIA",
     description: "na perda de gordura!",
-    color: "bg-[#c300ae]"
+    color: "bg-foreground"
   }
 ]
 
@@ -63,7 +63,7 @@ export function ProductBenefits() {
             className="bg-card border border-border rounded-lg sm:rounded-xl p-2.5 xs:p-3 sm:p-4 text-center hover:shadow-lg transition-shadow"
           >
             <div className={`${benefit.color} w-9 h-9 xs:w-10 xs:h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center mx-auto mb-1.5 xs:mb-2 sm:mb-3`}>
-              <benefit.icon className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 text-white" />
+              <benefit.icon className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 text-background" />
             </div>
             <h3 className="font-bold text-foreground text-xs xs:text-sm sm:text-base">{benefit.title}</h3>
             <p className="text-[10px] xs:text-xs sm:text-sm text-muted-foreground leading-tight">{benefit.description}</p>

@@ -22,8 +22,8 @@ export default function ProductPage() {
       {/* Banner marquee */}
       <MarqueeBanner />
       
-      {/* Faixa de urgência */}
-      <div className="bg-[#fe9a00] text-white py-1.5 xs:py-2 sm:py-3 text-center px-2">
+      {/* Faixa de urgência - TikTok Style */}
+      <div className="bg-primary text-primary-foreground py-1.5 xs:py-2 sm:py-3 text-center px-2">
         <p className="text-xs xs:text-sm sm:text-base font-bold tracking-wide">
           Restam apenas <span className="font-extrabold">7 unidades</span> em estoque!
         </p>
