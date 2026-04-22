@@ -1,3 +1,4 @@
+import { MarqueeBanner } from "@/components/marquee-banner"
 import { ProductGallery } from "@/components/product-gallery"
 import { ProductInfo } from "@/components/product-info"
 import { ProductBenefits } from "@/components/product-benefits"
@@ -8,7 +9,6 @@ import { StickyBuyBar } from "@/components/sticky-buy-bar"
 import { PricingProvider } from "@/contexts/pricing-context"
 
 const productImages = [
-  "/images/product-banner.png",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner1-f4TX1mgPjhXF4yBQtwq8VK2FnZhoJK.webp",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner2-aIut77aLvzZMksyJzukHyThICwTwZZ.webp",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner3-WSTV9vHsAFboaHXjdyyChSnNzCm3ll.webp",
@@ -19,6 +19,8 @@ export default function ProductPage() {
   return (
     <PricingProvider>
     <main className="min-h-screen bg-background pb-24 xs:pb-28 sm:pb-32 md:pb-8">
+      {/* Banner marquee */}
+      <MarqueeBanner />
       
       {/* Faixa de urgência */}
       <div className="bg-[#fe9a00] text-white py-1.5 xs:py-2 sm:py-3 text-center px-2">
