@@ -1,4 +1,3 @@
-import { MarqueeBanner } from "@/components/marquee-banner"
 import { ProductGallery } from "@/components/product-gallery"
 import { ProductInfo } from "@/components/product-info"
 import { ProductBenefits } from "@/components/product-benefits"
@@ -6,7 +5,6 @@ import { TrustBadges } from "@/components/trust-badges"
 import { ProductReviews } from "@/components/product-reviews"
 import { ProductFAQ } from "@/components/product-faq"
 import { StickyBuyBar } from "@/components/sticky-buy-bar"
-import { DesktopBlocker } from "@/components/desktop-blocker"
 import { PricingProvider } from "@/contexts/pricing-context"
 
 const productImages = [
@@ -19,11 +17,8 @@ const productImages = [
 
 export default function ProductPage() {
   return (
-    <DesktopBlocker>
     <PricingProvider>
     <main className="min-h-screen bg-background pb-24 xs:pb-28 sm:pb-32 md:pb-8">
-      {/* Banner marquee */}
-      <MarqueeBanner />
       
       {/* Faixa de urgência */}
       <div className="bg-[#fe9a00] text-white py-1.5 xs:py-2 sm:py-3 text-center px-2">
@@ -73,10 +68,7 @@ export default function ProductPage() {
 
       {/* Barra fixa de compra (mobile) */}
       <StickyBuyBar />
-
-
     </main>
     </PricingProvider>
-    </DesktopBlocker>
   )
 }
