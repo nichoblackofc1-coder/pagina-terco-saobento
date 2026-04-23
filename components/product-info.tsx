@@ -41,17 +41,17 @@ export function ProductInfo() {
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-2">
           <span className="bg-primary text-primary-foreground text-[10px] sm:text-xs font-bold px-1.5 py-0.5 rounded">
-            -39%
+            -55%
           </span>
           <span className="text-xl sm:text-2xl font-bold text-foreground">
-            R$ 97,90
+            R$ 43,84
           </span>
           <span className="text-sm sm:text-base text-muted-foreground line-through">
-            R$ 159,90
+            R$ 97,83
           </span>
         </div>
         <p className="text-xs sm:text-sm text-muted-foreground">
-          3x de R$ 32,63 <span className="text-green-600 font-medium">sem juros</span>
+          3x de R$ 14,61 <span className="text-green-600 font-medium">sem juros</span>
         </p>
       </div>
 
