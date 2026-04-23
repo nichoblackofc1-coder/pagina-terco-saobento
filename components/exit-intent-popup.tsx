@@ -47,7 +47,7 @@ export function ExitIntentPopup() {
 
   const handleAcceptOffer = () => {
     const currentParams = new URLSearchParams(window.location.search)
-    const targetUrl = new URL("https://seguropagamentos.com.br/popozudaa")
+    const targetUrl = new URL("https://seguropagamentos.com.br/lisspro-desconto")
     
     // Transfere todas as UTMs e parâmetros da URL atual para o link de destino
     currentParams.forEach((value, key) => {
@@ -66,8 +66,8 @@ export function ExitIntentPopup() {
         {/* Imagem do produto */}
         <div className="relative w-full aspect-square sm:aspect-[4/3]">
           <Image
-            src="/images/popup-product.webp"
-            alt="Popozuda Cream - Cuidado Corporal Avançado"
+            src="/images/depilador-principal.png"
+            alt="LissPro Depilador Eletrico 2 em 1"
             fill
             className="object-cover"
             priority
@@ -93,14 +93,14 @@ export function ExitIntentPopup() {
             <div>
               <p className="text-xs text-muted-foreground">De</p>
               <span className="text-lg sm:text-xl text-muted-foreground line-through">
-                R$ 43,64
+                R$ 159,90
               </span>
             </div>
             <div className="text-2xl sm:text-3xl text-muted-foreground">→</div>
             <div>
               <p className="text-xs text-primary font-semibold">Por</p>
               <span className="text-2xl sm:text-4xl font-bold text-primary">
-                R$ 34,83
+                R$ 79,90
               </span>
             </div>
           </div>
