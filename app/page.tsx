@@ -10,6 +10,7 @@ import { ExitIntentPopup } from "@/components/exit-intent-popup"
 import { PricingProvider } from "@/contexts/pricing-context"
 
 const productImages = [
+  "/images/depilador-produto.png",
   "/images/depilador-principal.png",
   "/images/depilador-uso.png",
   "/images/depilador-tecnologia.png",
