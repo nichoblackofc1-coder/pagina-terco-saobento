@@ -10,10 +10,12 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
+import { useUtmParams } from "@/hooks/use-utm"
 
 export function ExitIntentPopup() {
   const [isOpen, setIsOpen] = useState(false)
   const [hasShown, setHasShown] = useState(false)
+  const { appendUtmToUrl } = useUtmParams()
 
   useEffect(() => {
     const handleMouseLeave = (e: MouseEvent) => {
@@ -46,15 +48,8 @@ export function ExitIntentPopup() {
   }, [hasShown])
 
   const handleAcceptOffer = () => {
-    const currentParams = new URLSearchParams(window.location.search)
-    const targetUrl = new URL("https://seguropagamentos.com.br/backredirect-lisspro")
-    
-    // Transfere todas as UTMs e parâmetros da URL atual para o link de destino
-    currentParams.forEach((value, key) => {
-      targetUrl.searchParams.set(key, value)
-    })
-    
-    window.location.href = targetUrl.toString()
+    const checkoutUrl = appendUtmToUrl("https://seguropagamentos.com.br/backredirect-lisspro")
+    window.location.href = checkoutUrl
   }
 
   return (
@@ -66,7 +61,7 @@ export function ExitIntentPopup() {
         {/* Imagem do produto */}
         <div className="relative w-full aspect-square sm:aspect-[4/3]">
           <Image
-            src="/images/depilador-principal.png"
+            src="/images/depilador-produto.png"
             alt="LissPro Depilador Eletrico 2 em 1"
             fill
             className="object-cover"
