@@ -16,12 +16,12 @@ const benefits = [
   {
     icon: Zap,
     title: "TODO CORPO",
-    description: "Pernas, virilha, axila, buco e sobrancelha",
+    description: "Pernas, virilha, axila, buço e sobrancelha",
     color: "bg-foreground"
   },
   {
     icon: Battery,
-    title: "RECARREGAVEL",
+    title: "RECARREGÁVEL",
     description: "60 min de autonomia, carrega via USB",
     color: "bg-foreground"
   }
@@ -31,7 +31,7 @@ const areas = [
   "Pernas",
   "Virilha", 
   "Axila",
-  "Buco",
+  "Buço",
   "Sobrancelha",
   "Corpo Todo"
 ]
@@ -40,7 +40,7 @@ export function ProductBenefits() {
   return (
     <section className="py-5 sm:py-8">
       <h2 className="text-base xs:text-lg sm:text-xl font-bold text-center mb-3 sm:mb-6 px-2">
-        Veja os Beneficios do LissPro
+        Veja os Benefícios do LissPro
       </h2>
       
       {/* Áreas de aplicação */}

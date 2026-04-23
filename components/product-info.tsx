@@ -57,7 +57,7 @@ export function ProductInfo() {
 
       {/* Título */}
       <h1 className="text-base sm:text-lg font-bold text-foreground leading-snug">
-        LissPro Depilador Eletrico 2 em 1 - Facial e Corporal A Prova d&apos;Agua + Brindes Exclusivos
+        LissPro Depilador Elétrico 2 em 1 - Facial e Corporal À Prova d&apos;Água + Brindes Exclusivos
       </h1>
 
       {/* Avaliações */}
@@ -118,7 +118,7 @@ export function ProductInfo() {
         </div>
         <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
           <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
-          <span>Recarregavel e portatil</span>
+          <span>Recarregável e portátil</span>
         </div>
       </div>
 

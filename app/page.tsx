@@ -16,7 +16,7 @@ const productImages = [
   "/images/depilador-resultado.png",
 ]
 
-// LissPro Depilador Eletrico 2 em 1
+// LissPro Depilador Elétrico 2 em 1
 export default function ProductPage() {
   return (
     <PricingProvider>
@@ -62,7 +62,7 @@ export default function ProductPage() {
           <p className="font-medium text-foreground mb-1 xs:mb-1.5 sm:mb-2">LissPro - Loja Oficial</p>
           <p>Entregamos em todo Brasil com entrega garantida e segurada</p>
           <p className="mt-2 xs:mt-3 sm:mt-4">
-            Possuimos uma equipe de suporte que responde em ate 24hrs
+            Possuímos uma equipe de suporte que responde em até 24hrs
           </p>
           <p className="mt-2 xs:mt-3 sm:mt-4 text-[9px] xs:text-[10px] sm:text-xs">
             2024 LissPro. Todos os direitos reservados.

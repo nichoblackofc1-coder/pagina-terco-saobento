@@ -3,18 +3,18 @@ import { ShieldCheck, Truck, RotateCcw, Lock } from "lucide-react"
 const badges = [
   {
     icon: Truck,
-    title: "Frete Gratis",
+    title: "Frete Grátis",
     description: "Envio de 2 a 5 dias"
   },
   {
     icon: ShieldCheck,
     title: "Pedido Monitorado",
-    description: "Codigo de rastreio"
+    description: "Código de rastreio"
   },
   {
     icon: RotateCcw,
     title: "Garantia",
-    description: "Satisfacao ou reembolso"
+    description: "Satisfação ou reembolso"
   },
   {
     icon: Lock,

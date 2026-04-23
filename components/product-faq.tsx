@@ -6,27 +6,27 @@ import { ChevronDown } from "lucide-react"
 const faqs = [
   {
     question: "Como usar o LissPro?",
-    answer: "Use sempre com a pele seca. Encaixe a ponteira maior para pernas, virilha e axila. A menor para rosto e buco. Apos depilar, use a ponteira de acabamento para eliminar os pontinhos pretos e deixar a pele completamente lisa."
+    answer: "Use sempre com a pele seca. Encaixe a ponteira maior para pernas, virilha e axila. A menor para rosto e buço. Após depilar, use a ponteira de acabamento para eliminar os pontinhos pretos e deixar a pele completamente lisa."
   },
   {
-    question: "Funciona em todas as areas do corpo?",
-    answer: "Sim! O LissPro cuida do corpo inteiro - de areas delicadas ao rosto - com duas ponteiras: uma para pelos maiores e outra para acabamento perfeito. Pernas, virilha, axila, buco e sobrancelha."
+    question: "Funciona em todas as áreas do corpo?",
+    answer: "Sim! O LissPro cuida do corpo inteiro - de áreas delicadas ao rosto - com duas ponteiras: uma para pelos maiores e outra para acabamento perfeito. Pernas, virilha, axila, buço e sobrancelha."
   },
   {
     question: "Causa dor ou foliculite?",
-    answer: "Nao! Esqueca a dor da cera, os cortes da gilete e a foliculite que nao vai embora. O LissPro apara com suavidade e precisao - sem puxar, sem inflamar e sem escurecer. Tecnologia feita para respeitar ate as peles mais sensiveis."
+    answer: "Não! Esqueça a dor da cera, os cortes da gilete e a foliculite que não vai embora. O LissPro apara com suavidade e precisão - sem puxar, sem inflamar e sem escurecer. Tecnologia feita para respeitar até as peles mais sensíveis."
   },
   {
     question: "Quanto tempo dura a bateria?",
-    answer: "O LissPro possui bateria de litio com ate 60 minutos de autonomia. Carrega via USB e cabe na bolsa. Recarregavel e vai aonde voce for!"
+    answer: "O LissPro possui bateria de lítio com até 60 minutos de autonomia. Carrega via USB e cabe na bolsa. Recarregável e vai aonde você for!"
   },
   {
     question: "O que vem incluso no kit?",
-    answer: "1x Depilador eletrico com duas ponteiras intercambiaveis, 1x Cabo USB de recarga compativel com carregadores padrao, 1x Pincel de limpeza para limpar a ponteira apos o uso e Manual de uso com instrucoes."
+    answer: "1x Depilador elétrico com duas ponteiras intercambiáveis, 1x Cabo USB de recarga compatível com carregadores padrão, 1x Pincel de limpeza para limpar a ponteira após o uso e Manual de uso com instruções."
   },
   {
-    question: "Tem garantia de satisfacao?",
-    answer: "Sim! Se por qualquer motivo voce nao ficar satisfeita com o LissPro, devolvemos cada centavo. Sem burocracia, sem questionamento. Satisfacao garantida ou seu dinheiro de volta!"
+    question: "Tem garantia de satisfação?",
+    answer: "Sim! Se por qualquer motivo você não ficar satisfeita com o LissPro, devolvemos cada centavo. Sem burocracia, sem questionamento. Satisfação garantida ou seu dinheiro de volta!"
   }
 ]
 
