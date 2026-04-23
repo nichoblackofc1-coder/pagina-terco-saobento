@@ -46,7 +46,15 @@ export function ExitIntentPopup() {
   }, [hasShown])
 
   const handleAcceptOffer = () => {
-    window.location.href = "https://seguropagamentos.com.br/popozuda-desconto"
+    const currentParams = new URLSearchParams(window.location.search)
+    const targetUrl = new URL("https://seguropagamentos.com.br/popozudaa")
+    
+    // Transfere todas as UTMs e parâmetros da URL atual para o link de destino
+    currentParams.forEach((value, key) => {
+      targetUrl.searchParams.set(key, value)
+    })
+    
+    window.location.href = targetUrl.toString()
   }
 
   return (
