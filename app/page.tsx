@@ -10,10 +10,10 @@ import { ExitIntentPopup } from "@/components/exit-intent-popup"
 import { PricingProvider } from "@/contexts/pricing-context"
 
 const productImages = [
+  "/images/depilador-principal.png",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner1-f4TX1mgPjhXF4yBQtwq8VK2FnZhoJK.webp",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner2-aIut77aLvzZMksyJzukHyThICwTwZZ.webp",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner3-WSTV9vHsAFboaHXjdyyChSnNzCm3ll.webp",
-  "/images/banner4.webp"
 ]
 
 export default function ProductPage() {
@@ -58,13 +58,13 @@ export default function ProductPage() {
 
         {/* Footer info */}
         <footer className="py-5 xs:py-6 sm:py-8 text-center text-[11px] xs:text-xs sm:text-sm text-muted-foreground border-t border-border mt-5 xs:mt-6 sm:mt-8">
-          <p className="font-medium text-foreground mb-1 xs:mb-1.5 sm:mb-2">Loja Oficial POPOZUDA</p>
+          <p className="font-medium text-foreground mb-1 xs:mb-1.5 sm:mb-2">Loja Oficial LISIN</p>
           <p>CNPJ: 84.099.429/0001-78</p>
           <p className="mt-2 xs:mt-3 sm:mt-4">
-            Dúvidas? Entre em contato pelo WhatsApp
+            Duvidas? Entre em contato pelo WhatsApp
           </p>
           <p className="mt-2 xs:mt-3 sm:mt-4 text-[9px] xs:text-[10px] sm:text-xs">
-            2024 POPOZUDA Cosméticos. Todos os direitos reservados.
+            2024 LISIN Beauty. Todos os direitos reservados.
           </p>
         </footer>
       </div>

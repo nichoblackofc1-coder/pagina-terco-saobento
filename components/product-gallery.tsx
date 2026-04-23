@@ -61,7 +61,7 @@ export function ProductGallery({ images }: ProductGalleryProps) {
       >
         <Image
           src={images[selectedIndex]}
-          alt="POPOZUDA Cream"
+          alt="Depilador Eletrico Feminino"
           fill
           className="object-contain p-2 sm:p-4 pointer-events-none select-none"
           priority

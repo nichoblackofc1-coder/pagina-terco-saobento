@@ -5,24 +5,24 @@ import { ChevronDown } from "lucide-react"
 
 const faqs = [
   {
-    question: "Em quanto tempo vejo resultados?",
-    answer: "Os primeiros resultados podem ser notados a partir de 2 a 4 semanas de uso continuo. Resultados mais expressivos sao observados apos 8 a 12 semanas, dependendo da area tratada e do uso regular."
+    question: "Como funciona o depilador 2 em 1?",
+    answer: "O depilador possui duas cabecas: uma para pelos curtos e finos (rosto, buço) e outra para pelos grossos e longos (pernas, axilas, virilha). Basta trocar a cabeca conforme a area que deseja depilar."
   },
   {
     question: "Posso usar em todas as areas do corpo?",
-    answer: "Sim! O POPOZUDA Cream pode ser usado em bumbum, coxas, barriga, quadril e outras areas com celulite ou estrias. Evite apenas regioes sensiveis e mucosas."
+    answer: "Sim! O depilador e seguro para uso em pernas, axilas, virilha, bracos, rosto e buço. E projetado para todas as areas do corpo feminino."
   },
   {
-    question: "E indicado para todos os tipos de pele?",
-    answer: "Sim, a formula foi desenvolvida para todos os tipos de pele. E dermatologicamente testado e nao causa irritacao."
+    question: "Causa dor ou irritacao na pele?",
+    answer: "Nao! Diferente de outros metodos, nosso depilador remove os pelos suavemente sem causar dor, irritacao ou foliculite. Pele lisinha sem desconforto!"
   },
   {
-    question: "Como devo aplicar o produto?",
-    answer: "Aplique uma quantidade generosa na area desejada, massageando com movimentos circulares ate completa absorcao. Use 2x ao dia, de manha e a noite, preferencialmente apos o banho."
+    question: "Precisa de pilha ou e recarregavel?",
+    answer: "O depilador e recarregavel via USB, muito pratico! Uma carga completa dura aproximadamente 60 minutos de uso continuo."
   },
   {
     question: "O produto e original?",
-    answer: "Sim! Somos a loja oficial POPOZUDA no TikTok Shop. Todos os produtos sao 100% originais, lacrados e com nota fiscal."
+    answer: "Sim! Somos loja oficial no TikTok Shop. Todos os produtos sao 100% originais, lacrados e com nota fiscal."
   },
   {
     question: "Qual o prazo de entrega?",

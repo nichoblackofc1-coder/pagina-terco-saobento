@@ -44,20 +44,20 @@ export function ProductInfo() {
             -40%
           </span>
           <span className="text-xl sm:text-2xl font-bold text-foreground">
-            R$ 43,64
+            R$ 89,90
           </span>
           <span className="text-sm sm:text-base text-muted-foreground line-through">
-            R$ 87,84
+            R$ 149,90
           </span>
         </div>
         <p className="text-xs sm:text-sm text-muted-foreground">
-          3x de R$ 14,55 <span className="text-green-600 font-medium">sem juros</span>
+          3x de R$ 29,97 <span className="text-green-600 font-medium">sem juros</span>
         </p>
       </div>
 
       {/* Título */}
       <h1 className="text-base sm:text-lg font-bold text-foreground leading-snug">
-        Popozuda Crem - Cuidado Corporal Avancado para a Pele.
+        Depilador Eletrico Feminino 2 em 1 - Pele Lisinha Sem Foliculite e Sem Dor
       </h1>
 
       {/* Avaliações */}

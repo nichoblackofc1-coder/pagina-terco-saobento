@@ -1,46 +1,46 @@
-import { Sparkles, Droplets, Clock, ShieldCheck } from "lucide-react"
+import { Sparkles, Zap, Clock, ShieldCheck } from "lucide-react"
 
 const benefits = [
   {
     icon: Sparkles,
-    title: "ATIVA",
-    description: "a circulacao!",
+    title: "REMOVE",
+    description: "pelos curtos e finos!",
     color: "bg-foreground"
   },
   {
-    icon: Droplets,
-    title: "REDUZ",
-    description: "estrias e celulites!",
+    icon: Zap,
+    title: "EFICIENTE",
+    description: "pelos grossos e longos!",
     color: "bg-foreground"
   },
   {
     icon: Clock,
-    title: "ALIVIA",
-    description: "sintomas do lipedema!",
+    title: "RAPIDO",
+    description: "sem dor ou irritacao!",
     color: "bg-foreground"
   },
   {
     icon: ShieldCheck,
-    title: "AUXILIA",
-    description: "na perda de gordura!",
+    title: "SEGURO",
+    description: "sem foliculite!",
     color: "bg-foreground"
   }
 ]
 
 const areas = [
-  "Bumbum",
-  "Coxas", 
-  "Barriga",
-  "Quadril",
-  "Celulite",
-  "Estrias"
+  "Pernas",
+  "Axilas", 
+  "Virilha",
+  "Braco",
+  "Rosto",
+  "Corpo Todo"
 ]
 
 export function ProductBenefits() {
   return (
     <section className="py-5 sm:py-8">
       <h2 className="text-base xs:text-lg sm:text-xl font-bold text-center mb-3 sm:mb-6 px-2">
-        Resultados em Diversas Areas do Corpo
+        Depilacao Perfeita em Diversas Areas
       </h2>
       
       {/* Áreas de aplicação */}
