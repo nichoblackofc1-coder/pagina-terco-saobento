@@ -63,8 +63,9 @@ export function TiktokVideos() {
             >
               <div className="relative bg-muted rounded-xl overflow-hidden shadow-md aspect-[9/16] transition-transform duration-300 group-hover:scale-[1.02]">
                 <iframe
-                  src={`${video.embedUrl}?autoplay=1&mute=1&controls=0&loop=1`}
-                  className="absolute inset-0 w-full h-full pointer-events-none"
+                  src={`${video.embedUrl}?autoplay=1&mute=1&controls=0&loop=1&hide_share_button=1&hide_author=1&hide_caption=1`}
+                  className="absolute inset-0 w-[300%] h-[300%] -top-[100%] -left-[100%] pointer-events-none"
+                  style={{ transform: "scale(0.34)", transformOrigin: "center center" }}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   title={`TikTok video ${video.id}`}
                 />
