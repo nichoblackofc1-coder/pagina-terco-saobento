@@ -27,7 +27,7 @@ export default function ProductPage() {
       {/* Faixa de urgência - TikTok Style */}
       <div className="bg-primary text-primary-foreground py-1.5 xs:py-2 sm:py-3 text-center px-2">
         <p className="text-xs xs:text-sm sm:text-base font-bold tracking-wide">
-          ADEUS FOLICULITE! Pele lisinha sem dor e sem gilete!
+          Restam apenas 7 unidades em estoque!
         </p>
       </div>
       
