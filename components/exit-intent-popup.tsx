@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { X, Clock, ShoppingBag } from "lucide-react"
+import { Clock, ShoppingBag } from "lucide-react"
 import Image from "next/image"
 import {
   Dialog,
@@ -55,15 +55,6 @@ export function ExitIntentPopup() {
         className="max-w-[95vw] sm:max-w-lg p-0 overflow-hidden border-2 border-primary/20 max-h-[90vh] overflow-y-auto"
         showCloseButton={false}
       >
-        {/* Botão fechar */}
-        <button
-          onClick={() => setIsOpen(false)}
-          className="absolute top-2 right-2 z-10 bg-black/50 hover:bg-black/70 text-white p-1.5 rounded-full transition-colors"
-        >
-          <X className="size-5" />
-          <span className="sr-only">Fechar</span>
-        </button>
-
         {/* Imagem do produto */}
         <div className="relative w-full aspect-square sm:aspect-[4/3]">
           <Image
