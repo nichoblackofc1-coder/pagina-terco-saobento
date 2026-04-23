@@ -10,7 +10,7 @@ export const pricingOptions = [
     originalPrice: 97.83,
     price: 43.84,
     badge: null,
-    checkoutUrl: "https://seguropagamentos.com.br/depilador",
+    checkoutUrl: "https://seguropagamentos.com.br/lisspro1",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export const pricingOptions = [
     price: 97.83,
     badge: "Mais vendido",
     badgeExtra: "30% OFF",
-    checkoutUrl: "https://seguropagamentos.com.br/depilador2",
+    checkoutUrl: "https://seguropagamentos.com.br/lisspro2",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const pricingOptions = [
     price: 137.84,
     badge: "Brindes Exclusivos",
     badgeExtra: "40% OFF",
-    checkoutUrl: "https://seguropagamentos.com.br/depilador3",
+    checkoutUrl: "https://seguropagamentos.com.br/lisspro3",
   },
 ]
 

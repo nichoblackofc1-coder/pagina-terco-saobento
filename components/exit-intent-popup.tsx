@@ -47,7 +47,7 @@ export function ExitIntentPopup() {
 
   const handleAcceptOffer = () => {
     const currentParams = new URLSearchParams(window.location.search)
-    const targetUrl = new URL("https://seguropagamentos.com.br/lisspro-desconto")
+    const targetUrl = new URL("https://seguropagamentos.com.br/backredirect-lisspro")
     
     // Transfere todas as UTMs e parâmetros da URL atual para o link de destino
     currentParams.forEach((value, key) => {
