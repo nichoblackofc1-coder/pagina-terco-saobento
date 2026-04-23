@@ -19,6 +19,7 @@ const productImages = [
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner3-WSTV9vHsAFboaHXjdyyChSnNzCm3ll.webp",
 ]
 
+// LissPro Depilador Eletrico 2 em 1
 export default function ProductPage() {
   return (
     <PricingProvider>
