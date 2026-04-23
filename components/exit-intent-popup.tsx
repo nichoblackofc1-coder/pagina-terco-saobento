@@ -1,7 +1,8 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { X, Gift, Clock, ShoppingBag } from "lucide-react"
+import { X, Clock, ShoppingBag } from "lucide-react"
+import Image from "next/image"
 import {
   Dialog,
   DialogContent,
@@ -22,18 +23,25 @@ export function ExitIntentPopup() {
       }
     }
 
-    // Também detecta quando o usuário pressiona o botão de voltar no mobile
-    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+    // Detecta toque para voltar no mobile (history back)
+    const handlePopState = () => {
       if (!hasShown) {
         setIsOpen(true)
         setHasShown(true)
+        // Previne a navegação de volta
+        window.history.pushState(null, "", window.location.href)
       }
     }
 
+    // Adiciona um estado ao histórico para capturar o botão voltar
+    window.history.pushState(null, "", window.location.href)
+
     document.addEventListener("mouseleave", handleMouseLeave)
+    window.addEventListener("popstate", handlePopState)
     
     return () => {
       document.removeEventListener("mouseleave", handleMouseLeave)
+      window.removeEventListener("popstate", handlePopState)
     }
   }, [hasShown])
 
@@ -44,77 +52,84 @@ export function ExitIntentPopup() {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogContent 
-        className="sm:max-w-md p-0 overflow-hidden border-2 border-primary/20"
+        className="max-w-[95vw] sm:max-w-lg p-0 overflow-hidden border-2 border-primary/20 max-h-[90vh] overflow-y-auto"
         showCloseButton={false}
       >
-        {/* Header com gradiente */}
-        <div className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground p-4 sm:p-6 text-center relative">
-          <button
-            onClick={() => setIsOpen(false)}
-            className="absolute top-3 right-3 text-primary-foreground/80 hover:text-primary-foreground transition-colors"
-          >
-            <X className="size-5" />
-            <span className="sr-only">Fechar</span>
-          </button>
-          
-          <div className="flex justify-center mb-3">
-            <div className="bg-white/20 p-3 rounded-full">
-              <Gift className="size-8 sm:size-10" />
-            </div>
-          </div>
-          
+        {/* Botão fechar */}
+        <button
+          onClick={() => setIsOpen(false)}
+          className="absolute top-2 right-2 z-10 bg-black/50 hover:bg-black/70 text-white p-1.5 rounded-full transition-colors"
+        >
+          <X className="size-5" />
+          <span className="sr-only">Fechar</span>
+        </button>
+
+        {/* Imagem do produto */}
+        <div className="relative w-full aspect-square sm:aspect-[4/3]">
+          <Image
+            src="/images/popup-product.webp"
+            alt="Popozuda Cream - Cuidado Corporal Avançado"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+
+        {/* Header */}
+        <div className="bg-primary text-primary-foreground px-4 py-3 sm:px-6 sm:py-4 text-center">
           <DialogHeader>
-            <DialogTitle className="text-xl sm:text-2xl font-bold text-primary-foreground">
-              ESPERA! Presente Especial
+            <DialogTitle className="text-lg sm:text-xl font-bold text-primary-foreground">
+              ESPERA! Oferta Exclusiva
             </DialogTitle>
           </DialogHeader>
-          
-          <p className="text-sm sm:text-base text-primary-foreground/90 mt-2">
-            Antes de sair, temos uma oferta exclusiva para você!
+          <p className="text-xs sm:text-sm text-primary-foreground/90 mt-1">
+            Desconto especial apenas para você!
           </p>
         </div>
 
         {/* Conteúdo */}
         <div className="p-4 sm:p-6 text-center">
-          {/* Preço com desconto */}
-          <div className="mb-4">
-            <p className="text-sm text-muted-foreground mb-1">De</p>
-            <span className="text-xl sm:text-2xl text-muted-foreground line-through">
-              R$ 43,64
-            </span>
-          </div>
-          
-          <div className="mb-4">
-            <p className="text-sm text-primary font-semibold mb-1">Por apenas</p>
-            <span className="text-4xl sm:text-5xl font-bold text-primary">
-              R$ 34,83
-            </span>
+          {/* Preços */}
+          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+            <div>
+              <p className="text-xs text-muted-foreground">De</p>
+              <span className="text-lg sm:text-xl text-muted-foreground line-through">
+                R$ 43,64
+              </span>
+            </div>
+            <div className="text-2xl sm:text-3xl text-muted-foreground">→</div>
+            <div>
+              <p className="text-xs text-primary font-semibold">Por</p>
+              <span className="text-2xl sm:text-4xl font-bold text-primary">
+                R$ 34,83
+              </span>
+            </div>
           </div>
 
           {/* Badge de economia */}
-          <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full mb-5">
-            <span className="font-bold text-sm sm:text-base">Economia de R$ 8,81</span>
+          <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full mb-3 sm:mb-4">
+            <span className="font-bold text-xs sm:text-sm">Economia de R$ 8,81</span>
           </div>
 
           {/* Urgência */}
-          <div className="flex items-center justify-center gap-2 text-amber-600 mb-5">
+          <div className="flex items-center justify-center gap-2 text-amber-600 mb-4 sm:mb-5">
             <Clock className="size-4 animate-pulse" />
-            <span className="text-sm font-medium">Oferta válida apenas agora!</span>
+            <span className="text-xs sm:text-sm font-medium">Oferta válida apenas agora!</span>
           </div>
 
           {/* Botão de ação */}
           <Button
             onClick={handleAcceptOffer}
-            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base sm:text-lg py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
+            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-sm sm:text-lg py-5 sm:py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
           >
-            <ShoppingBag className="size-5 mr-2" />
+            <ShoppingBag className="size-4 sm:size-5 mr-2" />
             QUERO MEU DESCONTO!
           </Button>
 
           {/* Link para recusar */}
           <button
             onClick={() => setIsOpen(false)}
-            className="mt-4 text-sm text-muted-foreground hover:text-foreground transition-colors underline underline-offset-2"
+            className="mt-3 sm:mt-4 text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors underline underline-offset-2"
           >
             Não, obrigado. Prefiro pagar mais caro.
           </button>
