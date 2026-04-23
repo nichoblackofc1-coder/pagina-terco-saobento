@@ -106,11 +106,6 @@ export function ExitIntentPopup() {
             </div>
           </div>
 
-          {/* Badge de economia */}
-          <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full mb-3 sm:mb-4">
-            <span className="font-bold text-xs sm:text-sm">Economia de R$ 8,81</span>
-          </div>
-
           {/* Urgência */}
           <div className="flex items-center justify-center gap-2 text-amber-600 mb-4 sm:mb-5">
             <Clock className="size-4 animate-pulse" />
