@@ -5,28 +5,28 @@ import { ChevronDown } from "lucide-react"
 
 const faqs = [
   {
-    question: "Como funciona o depilador 2 em 1?",
-    answer: "O depilador possui duas cabecas: uma para pelos curtos e finos (rosto, buço) e outra para pelos grossos e longos (pernas, axilas, virilha). Basta trocar a cabeca conforme a area que deseja depilar."
+    question: "Como usar o LissPro?",
+    answer: "Use sempre com a pele seca. Encaixe a ponteira maior para pernas, virilha e axila. A menor para rosto e buco. Apos depilar, use a ponteira de acabamento para eliminar os pontinhos pretos e deixar a pele completamente lisa."
   },
   {
-    question: "Posso usar em todas as areas do corpo?",
-    answer: "Sim! O depilador e seguro para uso em pernas, axilas, virilha, bracos, rosto e buço. E projetado para todas as areas do corpo feminino."
+    question: "Funciona em todas as areas do corpo?",
+    answer: "Sim! O LissPro cuida do corpo inteiro - de areas delicadas ao rosto - com duas ponteiras: uma para pelos maiores e outra para acabamento perfeito. Pernas, virilha, axila, buco e sobrancelha."
   },
   {
-    question: "Causa dor ou irritacao na pele?",
-    answer: "Nao! Diferente de outros metodos, nosso depilador remove os pelos suavemente sem causar dor, irritacao ou foliculite. Pele lisinha sem desconforto!"
+    question: "Causa dor ou foliculite?",
+    answer: "Nao! Esqueca a dor da cera, os cortes da gilete e a foliculite que nao vai embora. O LissPro apara com suavidade e precisao - sem puxar, sem inflamar e sem escurecer. Tecnologia feita para respeitar ate as peles mais sensiveis."
   },
   {
-    question: "Precisa de pilha ou e recarregavel?",
-    answer: "O depilador e recarregavel via USB, muito pratico! Uma carga completa dura aproximadamente 60 minutos de uso continuo."
+    question: "Quanto tempo dura a bateria?",
+    answer: "O LissPro possui bateria de litio com ate 60 minutos de autonomia. Carrega via USB e cabe na bolsa. Recarregavel e vai aonde voce for!"
   },
   {
-    question: "O produto e original?",
-    answer: "Sim! Somos loja oficial no TikTok Shop. Todos os produtos sao 100% originais, lacrados e com nota fiscal."
+    question: "O que vem incluso no kit?",
+    answer: "1x Depilador eletrico com duas ponteiras intercambiaveis, 1x Cabo USB de recarga compativel com carregadores padrao, 1x Pincel de limpeza para limpar a ponteira apos o uso e Manual de uso com instrucoes."
   },
   {
-    question: "Qual o prazo de entrega?",
-    answer: "O envio e realizado em ate 24h apos a confirmacao do pagamento. O prazo de entrega varia de 3 a 12 dias uteis, dependendo da sua regiao. Frete gratis para todo o Brasil!"
+    question: "Tem garantia de satisfacao?",
+    answer: "Sim! Se por qualquer motivo voce nao ficar satisfeita com o LissPro, devolvemos cada centavo. Sem burocracia, sem questionamento. Satisfacao garantida ou seu dinheiro de volta!"
   }
 ]
 

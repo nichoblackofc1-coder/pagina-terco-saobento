@@ -26,7 +26,7 @@ export default function ProductPage() {
       {/* Faixa de urgência - TikTok Style */}
       <div className="bg-primary text-primary-foreground py-1.5 xs:py-2 sm:py-3 text-center px-2">
         <p className="text-xs xs:text-sm sm:text-base font-bold tracking-wide">
-          Restam apenas <span className="font-extrabold">7 unidades</span> em estoque!
+          ADEUS FOLICULITE! Pele lisinha sem dor e sem gilete!
         </p>
       </div>
       
@@ -58,13 +58,13 @@ export default function ProductPage() {
 
         {/* Footer info */}
         <footer className="py-5 xs:py-6 sm:py-8 text-center text-[11px] xs:text-xs sm:text-sm text-muted-foreground border-t border-border mt-5 xs:mt-6 sm:mt-8">
-          <p className="font-medium text-foreground mb-1 xs:mb-1.5 sm:mb-2">Loja Oficial LISIN</p>
-          <p>CNPJ: 84.099.429/0001-78</p>
+          <p className="font-medium text-foreground mb-1 xs:mb-1.5 sm:mb-2">LissPro - Loja Oficial</p>
+          <p>Entregamos em todo Brasil com entrega garantida e segurada</p>
           <p className="mt-2 xs:mt-3 sm:mt-4">
-            Duvidas? Entre em contato pelo WhatsApp
+            Possuimos uma equipe de suporte que responde em ate 24hrs
           </p>
           <p className="mt-2 xs:mt-3 sm:mt-4 text-[9px] xs:text-[10px] sm:text-xs">
-            2024 LISIN Beauty. Todos os direitos reservados.
+            2024 LissPro. Todos os direitos reservados.
           </p>
         </footer>
       </div>

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Star, ShieldCheck, Truck, Clock, CheckCircle2 } from "lucide-react"
+import { Star, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { usePricing, pricingOptions } from "@/contexts/pricing-context"
 import { useUtmParams } from "@/hooks/use-utm"
@@ -41,23 +41,23 @@ export function ProductInfo() {
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-2">
           <span className="bg-primary text-primary-foreground text-[10px] sm:text-xs font-bold px-1.5 py-0.5 rounded">
-            -40%
+            -39%
           </span>
           <span className="text-xl sm:text-2xl font-bold text-foreground">
-            R$ 89,90
+            R$ 97,90
           </span>
           <span className="text-sm sm:text-base text-muted-foreground line-through">
-            R$ 149,90
+            R$ 159,90
           </span>
         </div>
         <p className="text-xs sm:text-sm text-muted-foreground">
-          3x de R$ 29,97 <span className="text-green-600 font-medium">sem juros</span>
+          3x de R$ 32,63 <span className="text-green-600 font-medium">sem juros</span>
         </p>
       </div>
 
       {/* Título */}
       <h1 className="text-base sm:text-lg font-bold text-foreground leading-snug">
-        Depilador Eletrico Feminino 2 em 1 - Pele Lisinha Sem Foliculite e Sem Dor
+        LissPro Depilador Eletrico 2 em 1 - Facial e Corporal A Prova d&apos;Agua + Brindes Exclusivos
       </h1>
 
       {/* Avaliações */}
@@ -105,20 +105,20 @@ export function ProductInfo() {
       {/* Benefícios rápidos */}
       <div className="grid grid-cols-2 gap-2 sm:gap-3">
         <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
-          <Truck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
-          <span>Frete Grátis</span>
-        </div>
-        <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
-          <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary flex-shrink-0" />
-          <span>Entrega Rápida</span>
-        </div>
-        <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
-          <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary flex-shrink-0" />
-          <span>Compra Segura</span>
+          <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
+          <span>Sem dor, sem foliculite</span>
         </div>
         <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
           <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
-          <span>Original</span>
+          <span>Pele lisinha de verdade</span>
+        </div>
+        <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
+          <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
+          <span>Funciona em todo o corpo</span>
+        </div>
+        <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
+          <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
+          <span>Recarregavel e portatil</span>
         </div>
       </div>
 

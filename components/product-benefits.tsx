@@ -1,38 +1,38 @@
-import { Sparkles, Zap, Clock, ShieldCheck } from "lucide-react"
+import { Sparkles, Zap, Battery, ShieldCheck } from "lucide-react"
 
 const benefits = [
   {
+    icon: ShieldCheck,
+    title: "SEM DOR",
+    description: "Sem foliculite e sem escurecer a pele",
+    color: "bg-foreground"
+  },
+  {
     icon: Sparkles,
-    title: "REMOVE",
-    description: "pelos curtos e finos!",
+    title: "PELE LISINHA",
+    description: "Duas ponteiras para acabamento perfeito",
     color: "bg-foreground"
   },
   {
     icon: Zap,
-    title: "EFICIENTE",
-    description: "pelos grossos e longos!",
+    title: "TODO CORPO",
+    description: "Pernas, virilha, axila, buco e sobrancelha",
     color: "bg-foreground"
   },
   {
-    icon: Clock,
-    title: "RAPIDO",
-    description: "sem dor ou irritacao!",
-    color: "bg-foreground"
-  },
-  {
-    icon: ShieldCheck,
-    title: "SEGURO",
-    description: "sem foliculite!",
+    icon: Battery,
+    title: "RECARREGAVEL",
+    description: "60 min de autonomia, carrega via USB",
     color: "bg-foreground"
   }
 ]
 
 const areas = [
   "Pernas",
-  "Axilas", 
-  "Virilha",
-  "Braco",
-  "Rosto",
+  "Virilha", 
+  "Axila",
+  "Buco",
+  "Sobrancelha",
   "Corpo Todo"
 ]
 
@@ -40,7 +40,7 @@ export function ProductBenefits() {
   return (
     <section className="py-5 sm:py-8">
       <h2 className="text-base xs:text-lg sm:text-xl font-bold text-center mb-3 sm:mb-6 px-2">
-        Depilacao Perfeita em Diversas Areas
+        Veja os Beneficios do LissPro
       </h2>
       
       {/* Áreas de aplicação */}
