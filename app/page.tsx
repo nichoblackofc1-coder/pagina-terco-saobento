@@ -13,6 +13,7 @@ const productImages = [
   "/images/depilador-principal.png",
   "/images/depilador-uso.png",
   "/images/depilador-tecnologia.png",
+  "/images/depilador-resultado.png",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner1-f4TX1mgPjhXF4yBQtwq8VK2FnZhoJK.webp",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner2-aIut77aLvzZMksyJzukHyThICwTwZZ.webp",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner3-WSTV9vHsAFboaHXjdyyChSnNzCm3ll.webp",
