@@ -1,7 +1,8 @@
 "use client"
 
-import { useRef } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useRef, useState } from "react"
+import { ChevronLeft, ChevronRight, X } from "lucide-react"
+import { Dialog, DialogContent } from "@/components/ui/dialog"
 
 const tiktokVideos = [
   {
@@ -20,6 +21,7 @@ const tiktokVideos = [
 
 export function TiktokVideos() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null)
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
@@ -56,16 +58,18 @@ export function TiktokVideos() {
           {tiktokVideos.map((video) => (
             <div
               key={video.id}
-              className="flex-shrink-0 snap-center w-[200px] xs:w-[220px] sm:w-[260px] md:w-[280px]"
+              className="flex-shrink-0 snap-center w-[200px] xs:w-[220px] sm:w-[260px] md:w-[280px] cursor-pointer group"
+              onClick={() => setSelectedVideo(video.embedUrl)}
             >
-              <div className="relative bg-muted rounded-xl overflow-hidden shadow-md aspect-[9/16]">
+              <div className="relative bg-muted rounded-xl overflow-hidden shadow-md aspect-[9/16] transition-transform duration-300 group-hover:scale-[1.02]">
                 <iframe
-                  src={video.embedUrl}
-                  className="absolute inset-0 w-full h-full"
-                  allowFullScreen
+                  src={`${video.embedUrl}?autoplay=1&mute=1&controls=0&loop=1`}
+                  className="absolute inset-0 w-full h-full pointer-events-none"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   title={`TikTok video ${video.id}`}
                 />
+                {/* Overlay para capturar clique */}
+                <div className="absolute inset-0 bg-transparent" />
               </div>
             </div>
           ))}
@@ -91,6 +95,34 @@ export function TiktokVideos() {
           />
         ))}
       </div>
+
+      {/* Modal para vídeo expandido */}
+      <Dialog open={!!selectedVideo} onOpenChange={() => setSelectedVideo(null)}>
+        <DialogContent 
+          className="max-w-[95vw] sm:max-w-md p-0 overflow-hidden border-0 bg-black max-h-[90vh]"
+          showCloseButton={false}
+        >
+          <button
+            onClick={() => setSelectedVideo(null)}
+            className="absolute top-3 right-3 z-10 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full transition-colors"
+          >
+            <X className="size-5" />
+            <span className="sr-only">Fechar</span>
+          </button>
+          
+          {selectedVideo && (
+            <div className="relative w-full aspect-[9/16]">
+              <iframe
+                src={`${selectedVideo}?autoplay=1`}
+                className="absolute inset-0 w-full h-full"
+                allowFullScreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                title="TikTok video expandido"
+              />
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   )
 }
