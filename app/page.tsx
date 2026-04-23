@@ -3,6 +3,7 @@ import { ProductGallery } from "@/components/product-gallery"
 import { ProductInfo } from "@/components/product-info"
 import { ProductBenefits } from "@/components/product-benefits"
 import { TrustBadges } from "@/components/trust-badges"
+import { TiktokVideos } from "@/components/tiktok-videos"
 import { ProductReviews } from "@/components/product-reviews"
 import { ProductFAQ } from "@/components/product-faq"
 import { StickyBuyBar } from "@/components/sticky-buy-bar"
@@ -46,6 +47,9 @@ export default function ProductPage() {
 
         {/* Badges de confiança */}
         <TrustBadges />
+
+        {/* Vídeos TikTok */}
+        <TiktokVideos />
 
         {/* Benefícios */}
         <ProductBenefits />
