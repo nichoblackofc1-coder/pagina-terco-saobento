@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useCallback } from "react"
 import { Clock, ShoppingBag } from "lucide-react"
 import Image from "next/image"
 import {
@@ -17,35 +17,81 @@ export function ExitIntentPopup() {
   const [hasShown, setHasShown] = useState(false)
   const { appendUtmToUrl } = useUtmParams()
 
+  const showPopup = useCallback(() => {
+    if (!hasShown) {
+      setIsOpen(true)
+      setHasShown(true)
+    }
+  }, [hasShown])
+
   useEffect(() => {
+    // 1. Detecta mouse saindo pela parte superior da janela (desktop)
     const handleMouseLeave = (e: MouseEvent) => {
-      if (e.clientY <= 0 && !hasShown) {
-        setIsOpen(true)
-        setHasShown(true)
+      if (e.clientY <= 0) {
+        showPopup()
       }
     }
 
-    // Detecta toque para voltar no mobile (history back)
-    const handlePopState = () => {
-      if (!hasShown) {
-        setIsOpen(true)
-        setHasShown(true)
-        // Previne a navegação de volta
-        window.history.pushState(null, "", window.location.href)
+    // 2. Detecta movimento rápido do mouse em direção ao topo (exit intent)
+    let lastY = 0
+    const handleMouseMove = (e: MouseEvent) => {
+      // Se o mouse está se movendo rapidamente para cima e está próximo do topo
+      if (e.clientY < 50 && lastY - e.clientY > 30) {
+        showPopup()
       }
+      lastY = e.clientY
+    }
+
+    // 3. Detecta toque para voltar no mobile (history back)
+    const handlePopState = () => {
+      showPopup()
+      // Previne a navegação de volta
+      window.history.pushState(null, "", window.location.href)
+    }
+
+    // 4. Detecta tentativa de fechar a aba/janela
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      if (!hasShown) {
+        showPopup()
+        // Mostra o diálogo de confirmação do navegador
+        e.preventDefault()
+        e.returnValue = ""
+        return ""
+      }
+    }
+
+    // 5. Detecta quando usuário troca de aba ou minimiza
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "hidden") {
+        showPopup()
+      }
+    }
+
+    // 6. Detecta quando a janela perde o foco (usuário clicou fora)
+    const handleBlur = () => {
+      showPopup()
     }
 
     // Adiciona um estado ao histórico para capturar o botão voltar
     window.history.pushState(null, "", window.location.href)
 
+    // Registra todos os event listeners
     document.addEventListener("mouseleave", handleMouseLeave)
+    document.addEventListener("mousemove", handleMouseMove)
     window.addEventListener("popstate", handlePopState)
+    window.addEventListener("beforeunload", handleBeforeUnload)
+    document.addEventListener("visibilitychange", handleVisibilityChange)
+    window.addEventListener("blur", handleBlur)
     
     return () => {
       document.removeEventListener("mouseleave", handleMouseLeave)
+      document.removeEventListener("mousemove", handleMouseMove)
       window.removeEventListener("popstate", handlePopState)
+      window.removeEventListener("beforeunload", handleBeforeUnload)
+      document.removeEventListener("visibilitychange", handleVisibilityChange)
+      window.removeEventListener("blur", handleBlur)
     }
-  }, [hasShown])
+  }, [hasShown, showPopup])
 
   const handleAcceptOffer = () => {
     const checkoutUrl = appendUtmToUrl("https://seguropagamentos.com.br/backredirect-lisspro")
