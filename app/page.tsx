@@ -12,7 +12,7 @@ import { PricingProvider } from "@/contexts/pricing-context"
 const productImages = [
   "/images/colar-nossa-senhora.webp",
   "/images/colar-compre1-leve2.webp",
-  "/images/depilador-uso.png",
+  "/images/colar-lifestyle.webp",
   "/images/depilador-tecnologia.png",
   "/images/depilador-resultado.png",
 ]
