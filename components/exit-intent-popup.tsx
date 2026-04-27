@@ -94,7 +94,7 @@ export function ExitIntentPopup() {
   }, [hasShown, showPopup])
 
   const handleAcceptOffer = () => {
-    const checkoutUrl = appendUtmToUrl("https://seguropagamentos.com.br/backredirect-lisspro")
+    const checkoutUrl = appendUtmToUrl("https://seguropagamentos.com.br/nossa-senhora")
     window.location.href = checkoutUrl
   }
 
