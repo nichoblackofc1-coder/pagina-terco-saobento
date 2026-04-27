@@ -14,7 +14,7 @@ const productImages = [
   "/images/colar-compre1-leve2.webp",
   "/images/colar-lifestyle.webp",
   "/images/colar-embalagem.webp",
-  "/images/depilador-resultado.png",
+  "/images/colar-praia.webp",
 ]
 
 // LissPro Depilador Elétrico 2 em 1
