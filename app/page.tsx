@@ -22,20 +22,20 @@ const productImages = [
 export default function ProductPage() {
   return (
     <PricingProvider>
-    <main className="min-h-screen bg-background pb-24 xs:pb-28 sm:pb-32 md:pb-8">
+    <main className="min-h-screen bg-background pb-16 sm:pb-32 md:pb-8">
       {/* Banner marquee */}
       <MarqueeBanner />
       
       {/* Faixa de urgência - TikTok Style */}
-      <div className="bg-primary text-primary-foreground py-1.5 xs:py-2 sm:py-3 text-center px-2">
-        <p className="text-xs xs:text-sm sm:text-base font-bold tracking-wide">
+      <div className="bg-primary text-primary-foreground py-1 sm:py-3 text-center px-2">
+        <p className="text-[10px] sm:text-base font-bold tracking-wide">
           Restam apenas 12 colares em estoque!
         </p>
       </div>
       
       {/* Conteúdo principal */}
-      <div className="max-w-6xl mx-auto px-3 sm:px-4 py-3 sm:py-6">
-        <div className="grid md:grid-cols-2 gap-3 xs:gap-4 sm:gap-6 md:gap-8">
+      <div className="max-w-6xl mx-auto px-2 sm:px-4 py-2 sm:py-6">
+        <div className="grid md:grid-cols-2 gap-2 sm:gap-6 md:gap-8">
           {/* Galeria de imagens */}
           <div className="md:sticky md:top-4 md:self-start">
             <ProductGallery images={productImages} />
@@ -60,13 +60,11 @@ export default function ProductPage() {
         <ProductFAQ />
 
         {/* Footer info */}
-        <footer className="py-5 xs:py-6 sm:py-8 text-center text-[11px] xs:text-xs sm:text-sm text-muted-foreground border-t border-border mt-5 xs:mt-6 sm:mt-8">
-          <p className="font-medium text-foreground mb-1 xs:mb-1.5 sm:mb-2">Joias Sagradas - Loja Oficial</p>
-          <p>Entregamos em todo Brasil com entrega garantida e segurada</p>
-          <p className="mt-2 xs:mt-3 sm:mt-4">
-            Possuímos uma equipe de suporte que responde em até 24hrs
-          </p>
-          <p className="mt-2 xs:mt-3 sm:mt-4 text-[9px] xs:text-[10px] sm:text-xs">
+        <footer className="py-4 sm:py-8 text-center text-[10px] sm:text-sm text-muted-foreground border-t border-border mt-4 sm:mt-8">
+          <p className="font-medium text-foreground mb-1 sm:mb-2">Joias Sagradas - Loja Oficial</p>
+          <p>Entregamos em todo Brasil</p>
+          <p className="mt-1.5 sm:mt-4">Suporte em até 24hrs</p>
+          <p className="mt-1.5 sm:mt-4 text-[8px] sm:text-xs">
             2024 Joias Sagradas. Todos os direitos reservados.
           </p>
         </footer>

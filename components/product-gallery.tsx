@@ -75,24 +75,24 @@ export function ProductGallery({ images }: ProductGalleryProps) {
       
       {/* Thumbnails - visíveis em todas as telas */}
       {images.length > 1 && (
-        <div className="flex gap-2 sm:gap-2.5 overflow-x-auto pb-2 sm:pb-3 scrollbar-hide -mx-1 px-1">
+        <div className="flex gap-1.5 sm:gap-2 overflow-x-auto pb-1 scrollbar-hide">
           {images.map((image, index) => (
             <button
               key={index}
               onClick={() => setSelectedIndex(index)}
-              className={`relative w-16 h-16 xs:w-18 xs:h-18 sm:w-20 sm:h-20 md:w-22 md:h-22 flex-shrink-0 rounded-lg sm:rounded-xl overflow-hidden border-2 transition-all bg-white active:scale-95 ${
+              className={`relative w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 flex-shrink-0 rounded-md sm:rounded-lg overflow-hidden border-2 transition-all bg-white active:scale-95 ${
                 selectedIndex === index 
-                  ? "border-primary ring-2 ring-primary/30" 
-                  : "border-border hover:border-muted-foreground"
+                  ? "border-primary" 
+                  : "border-border"
               }`}
             >
               <Image
                 src={image}
-                alt={`Colar Nossa Senhora - Imagem ${index + 1}`}
+                alt={`Imagem ${index + 1}`}
                 fill
-                className="object-contain p-1 sm:p-1.5"
+                className="object-contain p-0.5"
                 loading={index < 3 ? "eager" : "lazy"}
-                sizes="88px"
+                sizes="80px"
                 quality={60}
               />
             </button>
