@@ -94,7 +94,7 @@ export function ExitIntentPopup() {
   }, [hasShown, showPopup])
 
   const handleAcceptOffer = () => {
-    const checkoutUrl = appendUtmToUrl("https://seguropagamentos.com.br/nossa-senhora")
+    const checkoutUrl = appendUtmToUrl("https://seguropagamentos.com.br/backredirect-senhora")
     window.location.href = checkoutUrl
   }
 
