@@ -57,7 +57,7 @@ export function ProductInfo() {
 
       {/* Título */}
       <h1 className="text-base sm:text-lg font-bold text-foreground leading-snug">
-        LissPro Depilador Elétrico 2 em 1 - Facial e Corporal À Prova d&apos;Água + Brindes Exclusivos
+        [COMPRE 1 LEVE 2] Colar Nossa Senhora Aparecida Dupla Face - Zircônia &amp; Ouro 14K
       </h1>
 
       {/* Avaliações */}
