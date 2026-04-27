@@ -129,20 +129,36 @@ export function ExitIntentPopup() {
 
         {/* Conteúdo */}
         <div className="p-4 sm:p-6 text-center">
-          {/* Preços */}
-          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-            <div>
-              <p className="text-xs text-muted-foreground">De</p>
-              <span className="text-lg sm:text-xl text-muted-foreground line-through">
-                R$ 43,84
-              </span>
+          {/* Opções de preços */}
+          <div className="space-y-2 mb-4">
+            {/* 1 Unidade */}
+            <div className="flex items-center justify-between bg-muted/50 rounded-lg px-3 py-2">
+              <span className="text-sm font-medium">1 Unidade</span>
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-muted-foreground line-through">R$ 43,84</span>
+                <span className="text-lg font-bold text-primary">R$ 23,63</span>
+              </div>
             </div>
-            <div className="text-2xl sm:text-3xl text-muted-foreground">→</div>
-            <div>
-              <p className="text-xs text-primary font-semibold">Por</p>
-              <span className="text-2xl sm:text-4xl font-bold text-primary">
-                R$ 34,83
-              </span>
+            
+            {/* 2 Unidades */}
+            <div className="flex items-center justify-between bg-muted/50 rounded-lg px-3 py-2">
+              <span className="text-sm font-medium">2 Unidades</span>
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-muted-foreground line-through">R$ 74,53</span>
+                <span className="text-lg font-bold text-primary">R$ 43,84</span>
+              </div>
+            </div>
+            
+            {/* 3 Unidades - Destaque */}
+            <div className="flex items-center justify-between bg-primary/10 border-2 border-primary rounded-lg px-3 py-2">
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-bold text-primary">3 Unidades</span>
+                <span className="text-[10px] bg-primary text-primary-foreground px-1.5 py-0.5 rounded-full font-bold">MELHOR OFERTA</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-muted-foreground line-through">R$ 97,90</span>
+                <span className="text-lg font-bold text-primary">R$ 72,54</span>
+              </div>
             </div>
           </div>
 
