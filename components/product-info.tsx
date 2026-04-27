@@ -76,22 +76,22 @@ export function ProductInfo() {
       </div>
 
       {/* Benefícios rápidos */}
-      <div className="grid grid-cols-2 gap-2 sm:gap-3">
-        <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
-          <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
-          <span>Banhado a Ouro 14K</span>
+      <div className="grid grid-cols-2 gap-x-2 gap-y-1.5 sm:gap-3">
+        <div className="flex items-center gap-1 sm:gap-2 text-[11px] sm:text-sm">
+          <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
+          <span className="truncate">Ouro 14K</span>
         </div>
-        <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
-          <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
-          <span>Zircônias de alta qualidade</span>
+        <div className="flex items-center gap-1 sm:gap-2 text-[11px] sm:text-sm">
+          <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
+          <span className="truncate">Zircônias Premium</span>
         </div>
-        <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
-          <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
-          <span>Dupla face reversível</span>
+        <div className="flex items-center gap-1 sm:gap-2 text-[11px] sm:text-sm">
+          <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
+          <span className="truncate">Dupla face</span>
         </div>
-        <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
-          <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
-          <span>Compre 1 e leve 2</span>
+        <div className="flex items-center gap-1 sm:gap-2 text-[11px] sm:text-sm">
+          <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
+          <span className="truncate">Compre 1 leve 2</span>
         </div>
       </div>
 

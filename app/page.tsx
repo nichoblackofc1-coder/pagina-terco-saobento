@@ -34,7 +34,7 @@ export default function ProductPage() {
       </div>
       
       {/* Conteúdo principal */}
-      <div className="max-w-6xl mx-auto px-2 xs:px-3 sm:px-4 py-3 xs:py-4 sm:py-6">
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 py-3 sm:py-6">
         <div className="grid md:grid-cols-2 gap-3 xs:gap-4 sm:gap-6 md:gap-8">
           {/* Galeria de imagens */}
           <div className="md:sticky md:top-4 md:self-start">
