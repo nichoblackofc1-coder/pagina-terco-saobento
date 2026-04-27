@@ -250,6 +250,18 @@
   .xs\:h-10 {
     height: 2.5rem;
   }
+  .xs\:w-18 {
+    width: 4.5rem;
+  }
+  .xs\:h-18 {
+    height: 4.5rem;
+  }
+  .xs\:w-16 {
+    width: 4rem;
+  }
+  .xs\:h-16 {
+    height: 4rem;
+  }
   .xs\:gap-1\.5 {
     gap: 0.375rem;
   }

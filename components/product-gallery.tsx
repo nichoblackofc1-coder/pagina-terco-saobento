@@ -61,7 +61,7 @@ export function ProductGallery({ images }: ProductGalleryProps) {
       >
         <Image
           src={images[selectedIndex]}
-          alt="Depilador Eletrico Feminino"
+          alt="Colar Nossa Senhora Aparecida Dupla Face - Zirconia e Ouro 14K"
           fill
           className="object-contain p-2 sm:p-4 pointer-events-none select-none"
           priority
@@ -75,12 +75,12 @@ export function ProductGallery({ images }: ProductGalleryProps) {
       
       {/* Thumbnails - visíveis em todas as telas */}
       {images.length > 1 && (
-        <div className="flex gap-1.5 sm:gap-2 overflow-x-auto pb-1 sm:pb-2 scrollbar-hide">
+        <div className="flex gap-2 sm:gap-2.5 overflow-x-auto pb-2 sm:pb-3 scrollbar-hide -mx-1 px-1">
           {images.map((image, index) => (
             <button
               key={index}
               onClick={() => setSelectedIndex(index)}
-              className={`relative w-14 h-14 xs:w-16 xs:h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 flex-shrink-0 rounded-md sm:rounded-lg overflow-hidden border-2 transition-all bg-white ${
+              className={`relative w-16 h-16 xs:w-18 xs:h-18 sm:w-20 sm:h-20 md:w-22 md:h-22 flex-shrink-0 rounded-lg sm:rounded-xl overflow-hidden border-2 transition-all bg-white active:scale-95 ${
                 selectedIndex === index 
                   ? "border-primary ring-2 ring-primary/30" 
                   : "border-border hover:border-muted-foreground"
@@ -88,11 +88,11 @@ export function ProductGallery({ images }: ProductGalleryProps) {
             >
               <Image
                 src={image}
-                alt={`Imagem ${index + 1}`}
+                alt={`Colar Nossa Senhora - Imagem ${index + 1}`}
                 fill
-                className="object-contain p-0.5 sm:p-1"
+                className="object-contain p-1 sm:p-1.5"
                 loading={index < 3 ? "eager" : "lazy"}
-                sizes="80px"
+                sizes="88px"
                 quality={60}
               />
             </button>

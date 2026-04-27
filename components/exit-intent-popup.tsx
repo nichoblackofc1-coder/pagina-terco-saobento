@@ -101,72 +101,72 @@ export function ExitIntentPopup() {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogContent 
-        className="max-w-[95vw] sm:max-w-lg p-0 overflow-hidden border-2 border-primary/20 max-h-[90vh] overflow-y-auto"
+        className="max-w-[92vw] xs:max-w-[95vw] sm:max-w-lg p-0 overflow-hidden border-2 border-primary/20 max-h-[85vh] sm:max-h-[90vh] overflow-y-auto rounded-xl sm:rounded-2xl"
         showCloseButton={false}
       >
         {/* Imagem do produto */}
-        <div className="relative w-full aspect-square sm:aspect-[4/3]">
+        <div className="relative w-full aspect-[4/3] sm:aspect-[4/3]">
           <Image
             src="/images/colar-nossa-senhora.webp"
             alt="Colar Nossa Senhora Aparecida Dupla Face"
             fill
-            className="object-cover"
+            className="object-contain bg-white p-2"
             priority
           />
         </div>
 
         {/* Header */}
-        <div className="bg-primary text-primary-foreground px-4 py-3 sm:px-6 sm:py-4 text-center">
+        <div className="bg-primary text-primary-foreground px-3 py-2.5 xs:px-4 xs:py-3 sm:px-6 sm:py-4 text-center">
           <DialogHeader>
-            <DialogTitle className="text-lg sm:text-xl font-bold text-primary-foreground">
+            <DialogTitle className="text-base xs:text-lg sm:text-xl font-bold text-primary-foreground">
               ESPERA! Compre 1 Leve 2
             </DialogTitle>
           </DialogHeader>
-          <p className="text-xs sm:text-sm text-primary-foreground/90 mt-1">
+          <p className="text-[10px] xs:text-xs sm:text-sm text-primary-foreground/90 mt-0.5 xs:mt-1">
             Dois colares de Nossa Senhora pelo preço de um!
           </p>
         </div>
 
         {/* Conteúdo */}
-        <div className="p-4 sm:p-6 text-center">
+        <div className="p-3 xs:p-4 sm:p-6 text-center">
           {/* Preços */}
-          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+          <div className="flex items-center justify-center gap-2 xs:gap-3 sm:gap-4 mb-2.5 xs:mb-3 sm:mb-4">
             <div>
-              <p className="text-xs text-muted-foreground">De</p>
-              <span className="text-lg sm:text-xl text-muted-foreground line-through">
-                R$ 43,84
+              <p className="text-[10px] xs:text-xs text-muted-foreground">De</p>
+              <span className="text-base xs:text-lg sm:text-xl text-muted-foreground line-through">
+                R$ 87,64
               </span>
             </div>
-            <div className="text-2xl sm:text-3xl text-muted-foreground">→</div>
+            <div className="text-xl xs:text-2xl sm:text-3xl text-muted-foreground">→</div>
             <div>
-              <p className="text-xs text-primary font-semibold">Por</p>
-              <span className="text-2xl sm:text-4xl font-bold text-primary">
-                R$ 19,90
+              <p className="text-[10px] xs:text-xs text-primary font-semibold">Por apenas</p>
+              <span className="text-xl xs:text-2xl sm:text-4xl font-bold text-primary">
+                R$ 43,82
               </span>
             </div>
           </div>
 
           {/* Urgência */}
-          <div className="flex items-center justify-center gap-2 text-amber-600 mb-4 sm:mb-5">
-            <Clock className="size-4 animate-pulse" />
-            <span className="text-xs sm:text-sm font-medium">Oferta válida apenas agora!</span>
+          <div className="flex items-center justify-center gap-1.5 xs:gap-2 text-amber-600 mb-3 xs:mb-4 sm:mb-5">
+            <Clock className="size-3.5 xs:size-4 animate-pulse" />
+            <span className="text-[11px] xs:text-xs sm:text-sm font-medium">Oferta válida apenas agora!</span>
           </div>
 
           {/* Botão de ação */}
           <Button
             onClick={handleAcceptOffer}
-            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-sm sm:text-lg py-5 sm:py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
+            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-xs xs:text-sm sm:text-lg py-4 xs:py-5 sm:py-6 rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 active:scale-95 sm:hover:scale-[1.02]"
           >
-            <ShoppingBag className="size-4 sm:size-5 mr-2" />
+            <ShoppingBag className="size-3.5 xs:size-4 sm:size-5 mr-1.5 xs:mr-2" />
             QUERO MEU DESCONTO!
           </Button>
 
           {/* Link para recusar */}
           <button
             onClick={() => setIsOpen(false)}
-            className="mt-3 sm:mt-4 text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors underline underline-offset-2"
+            className="mt-2.5 xs:mt-3 sm:mt-4 text-[10px] xs:text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors underline underline-offset-2"
           >
-            Não, obrigado. Prefiro pagar mais caro.
+            Prefiro pagar mais caro
           </button>
         </div>
       </DialogContent>
