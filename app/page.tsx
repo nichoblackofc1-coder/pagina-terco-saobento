@@ -1,3 +1,5 @@
+"use client"
+
 import dynamic from "next/dynamic"
 import { MarqueeBanner } from "@/components/marquee-banner"
 import { ProductGallery } from "@/components/product-gallery"
