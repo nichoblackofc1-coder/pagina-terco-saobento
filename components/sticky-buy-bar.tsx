@@ -14,22 +14,22 @@ export function StickyBuyBar() {
       <div className="flex items-center gap-3 xs:gap-4 sm:gap-5 max-w-lg mx-auto">
         {/* Coluna esquerda: Badge em cima, precos embaixo */}
         <div className="flex-1 min-w-0">
-          {/* Badge de quantidade */}
+          {/* Badge do kit */}
           <div className="bg-primary text-primary-foreground text-[10px] xs:text-xs sm:text-sm font-bold px-2.5 xs:px-3 sm:px-4 py-1 xs:py-1.5 rounded inline-block mb-1 xs:mb-1.5">
-            {currentOption.quantity} {currentOption.quantity === 1 ? "Unidade" : "Unidades"}
+            Compre 1 Leve 2
           </div>
           
           {/* Precos */}
           <div className="flex items-center gap-2 xs:gap-3">
             <span className="text-base xs:text-lg sm:text-xl font-bold text-primary">
-              R$ {currentOption.price.toFixed(2).replace(".", ",")}
+              R$ 43,82
             </span>
             <span className="text-[10px] xs:text-xs sm:text-sm text-muted-foreground line-through">
-              R$ {currentOption.originalPrice.toFixed(2).replace(".", ",")}
+              R$ 87,64
             </span>
           </div>
           <p className="text-[10px] xs:text-xs sm:text-sm text-muted-foreground">
-            3x R$ {(currentOption.price / 3).toFixed(2).replace(".", ",")}
+            3x R$ 14,61
           </p>
         </div>
         

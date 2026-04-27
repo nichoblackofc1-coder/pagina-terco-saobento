@@ -5,32 +5,12 @@ import { createContext, useContext, useState, ReactNode } from "react"
 export const pricingOptions = [
   {
     id: 1,
-    quantity: 1,
-    label: "1 Unidade",
-    originalPrice: 43.84,
-    price: 23.63,
-    badge: null,
-    checkoutUrl: "https://seguropagamentos.com.br/lisspro1",
-  },
-  {
-    id: 2,
     quantity: 2,
-    label: "2 Unidades",
-    originalPrice: 74.53,
-    price: 43.84,
-    badge: "Mais vendido",
-    badgeExtra: "30% OFF",
-    checkoutUrl: "https://seguropagamentos.com.br/lisspro2",
-  },
-  {
-    id: 3,
-    quantity: 3,
-    label: "3 Unidades",
-    originalPrice: 97.90,
-    price: 72.54,
-    badge: "Brindes Exclusivos",
-    badgeExtra: "40% OFF",
-    checkoutUrl: "https://seguropagamentos.com.br/lisspro3",
+    label: "Kit Compre 1 Leve 2",
+    originalPrice: 87.64,
+    price: 43.82,
+    badge: null,
+    checkoutUrl: "https://seguropagamentos.com.br/colar-nossa-senhora",
   },
 ]
 

@@ -3,14 +3,14 @@
 import { useState, useEffect } from "react"
 import { Star, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { usePricing, pricingOptions } from "@/contexts/pricing-context"
+import { usePricing } from "@/contexts/pricing-context"
 import { useUtmParams } from "@/hooks/use-utm"
 
 // Tempo inicial do contador (2 horas, 45 minutos, 33 segundos)
 const INITIAL_TIME = 2 * 3600 + 45 * 60 + 33
 
 export function ProductInfo() {
-  const { selectedOption, setSelectedOption, currentOption } = usePricing()
+  const { currentOption } = usePricing()
   const { appendUtmToUrl } = useUtmParams()
   
   const [timeLeft, setTimeLeft] = useState(INITIAL_TIME)
@@ -41,17 +41,17 @@ export function ProductInfo() {
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-2">
           <span className="bg-primary text-primary-foreground text-[10px] sm:text-xs font-bold px-1.5 py-0.5 rounded">
-            -46%
+            -50%
           </span>
           <span className="text-xl sm:text-2xl font-bold text-foreground">
-            R$ 23,63
+            R$ 43,82
           </span>
           <span className="text-sm sm:text-base text-muted-foreground line-through">
-            R$ 43,84
+            R$ 87,64
           </span>
         </div>
         <p className="text-xs sm:text-sm text-muted-foreground">
-          3x de R$ 7,88 <span className="text-green-600 font-medium">sem juros</span>
+          3x de R$ 14,61 <span className="text-green-600 font-medium">sem juros</span>
         </p>
       </div>
 
@@ -68,38 +68,11 @@ export function ProductInfo() {
         <span className="text-xs sm:text-sm text-muted-foreground">39mil vendidos</span>
       </div>
 
-      {/* Seletor de Quantidade/Preco */}
-      <div className="flex flex-col gap-2">
-        {pricingOptions.map((option) => (
-          <button
-            key={option.id}
-            onClick={() => setSelectedOption(option.id)}
-            className={`relative flex flex-col xs:flex-row xs:items-center xs:justify-between p-3 sm:p-4 rounded-lg border-2 transition-all ${
-              selectedOption === option.id
-                ? "border-primary bg-primary/5"
-                : "border-border hover:border-muted-foreground/50"
-            }`}
-          >
-            <div className="flex items-center gap-2 sm:gap-3 mb-1 xs:mb-0">
-              <span className="text-sm sm:text-base font-semibold text-foreground">
-                {option.label}
-              </span>
-              {option.badge && (
-                <span className="bg-primary text-primary-foreground text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full">
-                  {option.badge}
-                </span>
-              )}
-            </div>
-            <div className="flex items-center gap-2 sm:gap-3">
-              <span className="text-xs sm:text-sm text-muted-foreground line-through">
-                R$ {option.originalPrice.toFixed(2).replace(".", ",")}
-              </span>
-              <span className="text-lg sm:text-xl font-bold text-primary">
-                R$ {option.price.toFixed(2).replace(".", ",")}
-              </span>
-            </div>
-          </button>
-        ))}
+      {/* Info do Kit */}
+      <div className="bg-primary/10 border border-primary/20 rounded-lg p-3 sm:p-4">
+        <p className="text-sm sm:text-base font-semibold text-primary text-center">
+          Kit com 2 Colares - Compre 1 e Leve 2
+        </p>
       </div>
 
       {/* Benefícios rápidos */}
