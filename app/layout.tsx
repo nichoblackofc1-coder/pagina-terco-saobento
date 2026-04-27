@@ -9,14 +9,16 @@ const inter = Inter({
   variable: '--font-inter',
   display: 'swap',
   preload: true,
+  fallback: ['system-ui', 'arial'],
 });
 
 const poppins = Poppins({ 
   subsets: ["latin"],
-  weight: ['600', '700', '800'],
+  weight: ['600', '700'],
   variable: '--font-poppins',
   display: 'swap',
   preload: true,
+  fallback: ['system-ui', 'arial'],
 });
 
 export const metadata: Metadata = {
@@ -57,12 +59,12 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="bg-background">
       <head>
-        <link rel="preconnect" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" />
+        <link rel="preconnect" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" />
-        <link rel="preconnect" href="https://cdn.utmify.com.br" />
+        <link rel="preconnect" href="https://cdn.utmify.com.br" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://cdn.utmify.com.br" />
-        <link rel="preload" as="image" href="/images/colar-nossa-senhora.webp" />
-        <link rel="preload" as="image" href="/images/colar-compre1-leve2.webp" />
+        <link rel="preload" as="image" href="/images/colar-nossa-senhora.webp" type="image/webp" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/colar-compre1-leve2.webp" type="image/webp" />
         <Script id="utmify-pixel" strategy="lazyOnload">
           {`
             window.pixelId = "69dc4648e55c012f0860327d";

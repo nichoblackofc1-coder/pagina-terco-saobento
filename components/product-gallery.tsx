@@ -64,11 +64,13 @@ export function ProductGallery({ images }: ProductGalleryProps) {
           alt="Colar Nossa Senhora Aparecida Dupla Face - Zirconia e Ouro 14K"
           fill
           className="object-contain p-2 sm:p-4 pointer-events-none select-none"
-          priority
-          loading="eager"
-          sizes="(max-width: 768px) 100vw, 50vw"
+          priority={selectedIndex === 0}
+          loading={selectedIndex === 0 ? "eager" : "lazy"}
+          sizes="(max-width: 640px) 95vw, (max-width: 768px) 50vw, 400px"
           draggable={false}
-          quality={85}
+          quality={75}
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIBAAAgIBBAMBAAAAAAAAAAAAAQIDBAAFERIhBhMxQf/EABQBAQAAAAAAAAAAAAAAAAAAAAX/xAAZEQACAwEAAAAAAAAAAAAAAAABAgADESH/2gAMAwEAAhEDEEEAAd2Gpa1BLQjnrW4Y2hBkd+CvZHR/Px+7nwYwxTAuRs//2Q=="
         />
 
       </div>
@@ -91,9 +93,9 @@ export function ProductGallery({ images }: ProductGalleryProps) {
                 alt={`Imagem ${index + 1}`}
                 fill
                 className="object-contain p-0.5"
-                loading={index < 3 ? "eager" : "lazy"}
-                sizes="80px"
-                quality={60}
+                loading={index < 2 ? "eager" : "lazy"}
+                sizes="48px"
+                quality={40}
               />
             </button>
           ))}

@@ -111,7 +111,9 @@ export function ExitIntentPopup() {
             alt="Colar Nossa Senhora Aparecida Dupla Face"
             fill
             className="object-contain bg-white p-2"
-            priority
+            loading="lazy"
+            sizes="(max-width: 640px) 90vw, 400px"
+            quality={70}
           />
         </div>
 

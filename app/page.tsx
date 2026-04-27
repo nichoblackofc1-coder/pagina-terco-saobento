@@ -1,13 +1,26 @@
+import dynamic from "next/dynamic"
 import { MarqueeBanner } from "@/components/marquee-banner"
 import { ProductGallery } from "@/components/product-gallery"
 import { ProductInfo } from "@/components/product-info"
-import { ProductBenefits } from "@/components/product-benefits"
 import { TrustBadges } from "@/components/trust-badges"
-import { ProductReviews } from "@/components/product-reviews"
-import { ProductFAQ } from "@/components/product-faq"
-import { StickyBuyBar } from "@/components/sticky-buy-bar"
-import { ExitIntentPopup } from "@/components/exit-intent-popup"
 import { PricingProvider } from "@/contexts/pricing-context"
+
+// Lazy load de componentes não críticos
+const ProductBenefits = dynamic(() => import("@/components/product-benefits").then(mod => ({ default: mod.ProductBenefits })), {
+  loading: () => <div className="py-4 sm:py-8"><div className="h-40 bg-muted/50 rounded-lg animate-pulse" /></div>
+})
+const ProductReviews = dynamic(() => import("@/components/product-reviews").then(mod => ({ default: mod.ProductReviews })), {
+  loading: () => <div className="py-5 sm:py-8"><div className="h-60 bg-muted/50 rounded-lg animate-pulse" /></div>
+})
+const ProductFAQ = dynamic(() => import("@/components/product-faq").then(mod => ({ default: mod.ProductFAQ })), {
+  loading: () => <div className="py-4 sm:py-8"><div className="h-40 bg-muted/50 rounded-lg animate-pulse" /></div>
+})
+const StickyBuyBar = dynamic(() => import("@/components/sticky-buy-bar").then(mod => ({ default: mod.StickyBuyBar })), {
+  ssr: false
+})
+const ExitIntentPopup = dynamic(() => import("@/components/exit-intent-popup").then(mod => ({ default: mod.ExitIntentPopup })), {
+  ssr: false
+})
 
 const productImages = [
   "/images/colar-nossa-senhora.webp",

@@ -11,10 +11,16 @@ const nextConfig = {
       },
     ],
     formats: ['image/avif', 'image/webp'],
-    deviceSizes: [640, 750, 828, 1080, 1200],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256],
+    deviceSizes: [320, 420, 640, 750, 828, 1080],
+    imageSizes: [16, 32, 48, 64, 96, 128],
+    minimumCacheTTL: 31536000,
   },
   compress: true,
+  poweredByHeader: false,
+  reactStrictMode: true,
+  experimental: {
+    optimizeCss: true,
+  },
 }
 
 export default nextConfig

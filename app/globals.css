@@ -400,11 +400,23 @@ html {
 /* Performance optimizations */
 img {
   content-visibility: auto;
+  contain-intrinsic-size: 300px;
 }
 
 /* Reduce layout shift */
 .aspect-square {
   aspect-ratio: 1/1;
+  contain: layout;
+}
+
+/* Critical rendering optimization */
+.above-fold {
+  contain: none;
+}
+
+.below-fold {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
 }
 
 /* GPU acceleration for animations */
