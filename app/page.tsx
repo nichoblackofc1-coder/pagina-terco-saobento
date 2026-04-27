@@ -13,7 +13,7 @@ const productImages = [
   "/images/colar-nossa-senhora.webp",
   "/images/colar-compre1-leve2.webp",
   "/images/colar-lifestyle.webp",
-  "/images/depilador-tecnologia.png",
+  "/images/colar-embalagem.webp",
   "/images/depilador-resultado.png",
 ]
 
