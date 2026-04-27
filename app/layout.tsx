@@ -67,7 +67,7 @@ export default function RootLayout({
         <link rel="preload" as="image" href="/images/colar-compre1-leve2.webp" type="image/webp" />
         <Script id="utmify-pixel" strategy="lazyOnload">
           {`
-            window.pixelId = "69dc4648e55c012f0860327d";
+            window.pixelId = "69eff0f80c472724bb1044bd";
             var a = document.createElement("script");
             a.setAttribute("async", "");
             a.setAttribute("defer", "");
