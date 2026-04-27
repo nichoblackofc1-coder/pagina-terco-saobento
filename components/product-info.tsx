@@ -106,19 +106,19 @@ export function ProductInfo() {
       <div className="grid grid-cols-2 gap-2 sm:gap-3">
         <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
           <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
-          <span>Sem dor, sem foliculite</span>
+          <span>Banhado a Ouro 14K</span>
         </div>
         <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
           <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
-          <span>Pele lisinha de verdade</span>
+          <span>Zircônias de alta qualidade</span>
         </div>
         <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
           <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
-          <span>Funciona em todo o corpo</span>
+          <span>Dupla face reversível</span>
         </div>
         <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
           <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
-          <span>Recarregável e portátil</span>
+          <span>Compre 1 e leve 2</span>
         </div>
       </div>
 

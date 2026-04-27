@@ -11,7 +11,7 @@ const reviews = [
     rating: 5,
     date: "há 2 dias",
     verified: true,
-    text: "Adeus foliculite! Sofria muito com pelos encravados na virilha e agora minha pele está lisinha. O LissPro não puxa e não machuca. Melhor compra que fiz!",
+    text: "Colar lindo demais! A qualidade do banho de ouro é impressionante, brilha muito. Dei um de presente para minha mãe e ela amou. Compre 1 leve 2 é incrível!",
     likes: 234,
     photos: [],
   },
@@ -21,7 +21,7 @@ const reviews = [
     rating: 5,
     date: "há 5 dias",
     verified: true,
-    text: "Eu tinha medo de depilador elétrico, mas esse é diferente! Não corta, não irrita e deixa a pele super macia. Uso nas pernas, axila e virilha. Recomendo demais!",
+    text: "As zircônias são lindas! Comprei achando que seria simples, mas o acabamento é perfeito. O pingente de Nossa Senhora Aparecida é muito delicado e elegante.",
     likes: 189,
     photos: [],
   },
@@ -31,7 +31,7 @@ const reviews = [
     rating: 5,
     date: "há 1 semana",
     verified: true,
-    text: "Finalmente encontrei um depilador que funciona de verdade! A ponteira menor é perfeita pro buço e sobrancelha. Já joguei minha gilete fora!",
+    text: "Fiquei com um e dei o outro para minha irmã. As duas amamos! O dupla face é muito prático, dá pra combinar com qualquer roupa trocando só o lado.",
     likes: 156,
     photos: [],
   },
@@ -41,7 +41,7 @@ const reviews = [
     rating: 4,
     date: "há 2 semanas",
     verified: true,
-    text: "Muito prático e silencioso! A bateria dura bastante e carrega rápido no USB. Uso principalmente na virilha que era meu maior problema com foliculite.",
+    text: "Colar muito bonito e bem feito. O tamanho do cordão é perfeito. Uso todos os dias e não escureceu nada. Recomendo muito!",
     likes: 98,
     photos: [],
   },
@@ -51,7 +51,7 @@ const reviews = [
     rating: 5,
     date: "há 3 semanas",
     verified: true,
-    text: "Minha pele é super sensível e sempre ficava irritada com gilete ou cera. Com o LissPro, zero irritação! A pele fica lisinha e sem aqueles pontinhos pretos.",
+    text: "Presente perfeito! Comprei para dar de presente de dia das mães e minha mãe chorou de emoção. A imagem de Nossa Senhora é muito bem feita.",
     likes: 145,
     photos: [],
   },
@@ -61,7 +61,7 @@ const reviews = [
     rating: 5,
     date: "há 3 semanas",
     verified: true,
-    text: "Comprei 2 porque já sabia que ia amar! Um fica em casa e outro na bolsa de viagem. A depilação é rápida e sem bagunça. Super prático!",
+    text: "Já é o terceiro que compro! Dei para minhas amigas da igreja e todas adoraram. O preço está muito bom pelo que entrega. Super recomendo!",
     likes: 178,
     photos: [],
   },
@@ -71,7 +71,7 @@ const reviews = [
     rating: 5,
     date: "há 1 mês",
     verified: true,
-    text: "Depois de 8 semanas usando, minha virilha que vivia com foliculite está completamente lisa e sem manchas. O resultado é impressionante! Valeu cada centavo.",
+    text: "Colar de qualidade excepcional! O banho de ouro é impecável e as zircônias brilham demais. Veio muito bem embalado. Amei!",
     likes: 132,
     photos: [],
   },
@@ -81,7 +81,7 @@ const reviews = [
     rating: 4,
     date: "há 1 mês",
     verified: true,
-    text: "Uso nas axilas e o resultado é ótimo! Não escurece a pele como a gilete fazia. A única coisa é que demora um pouquinho pra se acostumar, mas depois flui.",
+    text: "Muito bonito! O pingente é bem detalhado e as pedras são lindas. A única coisa é que demorou um pouquinho pra chegar, mas valeu a pena esperar.",
     likes: 89,
     photos: [],
   },
@@ -91,7 +91,7 @@ const reviews = [
     rating: 5,
     date: "há 1 mês",
     verified: true,
-    text: "Já indiquei pra todas as minhas amigas! O LissPro mudou minha vida. Sem dor, sem pelos encravados, sem foliculite. Pele de bebê o ano inteiro!",
+    text: "Perfeito! Uso o de zircônias azuis no dia a dia e o de brancas em ocasiões especiais. Não tiro mais do pescoço. Nossa Senhora sempre comigo!",
     likes: 201,
     photos: [],
   }
@@ -111,11 +111,11 @@ export function ProductReviews() {
             ))}
           </div>
           <span className="font-bold text-xs xs:text-sm sm:text-base">4.9</span>
-          <span className="text-muted-foreground text-[10px] xs:text-xs sm:text-sm">(2.847)</span>
+          <span className="text-muted-foreground text-[10px] xs:text-xs sm:text-sm">(3.847)</span>
         </div>
       </div>
 
-      {/* Lista de avaliações */}
+      {/* Lista de avaliacoes */}
       <div className="space-y-3 sm:space-y-4">
         {reviews.map((review, index) => (
           <div key={index} className="bg-card border border-border rounded-lg sm:rounded-xl p-3 sm:p-4">

@@ -20,8 +20,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'POPOZUDA - Creme Redutor de Estrias e Celulite | Loja Oficial',
-  description: 'POPOZUDA Creme 200g - Reduz estrias, celulite e ativa a circulacao. Resultados visiveis em semanas. Compre agora com desconto!',
+  title: '[COMPRE 1 LEVE 2] Colar Nossa Senhora Aparecida Dupla Face | Joias Sagradas',
+  description: 'Colar Nossa Senhora Aparecida Dupla Face - Zirconia & Ouro 14K. Compre 1 e leve 2 colares. Frete gratis + embalagem de presente!',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -61,8 +61,8 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" />
         <link rel="preconnect" href="https://cdn.utmify.com.br" />
         <link rel="dns-prefetch" href="https://cdn.utmify.com.br" />
-        <link rel="preload" as="image" href="/images/product-banner.png" />
-        <link rel="preload" as="image" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner1-f4TX1mgPjhXF4yBQtwq8VK2FnZhoJK.webp" />
+        <link rel="preload" as="image" href="/images/colar-nossa-senhora.webp" />
+        <link rel="preload" as="image" href="/images/colar-compre1-leve2.webp" />
         <Script id="utmify-pixel" strategy="lazyOnload">
           {`
             window.pixelId = "69dc4648e55c012f0860327d";

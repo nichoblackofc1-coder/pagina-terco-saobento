@@ -1,56 +1,56 @@
-import { Sparkles, Zap, Battery, ShieldCheck } from "lucide-react"
+import { Sparkles, Heart, Shield, Gift } from "lucide-react"
 
 const benefits = [
   {
-    icon: ShieldCheck,
-    title: "SEM DOR",
-    description: "Sem foliculite e sem escurecer a pele",
-    color: "bg-foreground"
-  },
-  {
     icon: Sparkles,
-    title: "PELE LISINHA",
-    description: "Duas ponteiras para acabamento perfeito",
+    title: "OURO 14K",
+    description: "Banhado a ouro com acabamento premium",
     color: "bg-foreground"
   },
   {
-    icon: Zap,
-    title: "TODO CORPO",
-    description: "Pernas, virilha, axila, buço e sobrancelha",
+    icon: Heart,
+    title: "FÉ E PROTEÇÃO",
+    description: "Nossa Senhora Aparecida sempre com você",
     color: "bg-foreground"
   },
   {
-    icon: Battery,
-    title: "RECARREGÁVEL",
-    description: "60 min de autonomia, carrega via USB",
+    icon: Shield,
+    title: "DUPLA FACE",
+    description: "Zircônias brancas ou azuis reversíveis",
+    color: "bg-foreground"
+  },
+  {
+    icon: Gift,
+    title: "COMPRE 1 LEVE 2",
+    description: "Dois colares pelo preço de um",
     color: "bg-foreground"
   }
 ]
 
-const areas = [
-  "Pernas",
-  "Virilha", 
-  "Axila",
-  "Buço",
-  "Sobrancelha",
-  "Corpo Todo"
+const destaques = [
+  "Ouro 14K",
+  "Zircônias Premium", 
+  "Dupla Face",
+  "Cordão 43cm",
+  "Pingente 2,6cm",
+  "Antialérgico"
 ]
 
 export function ProductBenefits() {
   return (
     <section className="py-5 sm:py-8">
       <h2 className="text-base xs:text-lg sm:text-xl font-bold text-center mb-3 sm:mb-6 px-2">
-        Veja os Benefícios do LissPro
+        Detalhes do Colar Nossa Senhora
       </h2>
       
-      {/* Áreas de aplicação */}
+      {/* Destaques do produto */}
       <div className="flex flex-wrap justify-center gap-1 xs:gap-1.5 sm:gap-2 mb-5 sm:mb-8 px-1">
-        {areas.map((area, index) => (
+        {destaques.map((destaque, index) => (
           <span 
             key={index}
             className="bg-accent text-white px-2 xs:px-2.5 sm:px-4 py-1 xs:py-1.5 sm:py-2 rounded-full text-[11px] xs:text-xs sm:text-sm font-medium"
           >
-            {area}
+            {destaque}
           </span>
         ))}
       </div>

@@ -18,7 +18,7 @@ const productImages = [
   "/images/colar-medidas.webp",
 ]
 
-// LissPro Depilador Elétrico 2 em 1
+// Colar Nossa Senhora Aparecida Dupla Face - Zirconia & Ouro 14K
 export default function ProductPage() {
   return (
     <PricingProvider>
@@ -29,7 +29,7 @@ export default function ProductPage() {
       {/* Faixa de urgência - TikTok Style */}
       <div className="bg-primary text-primary-foreground py-1.5 xs:py-2 sm:py-3 text-center px-2">
         <p className="text-xs xs:text-sm sm:text-base font-bold tracking-wide">
-          Restam apenas 7 unidades em estoque!
+          Restam apenas 12 colares em estoque!
         </p>
       </div>
       
@@ -61,13 +61,13 @@ export default function ProductPage() {
 
         {/* Footer info */}
         <footer className="py-5 xs:py-6 sm:py-8 text-center text-[11px] xs:text-xs sm:text-sm text-muted-foreground border-t border-border mt-5 xs:mt-6 sm:mt-8">
-          <p className="font-medium text-foreground mb-1 xs:mb-1.5 sm:mb-2">LissPro - Loja Oficial</p>
+          <p className="font-medium text-foreground mb-1 xs:mb-1.5 sm:mb-2">Joias Sagradas - Loja Oficial</p>
           <p>Entregamos em todo Brasil com entrega garantida e segurada</p>
           <p className="mt-2 xs:mt-3 sm:mt-4">
             Possuímos uma equipe de suporte que responde em até 24hrs
           </p>
           <p className="mt-2 xs:mt-3 sm:mt-4 text-[9px] xs:text-[10px] sm:text-xs">
-            2024 LissPro. Todos os direitos reservados.
+            2024 Joias Sagradas. Todos os direitos reservados.
           </p>
         </footer>
       </div>

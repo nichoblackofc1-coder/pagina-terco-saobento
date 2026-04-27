@@ -5,28 +5,28 @@ import { ChevronDown } from "lucide-react"
 
 const faqs = [
   {
-    question: "Como usar o LissPro?",
-    answer: "Use sempre com a pele seca. Encaixe a ponteira maior para pernas, virilha e axila. A menor para rosto e buço. Após depilar, use a ponteira de acabamento para eliminar os pontinhos pretos e deixar a pele completamente lisa."
+    question: "O que significa Compre 1 Leve 2?",
+    answer: "Você recebe dois colares pelo preço de um! Um colar com zircônias azuis e outro com zircônias brancas, ambos banhados a ouro 14K. Perfeito para usar um e presentear alguém especial."
   },
   {
-    question: "Funciona em todas as áreas do corpo?",
-    answer: "Sim! O LissPro cuida do corpo inteiro - de áreas delicadas ao rosto - com duas ponteiras: uma para pelos maiores e outra para acabamento perfeito. Pernas, virilha, axila, buço e sobrancelha."
+    question: "O colar é realmente banhado a ouro?",
+    answer: "Sim! Nosso colar é banhado a ouro 14K de alta qualidade, garantindo durabilidade, brilho intenso e resistência ao desgaste. O acabamento é premium e não escurece com o tempo."
   },
   {
-    question: "Causa dor ou foliculite?",
-    answer: "Não! Esqueça a dor da cera, os cortes da gilete e a foliculite que não vai embora. O LissPro apara com suavidade e precisão - sem puxar, sem inflamar e sem escurecer. Tecnologia feita para respeitar até as peles mais sensíveis."
+    question: "As zircônias são de qualidade?",
+    answer: "Utilizamos zircônias AAA de alta qualidade que imitam o brilho de diamantes. Cada pedra é cuidadosamente aplicada para garantir um acabamento impecável e duradouro."
   },
   {
-    question: "Quanto tempo dura a bateria?",
-    answer: "O LissPro possui bateria de lítio com até 60 minutos de autonomia. Carrega via USB e cabe na bolsa. Recarregável e vai aonde você for!"
+    question: "Quais são as medidas do colar?",
+    answer: "O cordão tem 43cm de comprimento, tamanho ideal para uso no dia a dia. O pingente de Nossa Senhora Aparecida mede 2,6cm, perfeito para destacar sem exagerar."
   },
   {
-    question: "O que vem incluso no kit?",
-    answer: "1x Depilador elétrico com duas ponteiras intercambiáveis, 1x Cabo USB de recarga compatível com carregadores padrão, 1x Pincel de limpeza para limpar a ponteira após o uso e Manual de uso com instruções."
+    question: "O colar é antialérgico?",
+    answer: "Sim! O colar é hipoalergênico e seguro para peles sensíveis. O banho de ouro 14K cria uma barreira que evita reações alérgicas comuns em bijuterias convencionais."
   },
   {
     question: "Tem garantia de satisfação?",
-    answer: "Sim! Se por qualquer motivo você não ficar satisfeita com o LissPro, devolvemos cada centavo. Sem burocracia, sem questionamento. Satisfação garantida ou seu dinheiro de volta!"
+    answer: "Sim! Se por qualquer motivo você não ficar satisfeita com o colar, devolvemos cada centavo. Sem burocracia, sem questionamento. Satisfação garantida ou seu dinheiro de volta!"
   }
 ]
 

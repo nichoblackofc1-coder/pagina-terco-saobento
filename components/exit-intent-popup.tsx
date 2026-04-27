@@ -107,8 +107,8 @@ export function ExitIntentPopup() {
         {/* Imagem do produto */}
         <div className="relative w-full aspect-square sm:aspect-[4/3]">
           <Image
-            src="/images/depilador-produto.png"
-            alt="LissPro Depilador Eletrico 2 em 1"
+            src="/images/colar-nossa-senhora.webp"
+            alt="Colar Nossa Senhora Aparecida Dupla Face"
             fill
             className="object-cover"
             priority
@@ -119,11 +119,11 @@ export function ExitIntentPopup() {
         <div className="bg-primary text-primary-foreground px-4 py-3 sm:px-6 sm:py-4 text-center">
           <DialogHeader>
             <DialogTitle className="text-lg sm:text-xl font-bold text-primary-foreground">
-              ESPERA! Oferta Exclusiva
+              ESPERA! Compre 1 Leve 2
             </DialogTitle>
           </DialogHeader>
           <p className="text-xs sm:text-sm text-primary-foreground/90 mt-1">
-            Desconto especial apenas para você!
+            Dois colares de Nossa Senhora pelo preço de um!
           </p>
         </div>
 
