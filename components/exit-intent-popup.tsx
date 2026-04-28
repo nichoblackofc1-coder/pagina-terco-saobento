@@ -107,7 +107,7 @@ export function ExitIntentPopup() {
         {/* Imagem do produto */}
         <div className="relative w-full aspect-[4/3] sm:aspect-[4/3]">
           <Image
-            src="/images/colar-nossa-senhora.webp"
+            src="/images/colar-embalagem.webp"
             alt="Colar Nossa Senhora Aparecida Dupla Face"
             fill
             className="object-contain bg-white p-2"

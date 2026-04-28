@@ -98,7 +98,7 @@ export function ProductInfo() {
       {/* Botão de ação */}
       <Button 
         size="lg" 
-        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-sm sm:text-lg py-5 sm:py-8 rounded-sm shadow-lg shadow-primary/30"
+        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-sm sm:text-lg py-7 sm:py-10 rounded-sm shadow-lg shadow-primary/30"
         onClick={() => window.open(appendUtmToUrl(currentOption.checkoutUrl), "_blank")}
       >
         COMPRAR AGORA
