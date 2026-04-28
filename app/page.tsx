@@ -25,10 +25,9 @@ const ExitIntentPopup = dynamic(() => import("@/components/exit-intent-popup").t
 })
 
 const productImages = [
-  "/images/colar-nossa-senhora.webp",
+  "/images/colar-embalagem.webp",
   "/images/colar-compre1-leve2.webp",
   "/images/colar-lifestyle.webp",
-  "/images/colar-embalagem.webp",
   "/images/colar-praia.webp",
   "/images/colar-medidas.webp",
 ]
