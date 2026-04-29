@@ -18,14 +18,14 @@ export function StickyBuyBar() {
             Compre 1 Leve 2
           </div>
           <div className="flex items-center gap-1.5 sm:gap-3 mt-0.5">
-            <span className="text-sm sm:text-xl font-bold text-primary">R$ 43,82</span>
+            <span className="text-sm sm:text-xl font-bold text-primary">R$ 34,83</span>
             <span className="text-[8px] sm:text-sm text-muted-foreground line-through">R$ 87,64</span>
           </div>
           <p className="text-[8px] sm:text-sm text-muted-foreground">3x R$ 14,61</p>
         </div>
-        
+
         {/* Botao comprar */}
-        <Button 
+        <Button
           size="lg"
           className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-3 sm:px-5 py-1.5 sm:py-3 rounded-sm shadow-md text-[11px] sm:text-base whitespace-nowrap active:scale-95 transition-transform"
           onClick={() => window.open(appendUtmToUrl(currentOption.checkoutUrl), "_blank")}
