@@ -82,7 +82,7 @@ export function ExitIntentPopup() {
     window.addEventListener("beforeunload", handleBeforeUnload)
     document.addEventListener("visibilitychange", handleVisibilityChange)
     window.addEventListener("blur", handleBlur)
-    
+
     return () => {
       document.removeEventListener("mouseleave", handleMouseLeave)
       document.removeEventListener("mousemove", handleMouseMove)
@@ -94,13 +94,13 @@ export function ExitIntentPopup() {
   }, [hasShown, showPopup])
 
   const handleAcceptOffer = () => {
-    const checkoutUrl = appendUtmToUrl("https://seguropagamentos.com.br/backredirect-senhora")
+    const checkoutUrl = appendUtmToUrl("https://loja.compra-segura.icu/fBPqDEAx")
     window.location.href = checkoutUrl
   }
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent 
+      <DialogContent
         className="max-w-[92vw] xs:max-w-[95vw] sm:max-w-lg p-0 overflow-hidden border-2 border-primary/20 max-h-[85vh] sm:max-h-[90vh] overflow-y-auto rounded-xl sm:rounded-2xl"
         showCloseButton={false}
       >
