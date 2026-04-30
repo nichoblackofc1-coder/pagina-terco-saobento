@@ -44,7 +44,7 @@ export function ProductInfo() {
             -50%
           </span>
           <span className="text-lg sm:text-2xl font-bold text-foreground">
-            R$ 43,82
+            R$ 34,83
           </span>
           <span className="text-xs sm:text-base text-muted-foreground line-through">
             R$ 87,64
