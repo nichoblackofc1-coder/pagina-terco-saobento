@@ -25,6 +25,17 @@ export function ExitIntentPopup() {
   }, [hasShown])
 
   useEffect(() => {
+    // Verifica se veio do domínio loja.compraa-aprovadaa.top - abre popup imediatamente
+    const referrer = document.referrer
+    const currentUrl = window.location.href
+    
+    if (referrer.includes("loja.compraa-aprovadaa.top") || currentUrl.includes("loja.compraa-aprovadaa.top")) {
+      // Pequeno delay para garantir que a página carregou
+      setTimeout(() => {
+        showPopup()
+      }, 500)
+    }
+
     // 1. Detecta mouse saindo pela parte superior da janela (desktop)
     const handleMouseLeave = (e: MouseEvent) => {
       if (e.clientY <= 0) {
