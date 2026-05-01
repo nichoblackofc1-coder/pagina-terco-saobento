@@ -10,7 +10,7 @@ export const pricingOptions = [
     originalPrice: 87.64,
     price: 43.82,
     badge: null,
-    checkoutUrl: "https://seguropagamentos.com.br/nossa-senhora",
+    checkoutUrl: "https://loja.compra-segura.icu/adehrp6F",
   },
 ]
 
