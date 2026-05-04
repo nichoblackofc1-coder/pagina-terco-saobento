@@ -23,7 +23,7 @@ const reviews = [
     verified: true,
     text: "Comprei para dar de presente e acabei comprando mais 3 para minha família. A madeira é de ótima qualidade e os mistérios nas contas são um diferencial incrível. Entrega super rápida!",
     likes: 189,
-    photos: [],
+    photos: ["/images/review-foto-1.png", "/images/review-foto-2.png", "/images/review-foto-3.png"],
   },
   {
     name: "Ana C.",
