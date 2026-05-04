@@ -60,18 +60,7 @@ export function ExitIntentPopup() {
       window.history.pushState(null, "", window.location.href)
     }
 
-    // 4. Detecta tentativa de fechar a aba/janela
-    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
-      if (!hasShown) {
-        showPopup()
-        // Mostra o diálogo de confirmação do navegador
-        e.preventDefault()
-        e.returnValue = ""
-        return ""
-      }
-    }
-
-    // 5. Detecta quando usuário troca de aba ou minimiza
+    // 4. Detecta quando usuário troca de aba ou minimiza
     const handleVisibilityChange = () => {
       if (document.visibilityState === "hidden") {
         showPopup()
@@ -90,7 +79,6 @@ export function ExitIntentPopup() {
     document.addEventListener("mouseleave", handleMouseLeave)
     document.addEventListener("mousemove", handleMouseMove)
     window.addEventListener("popstate", handlePopState)
-    window.addEventListener("beforeunload", handleBeforeUnload)
     document.addEventListener("visibilitychange", handleVisibilityChange)
     window.addEventListener("blur", handleBlur)
 
@@ -98,7 +86,6 @@ export function ExitIntentPopup() {
       document.removeEventListener("mouseleave", handleMouseLeave)
       document.removeEventListener("mousemove", handleMouseMove)
       window.removeEventListener("popstate", handlePopState)
-      window.removeEventListener("beforeunload", handleBeforeUnload)
       document.removeEventListener("visibilitychange", handleVisibilityChange)
       window.removeEventListener("blur", handleBlur)
     }
