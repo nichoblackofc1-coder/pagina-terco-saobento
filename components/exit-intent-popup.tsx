@@ -118,7 +118,7 @@ export function ExitIntentPopup() {
         {/* Imagem do produto */}
         <div className="relative w-full aspect-[4/3] sm:aspect-[4/3]">
           <Image
-            src="/images/colar-embalagem.webp"
+            src="/images/terco-mao.png"
             alt="Terço de Madeira de São Bento com Mistérios"
             fill
             className="object-contain bg-white p-2"
@@ -154,7 +154,7 @@ export function ExitIntentPopup() {
             <div>
               <p className="text-[10px] xs:text-xs text-primary font-semibold">Por apenas</p>
               <span className="text-xl xs:text-2xl sm:text-4xl font-bold text-primary">
-                R$ 34,56
+                R$ 23,90
               </span>
             </div>
           </div>
