@@ -202,7 +202,7 @@ export function ProductReviews() {
           
           {/* Preços */}
           <div className="mt-4">
-            <span className="text-sm sm:text-base text-muted-foreground line-through">R$ 125,00</span>
+            <span className="text-sm sm:text-base text-muted-foreground line-through">R$ 52,84</span>
             <p className="text-2xl sm:text-3xl font-bold text-primary">R$ 34,56</p>
           </div>
           

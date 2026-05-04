@@ -19,7 +19,7 @@ export function StickyBuyBar() {
           </div>
           <div className="flex items-center gap-1.5 sm:gap-3 mt-0.5">
             <span className="text-sm sm:text-xl font-bold text-primary">R$ 34,56</span>
-            <span className="text-[8px] sm:text-sm text-muted-foreground line-through">R$ 125,00</span>
+            <span className="text-[8px] sm:text-sm text-muted-foreground line-through">R$ 52,84</span>
           </div>
           <p className="text-[8px] sm:text-sm text-muted-foreground">Estoque Limitado</p>
         </div>
