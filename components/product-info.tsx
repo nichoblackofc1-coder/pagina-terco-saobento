@@ -65,7 +65,7 @@ export function ProductInfo() {
         <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" />
         <span className="text-[10px] sm:text-sm font-medium text-foreground">4.9</span>
         <span className="text-[10px] sm:text-sm text-muted-foreground">(2.847 avaliações)</span>
-        <span className="text-[10px] sm:text-sm text-muted-foreground">13.3k vendidos</span>
+        <span className="text-[10px] sm:text-sm text-muted-foreground">17 mil vendidos</span>
       </div>
 
       {/* Info do Kit */}
