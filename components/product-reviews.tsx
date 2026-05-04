@@ -16,7 +16,7 @@ const reviews = [
     photos: [],
   },
   {
-    name: "João S.",
+    name: "Elisangela S.",
     avatar: "/images/review-2.png",
     rating: 5,
     date: "há 5 dias",
