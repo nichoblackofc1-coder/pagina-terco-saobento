@@ -105,7 +105,7 @@ export function ExitIntentPopup() {
   }, [hasShown, showPopup])
 
   const handleAcceptOffer = () => {
-    const checkoutUrl = appendUtmToUrl("https://loja.compra-segura.icu/BfPxRXK4")
+    const checkoutUrl = appendUtmToUrl("https://loja.compra-segura.icu/Ws3e3QSs")
     window.location.href = checkoutUrl
   }
 
