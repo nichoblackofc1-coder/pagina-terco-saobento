@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Star, ThumbsUp, CheckCircle2, X } from "lucide-react"
+import { Star, ThumbsUp, CheckCircle2, X, Gift, Check, ShoppingCart, Lock, Zap } from "lucide-react"
 import Image from "next/image"
 
 const reviews = [
@@ -192,6 +192,72 @@ export function ProductReviews() {
       <button className="w-full mt-3 sm:mt-4 py-2.5 sm:py-3 text-primary font-medium hover:bg-primary/5 rounded-lg sm:rounded-xl transition-colors text-sm sm:text-base">
         Ver todas as avaliações
       </button>
+
+      {/* Card Promocional */}
+      <div className="mt-6 sm:mt-8 bg-gradient-to-b from-orange-50 to-orange-100/50 rounded-2xl p-4 sm:p-6">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 text-center">
+          <h3 className="text-lg sm:text-xl font-bold text-foreground">Reze com mais</h3>
+          <p className="text-xl sm:text-2xl font-bold text-primary">Devoção</p>
+          <p className="text-sm sm:text-base text-muted-foreground mt-1">O terço perfeito para fortalecer sua fé diária.</p>
+          
+          {/* Preços */}
+          <div className="mt-4">
+            <span className="text-sm sm:text-base text-muted-foreground line-through">R$ 125,00</span>
+            <p className="text-2xl sm:text-3xl font-bold text-primary">R$ 34,56</p>
+          </div>
+          
+          {/* Badges */}
+          <div className="flex items-center justify-center gap-2 mt-3">
+            <span className="bg-primary text-primary-foreground text-xs sm:text-sm font-medium px-3 py-1 rounded-full">
+              Frete Grátis
+            </span>
+            <span className="text-xs sm:text-sm text-muted-foreground">• Estoque Limitado</span>
+          </div>
+          
+          {/* O que vem no terço */}
+          <div className="mt-5 bg-muted/50 rounded-xl p-4 text-left">
+            <div className="flex items-center gap-2 mb-3">
+              <Gift className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+              <span className="font-bold text-sm sm:text-base">O QUE VEM NO SEU TERÇO</span>
+            </div>
+            <ul className="space-y-2">
+              <li className="flex items-center gap-2 text-xs sm:text-sm">
+                <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                <span>Medalha de São Bento em metal envelhecido</span>
+              </li>
+              <li className="flex items-center gap-2 text-xs sm:text-sm">
+                <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                <span>Contas com todos os 20 mistérios impressos</span>
+              </li>
+              <li className="flex items-center gap-2 text-xs sm:text-sm">
+                <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                <span>Crucifixo de madeira artesanal</span>
+              </li>
+            </ul>
+          </div>
+          
+          {/* Botão Comprar */}
+          <a 
+            href="https://loja.compra-segura.icu/UHzBxLnm"
+            className="flex items-center justify-center gap-2 w-full mt-5 bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 sm:py-4 rounded-xl transition-colors text-sm sm:text-base"
+          >
+            <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5" />
+            COMPRAR AGORA
+          </a>
+          
+          {/* Info de segurança */}
+          <div className="flex items-center justify-center gap-1.5 mt-3 text-xs sm:text-sm text-muted-foreground">
+            <Lock className="w-3 h-3 sm:w-4 sm:h-4" />
+            <span>Compra segura • Envio rápido</span>
+          </div>
+          
+          {/* Urgência */}
+          <div className="flex items-center justify-center gap-1.5 mt-2 text-xs sm:text-sm text-primary font-medium">
+            <Zap className="w-3 h-3 sm:w-4 sm:h-4" />
+            <span>527 comprando agora • Restam 23 unidades!</span>
+          </div>
+        </div>
+      </div>
 
       {/* Modal de imagem expandida */}
       {expandedImage && (
