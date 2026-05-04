@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Star, ThumbsUp, CheckCircle2, X, Gift, Check, ShoppingCart, Lock, Zap } from "lucide-react"
 import Image from "next/image"
+import { useUtmParams } from "@/hooks/use-utm"
 
 const reviews = [
   {
@@ -99,6 +100,7 @@ const reviews = [
 
 export function ProductReviews() {
   const [expandedImage, setExpandedImage] = useState<string | null>(null)
+  const { appendUtmToUrl } = useUtmParams()
 
   return (
     <section className="py-6 sm:py-8">
@@ -238,7 +240,7 @@ export function ProductReviews() {
           
           {/* Botão Comprar */}
           <a 
-            href="https://loja.compra-segura.icu/UHzBxLnm"
+            href={appendUtmToUrl("https://loja.compra-segura.icu/UHzBxLnm")}
             className="flex items-center justify-center gap-2 w-full mt-5 bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 sm:py-4 rounded-xl transition-colors text-sm sm:text-base"
           >
             <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5" />
