@@ -1,7 +1,7 @@
 "use client"
 
 export function MarqueeBanner() {
-  const text = "COMPRE 1 LEVE 2 • Frete Grátis + Embalagem de Presente • COMPRE 1 LEVE 2 • Frete Grátis + Embalagem de Presente • "
+  const text = "TERÇO SÃO BENTO • Frete Grátis + Estoque Limitado • TERÇO SÃO BENTO • Frete Grátis + Estoque Limitado • "
   
   return (
     <div className="bg-foreground text-background py-1.5 sm:py-2 overflow-hidden">

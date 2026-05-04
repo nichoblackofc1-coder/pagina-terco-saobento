@@ -41,37 +41,37 @@ export function ProductInfo() {
       <div className="flex flex-col gap-0.5">
         <div className="flex items-center gap-1.5 sm:gap-2">
           <span className="bg-primary text-primary-foreground text-[9px] sm:text-xs font-bold px-1.5 py-0.5 rounded">
-            -50%
+            -72%
           </span>
           <span className="text-lg sm:text-2xl font-bold text-foreground">
-            R$ 34,83
+            R$ 34,56
           </span>
           <span className="text-xs sm:text-base text-muted-foreground line-through">
-            R$ 87,64
+            R$ 125,00
           </span>
         </div>
         <p className="text-[10px] sm:text-sm text-muted-foreground">
-          3x de R$ 14,61 <span className="text-green-600 font-medium">sem juros</span>
+          Frete Grátis <span className="text-green-600 font-medium">Estoque Limitado</span>
         </p>
       </div>
 
       {/* Título */}
       <h1 className="text-sm sm:text-lg font-bold text-foreground leading-tight">
-        [COMPRE 1 LEVE 2] Colar Nossa Senhora Aparecida Dupla Face - Zircônia &amp; Ouro 14K
+        Terço de Madeira de São Bento e Mistérios
       </h1>
 
       {/* Avaliações */}
       <div className="flex items-center gap-1 sm:gap-2">
         <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" />
-        <span className="text-[10px] sm:text-sm font-medium text-foreground">4.6</span>
-        <span className="text-[10px] sm:text-sm text-muted-foreground">(3,9 mil)</span>
-        <span className="text-[10px] sm:text-sm text-muted-foreground">39mil vendidos</span>
+        <span className="text-[10px] sm:text-sm font-medium text-foreground">4.9</span>
+        <span className="text-[10px] sm:text-sm text-muted-foreground">(2.847 avaliações)</span>
+        <span className="text-[10px] sm:text-sm text-muted-foreground">13.3k vendidos</span>
       </div>
 
       {/* Info do Kit */}
       <div className="bg-primary/10 border border-primary/20 rounded-md sm:rounded-lg p-2 sm:p-4">
         <p className="text-xs sm:text-base font-semibold text-primary text-center">
-          Kit com 2 Colares - Compre 1 e Leve 2
+          Terço de São Bento com Mistérios - Frete Grátis
         </p>
       </div>
 
@@ -79,19 +79,19 @@ export function ProductInfo() {
       <div className="grid grid-cols-2 gap-x-1 gap-y-1 sm:gap-3">
         <div className="flex items-center gap-1 text-[10px] sm:text-sm">
           <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
-          <span>Ouro 14K</span>
+          <span>Medalha São Bento</span>
         </div>
         <div className="flex items-center gap-1 text-[10px] sm:text-sm">
           <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
-          <span>Zircônias</span>
+          <span>Mistérios Impressos</span>
         </div>
         <div className="flex items-center gap-1 text-[10px] sm:text-sm">
           <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
-          <span>Dupla face</span>
+          <span>Madeira Natural</span>
         </div>
         <div className="flex items-center gap-1 text-[10px] sm:text-sm">
           <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
-          <span>Compre 1 leve 2</span>
+          <span>Presente Perfeito</span>
         </div>
       </div>
 

@@ -15,13 +15,13 @@ export function StickyBuyBar() {
         {/* Coluna esquerda */}
         <div className="flex-1 min-w-0">
           <div className="bg-primary text-primary-foreground text-[8px] sm:text-sm font-bold px-1.5 sm:px-4 py-0.5 rounded inline-block">
-            Compre 1 Leve 2
+            Frete Grátis
           </div>
           <div className="flex items-center gap-1.5 sm:gap-3 mt-0.5">
-            <span className="text-sm sm:text-xl font-bold text-primary">R$ 34,83</span>
-            <span className="text-[8px] sm:text-sm text-muted-foreground line-through">R$ 87,64</span>
+            <span className="text-sm sm:text-xl font-bold text-primary">R$ 34,56</span>
+            <span className="text-[8px] sm:text-sm text-muted-foreground line-through">R$ 125,00</span>
           </div>
-          <p className="text-[8px] sm:text-sm text-muted-foreground">3x R$ 14,61</p>
+          <p className="text-[8px] sm:text-sm text-muted-foreground">Estoque Limitado</p>
         </div>
 
         {/* Botao comprar */}

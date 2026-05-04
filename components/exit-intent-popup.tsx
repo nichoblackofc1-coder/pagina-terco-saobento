@@ -119,7 +119,7 @@ export function ExitIntentPopup() {
         <div className="relative w-full aspect-[4/3] sm:aspect-[4/3]">
           <Image
             src="/images/colar-embalagem.webp"
-            alt="Colar Nossa Senhora Aparecida Dupla Face"
+            alt="Terço de Madeira de São Bento com Mistérios"
             fill
             className="object-contain bg-white p-2"
             loading="lazy"
@@ -132,11 +132,11 @@ export function ExitIntentPopup() {
         <div className="bg-primary text-primary-foreground px-3 py-2.5 xs:px-4 xs:py-3 sm:px-6 sm:py-4 text-center">
           <DialogHeader>
             <DialogTitle className="text-base xs:text-lg sm:text-xl font-bold text-primary-foreground">
-              ESPERA! Compre 1 Leve 2
+              ESPERA! Oferta Especial
             </DialogTitle>
           </DialogHeader>
           <p className="text-[10px] xs:text-xs sm:text-sm text-primary-foreground/90 mt-0.5 xs:mt-1">
-            Dois colares de Nossa Senhora pelo preço de um!
+            Terço de São Bento com Mistérios - Frete Grátis!
           </p>
         </div>
 
@@ -147,14 +147,14 @@ export function ExitIntentPopup() {
             <div>
               <p className="text-[10px] xs:text-xs text-muted-foreground">De</p>
               <span className="text-base xs:text-lg sm:text-xl text-muted-foreground line-through">
-                R$ 87,64
+                R$ 125,00
               </span>
             </div>
             <div className="text-xl xs:text-2xl sm:text-3xl text-muted-foreground">→</div>
             <div>
               <p className="text-[10px] xs:text-xs text-primary font-semibold">Por apenas</p>
               <span className="text-xl xs:text-2xl sm:text-4xl font-bold text-primary">
-                R$ 19,90
+                R$ 34,56
               </span>
             </div>
           </div>

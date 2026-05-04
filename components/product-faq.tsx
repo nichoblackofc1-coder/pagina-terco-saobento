@@ -5,28 +5,28 @@ import { ChevronDown } from "lucide-react"
 
 const faqs = [
   {
-    question: "O que significa Compre 1 Leve 2?",
-    answer: "Você recebe dois colares pelo preço de um! Um colar com zircônias azuis e outro com zircônias brancas, ambos banhados a ouro 14K. Perfeito para usar um e presentear alguém especial."
+    question: "O que é o Terço com Mistérios de São Bento?",
+    answer: "É um terço especial de madeira com a medalha de São Bento e todos os 20 mistérios do rosário impressos nas contas. Perfeito para guiar sua oração e manter a fé sempre presente."
   },
   {
-    question: "O colar é realmente banhado a ouro?",
-    answer: "Sim! Nosso colar é banhado a ouro 14K de alta qualidade, garantindo durabilidade, brilho intenso e resistência ao desgaste. O acabamento é premium e não escurece com o tempo."
+    question: "De que material é feito o terço?",
+    answer: "O terço é feito com contas de madeira natural de alta qualidade, resistentes e confortáveis ao toque. A medalha de São Bento é em metal envelhecido e o crucifixo é artesanal."
   },
   {
-    question: "As zircônias são de qualidade?",
-    answer: "Utilizamos zircônias AAA de alta qualidade que imitam o brilho de diamantes. Cada pedra é cuidadosamente aplicada para garantir um acabamento impecável e duradouro."
+    question: "Como funcionam os mistérios nas contas?",
+    answer: "Cada conta do terço tem impressos os mistérios correspondentes (Gozosos, Dolorosos, Gloriosos e Luminosos), facilitando a oração e ajudando você a nunca se perder durante a reza."
   },
   {
-    question: "Quais são as medidas do colar?",
-    answer: "O cordão tem 43cm de comprimento, tamanho ideal para uso no dia a dia. O pingente de Nossa Senhora Aparecida mede 2,6cm, perfeito para destacar sem exagerar."
+    question: "Posso receber em qualquer lugar do Brasil?",
+    answer: "Sim! Entregamos em todo o Brasil com frete grátis. O envio é rápido e você receberá o código de rastreamento para acompanhar seu pedido."
   },
   {
-    question: "O colar é antialérgico?",
-    answer: "Sim! O colar é hipoalergênico e seguro para peles sensíveis. O banho de ouro 14K cria uma barreira que evita reações alérgicas comuns em bijuterias convencionais."
+    question: "Como funciona a garantia de 30 dias?",
+    answer: "Se você não ficar 100% satisfeito com o seu Terço de São Bento, devolvemos seu dinheiro. Sem perguntas, sem complicações. Processo de reembolso simples e rápido."
   },
   {
-    question: "Tem garantia de satisfação?",
-    answer: "Sim! Se por qualquer motivo você não ficar satisfeita com o colar, devolvemos cada centavo. Sem burocracia, sem questionamento. Satisfação garantida ou seu dinheiro de volta!"
+    question: "O terço é indicado para iniciantes na oração?",
+    answer: "Sim! O terço é perfeito para iniciantes pois os mistérios impressos nas contas guiam a oração, facilitando a meditação e ajudando quem está começando a rezar o rosário."
   }
 ]
 

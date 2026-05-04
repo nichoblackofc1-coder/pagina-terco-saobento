@@ -1,46 +1,46 @@
-import { Sparkles, Heart, Shield, Gift } from "lucide-react"
+import { Shield, BookOpen, TreeDeciduous, Gift } from "lucide-react"
 
 const benefits = [
   {
-    icon: Sparkles,
-    title: "OURO 14K",
-    description: "Banhado a ouro com acabamento premium",
-    color: "bg-foreground"
-  },
-  {
-    icon: Heart,
-    title: "FÉ E PROTEÇÃO",
-    description: "Nossa Senhora Aparecida sempre com você",
-    color: "bg-foreground"
-  },
-  {
     icon: Shield,
-    title: "DUPLA FACE",
-    description: "Zircônias brancas ou azuis reversíveis",
+    title: "MEDALHA SÃO BENTO",
+    description: "Proteção e bênção em cada oração",
+    color: "bg-foreground"
+  },
+  {
+    icon: BookOpen,
+    title: "MISTÉRIOS IMPRESSOS",
+    description: "Todos os mistérios nas contas para guiar sua reza",
+    color: "bg-foreground"
+  },
+  {
+    icon: TreeDeciduous,
+    title: "MADEIRA NATURAL",
+    description: "Contas de madeira resistentes e confortáveis",
     color: "bg-foreground"
   },
   {
     icon: Gift,
-    title: "COMPRE 1 LEVE 2",
-    description: "Dois colares pelo preço de um",
+    title: "PRESENTE PERFEITO",
+    description: "Ideal para presentear quem você ama",
     color: "bg-foreground"
   }
 ]
 
 const destaques = [
-  "Ouro 14K",
-  "Zircônias Premium", 
-  "Dupla Face",
-  "Cordão 43cm",
-  "Pingente 2,6cm",
-  "Antialérgico"
+  "Medalha São Bento",
+  "20 Mistérios", 
+  "Madeira Natural",
+  "Crucifixo Artesanal",
+  "Metal Envelhecido",
+  "Frete Grátis"
 ]
 
 export function ProductBenefits() {
   return (
     <section className="py-4 sm:py-8">
       <h2 className="text-sm sm:text-xl font-bold text-center mb-3 sm:mb-6">
-        Detalhes do Colar Nossa Senhora
+        Um terço que transforma sua oração
       </h2>
       
       {/* Destaques do produto */}

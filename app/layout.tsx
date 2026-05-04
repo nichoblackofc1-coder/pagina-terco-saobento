@@ -22,8 +22,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: '[COMPRE 1 LEVE 2] Colar Nossa Senhora Aparecida Dupla Face | Joias Sagradas',
-  description: 'Colar Nossa Senhora Aparecida Dupla Face - Zirconia & Ouro 14K. Compre 1 e leve 2 colares. Frete gratis + embalagem de presente!',
+  title: 'Terço de Madeira com Medalha de São Bento | Loja Oficial',
+  description: 'Terço de São Bento com Mistérios - Medalha de São Bento em metal envelhecido. Contas de madeira com os 20 mistérios impressos. Frete grátis!',
   generator: 'v0.app',
   icons: {
     icon: [
