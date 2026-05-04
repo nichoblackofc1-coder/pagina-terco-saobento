@@ -26,14 +26,13 @@ const ExitIntentPopup = dynamic(() => import("@/components/exit-intent-popup").t
 
 const productImages = [
   "/images/terco-mao.png",
-  "/images/colar-embalagem.webp",
-  "/images/colar-compre1-leve2.webp",
-  "/images/colar-lifestyle.webp",
-  "/images/colar-praia.webp",
-  "/images/colar-medidas.webp",
+  "/images/terco-2.png",
+  "/images/terco-3.png",
+  "/images/terco-4.png",
+  "/images/terco-5.png",
 ]
 
-// Colar Nossa Senhora Aparecida Dupla Face - Zirconia & Ouro 14K
+// Terço de Madeira de São Bento com Mistérios
 export default function ProductPage() {
   return (
     <PricingProvider>
@@ -44,7 +43,7 @@ export default function ProductPage() {
       {/* Faixa de urgência - TikTok Style */}
       <div className="bg-primary text-primary-foreground py-1 sm:py-3 text-center px-2">
         <p className="text-[10px] sm:text-base font-bold tracking-wide">
-          Restam apenas 12 colares em estoque!
+          Restam apenas 23 terços em estoque!
         </p>
       </div>
       
@@ -76,11 +75,11 @@ export default function ProductPage() {
 
         {/* Footer info */}
         <footer className="py-4 sm:py-8 text-center text-[10px] sm:text-sm text-muted-foreground border-t border-border mt-4 sm:mt-8">
-          <p className="font-medium text-foreground mb-1 sm:mb-2">Joias Sagradas - Loja Oficial</p>
+          <p className="font-medium text-foreground mb-1 sm:mb-2">Terço São Bento - Loja Oficial</p>
           <p>Entregamos em todo Brasil</p>
           <p className="mt-1.5 sm:mt-4">Suporte em até 24hrs</p>
           <p className="mt-1.5 sm:mt-4 text-[8px] sm:text-xs">
-            2024 Joias Sagradas. Todos os direitos reservados.
+            2024 Terço São Bento. Todos os direitos reservados.
           </p>
         </footer>
       </div>

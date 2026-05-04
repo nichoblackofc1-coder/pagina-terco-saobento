@@ -61,7 +61,7 @@ export function ProductGallery({ images }: ProductGalleryProps) {
       >
         <Image
           src={images[selectedIndex]}
-          alt="Colar Nossa Senhora Aparecida Dupla Face - Zirconia e Ouro 14K"
+          alt="Terço de Madeira de São Bento com Mistérios"
           fill
           className="object-contain p-2 sm:p-4 pointer-events-none select-none"
           priority={selectedIndex === 0}
