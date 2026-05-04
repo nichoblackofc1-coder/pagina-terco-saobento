@@ -36,7 +36,7 @@ export function ProductInfo() {
   const formatTime = (num: number) => num.toString().padStart(2, "0")
 
   return (
-    <div className="flex flex-col gap-2 sm:gap-4">
+    <div className="flex flex-col gap-3 sm:gap-4">
       {/* Preco principal */}
       <div className="flex flex-col gap-0.5">
         <div className="flex items-center gap-1.5 sm:gap-2">
@@ -56,7 +56,7 @@ export function ProductInfo() {
       </div>
 
       {/* Título */}
-      <h1 className="text-sm sm:text-lg font-bold text-foreground leading-tight">
+      <h1 className="text-base sm:text-lg font-bold text-foreground leading-tight">
         Terço de Madeira de São Bento e Mistérios
       </h1>
 
@@ -98,7 +98,7 @@ export function ProductInfo() {
       {/* Botão de ação */}
       <Button 
         size="lg" 
-        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-sm sm:text-lg py-7 sm:py-10 rounded-sm shadow-lg shadow-primary/30"
+        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base sm:text-lg py-6 sm:py-10 rounded-lg shadow-lg shadow-primary/30 active:scale-[0.98] transition-transform"
         onClick={() => window.open(appendUtmToUrl(currentOption.checkoutUrl), "_blank")}
       >
         COMPRAR AGORA

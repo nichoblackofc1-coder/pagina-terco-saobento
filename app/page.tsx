@@ -36,7 +36,7 @@ const productImages = [
 export default function ProductPage() {
   return (
     <PricingProvider>
-    <main className="min-h-screen bg-background pb-16 sm:pb-32 md:pb-8">
+    <main className="min-h-screen bg-background pb-20 sm:pb-32 md:pb-8">
       {/* Banner marquee */}
       <MarqueeBanner />
       
@@ -48,8 +48,8 @@ export default function ProductPage() {
       </div>
       
       {/* Conteúdo principal */}
-      <div className="max-w-6xl mx-auto px-2 sm:px-4 py-2 sm:py-6">
-        <div className="grid md:grid-cols-2 gap-2 sm:gap-6 md:gap-8">
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 py-3 sm:py-6">
+        <div className="grid md:grid-cols-2 gap-3 sm:gap-6 md:gap-8">
           {/* Galeria de imagens */}
           <div className="md:sticky md:top-4 md:self-start">
             <ProductGallery images={productImages} />

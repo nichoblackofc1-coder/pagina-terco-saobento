@@ -101,9 +101,9 @@ export function ProductReviews() {
   const [expandedImage, setExpandedImage] = useState<string | null>(null)
 
   return (
-    <section className="py-5 sm:py-8">
-      <div className="flex flex-col xs:flex-row xs:items-center xs:justify-between gap-1.5 xs:gap-2 sm:gap-0 mb-3 xs:mb-4 sm:mb-6">
-        <h2 className="text-base xs:text-lg sm:text-xl font-bold">Avaliações dos Clientes</h2>
+    <section className="py-6 sm:py-8">
+      <div className="flex flex-col xs:flex-row xs:items-center xs:justify-between gap-2 xs:gap-2 sm:gap-0 mb-4 xs:mb-4 sm:mb-6">
+        <h2 className="text-lg xs:text-lg sm:text-xl font-bold">Avaliações dos Clientes</h2>
         <div className="flex items-center gap-1 xs:gap-1.5 sm:gap-2">
           <div className="flex">
             {[...Array(5)].map((_, i) => (
@@ -118,7 +118,7 @@ export function ProductReviews() {
       {/* Lista de avaliacoes */}
       <div className="space-y-3 sm:space-y-4">
         {reviews.map((review, index) => (
-          <div key={index} className="bg-card border border-border rounded-lg sm:rounded-xl p-3 sm:p-4">
+          <div key={index} className="bg-card border border-border rounded-xl sm:rounded-xl p-3.5 sm:p-4">
             <div className="flex items-start gap-2.5 sm:gap-3">
               <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden flex-shrink-0 relative bg-muted">
                 <Image

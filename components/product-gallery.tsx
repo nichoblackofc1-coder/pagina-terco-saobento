@@ -52,9 +52,9 @@ export function ProductGallery({ images }: ProductGalleryProps) {
   }
 
   return (
-    <div className="flex flex-col gap-2 sm:gap-3">
+    <div className="flex flex-col gap-2.5 sm:gap-3">
       <div 
-        className="relative aspect-square bg-white rounded-lg sm:rounded-xl overflow-hidden border border-border cursor-grab active:cursor-grabbing"
+        className="relative aspect-square bg-white rounded-xl sm:rounded-xl overflow-hidden border border-border cursor-grab active:cursor-grabbing shadow-sm"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -77,12 +77,12 @@ export function ProductGallery({ images }: ProductGalleryProps) {
       
       {/* Thumbnails - visíveis em todas as telas */}
       {images.length > 1 && (
-        <div className="flex gap-1.5 sm:gap-2 overflow-x-auto pb-1 scrollbar-hide">
+        <div className="flex gap-2 sm:gap-2.5 overflow-x-auto pb-1 scrollbar-hide">
           {images.map((image, index) => (
             <button
               key={index}
               onClick={() => setSelectedIndex(index)}
-              className={`relative w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 flex-shrink-0 rounded-md sm:rounded-lg overflow-hidden border-2 transition-all bg-white active:scale-95 ${
+              className={`relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 flex-shrink-0 rounded-lg sm:rounded-lg overflow-hidden border-2 transition-all bg-white active:scale-95 shadow-sm ${
                 selectedIndex === index 
                   ? "border-primary" 
                   : "border-border"
