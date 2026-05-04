@@ -252,7 +252,7 @@ export function ProductReviews() {
           </div>
           
           {/* Urgência */}
-          <div className="flex items-center justify-center gap-1.5 mt-2 text-xs sm:text-sm text-primary font-medium">
+          <div className="flex items-center justify-center gap-1.5 mt-2 text-[12px] sm:text-xs text-primary font-medium">
             <Zap className="w-3 h-3 sm:w-4 sm:h-4" />
             <span>527 comprando agora • Restam 23 unidades!</span>
           </div>
