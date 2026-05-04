@@ -194,7 +194,7 @@ export function ProductReviews() {
       </button>
 
       {/* Card Promocional */}
-      <div className="mt-6 sm:mt-8 bg-gradient-to-b from-orange-50 to-orange-100/50 rounded-2xl p-4 sm:p-6">
+      <div className="mt-6 sm:mt-8 rounded-2xl p-4 sm:p-6" style={{ backgroundColor: '#FFFCEE' }}>
         <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 text-center">
           <h3 className="text-lg sm:text-xl font-bold text-foreground">Reze com mais</h3>
           <p className="text-xl sm:text-2xl font-bold text-primary">Devoção</p>
