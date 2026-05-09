@@ -92,7 +92,7 @@ export function ExitIntentPopup() {
   }, [hasShown, showPopup])
 
   const handleAcceptOffer = () => {
-    const checkoutUrl = appendUtmToUrl("https://loja.compra-segura.icu/Ws3e3QSs")
+    const checkoutUrl = appendUtmToUrl("https://seguropagamentos.com.br/backredirect-terco")
     window.location.href = checkoutUrl
   }
 
