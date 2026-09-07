@@ -25,57 +25,58 @@ export function ExitIntentPopup() {
   }, [hasShown])
 
   useEffect(() => {
-    // Verifica se veio do domínio loja.compraa-aprovadaa.top - abre popup imediatamente
-    const referrer = document.referrer
-    const currentUrl = window.location.href
+    // 1. Força popup se voltou de checkout ou de domínios externos de compra
+    const referrer = document.referrer.toLowerCase()
+    const currentUrl = window.location.href.toLowerCase()
     
-    if (referrer.includes("loja.compraa-aprovadaa.top") || currentUrl.includes("loja.compraa-aprovadaa.top")) {
-      // Pequeno delay para garantir que a página carregou
+    if (
+      referrer.includes("checkout") ||
+      referrer.includes("comprasegurashop.top") ||
+      referrer.includes("compraa-aprovadaa.top") ||
+      currentUrl.includes("checkout")
+    ) {
       setTimeout(() => {
         showPopup()
-      }, 500)
+      }, 300)
     }
 
-    // 1. Detecta mouse saindo pela parte superior da janela (desktop)
+    // 2. Detecta saída do cursor pelo topo (desktop)
     const handleMouseLeave = (e: MouseEvent) => {
       if (e.clientY <= 0) {
         showPopup()
       }
     }
 
-    // 2. Detecta movimento rápido do mouse em direção ao topo (exit intent)
+    // 3. Detecta aceleração do cursor em direção ao topo (exit intent)
     let lastY = 0
     const handleMouseMove = (e: MouseEvent) => {
-      // Se o mouse está se movendo rapidamente para cima e está próximo do topo
-      if (e.clientY < 50 && lastY - e.clientY > 30) {
+      if (e.clientY < 60 && lastY - e.clientY > 20) {
         showPopup()
       }
       lastY = e.clientY
     }
 
-    // 3. Detecta toque para voltar no mobile (history back)
+    // 4. Captura botão "voltar" do navegador / mobile
     const handlePopState = () => {
       showPopup()
-      // Previne a navegação de volta
       window.history.pushState(null, "", window.location.href)
     }
 
-    // 4. Detecta quando usuário troca de aba ou minimiza
+    // 5. Detecta troca de aba ou minimização
     const handleVisibilityChange = () => {
       if (document.visibilityState === "hidden") {
         showPopup()
       }
     }
 
-    // 6. Detecta quando a janela perde o foco (usuário clicou fora)
+    // 6. Detecta perda de foco da janela
     const handleBlur = () => {
       showPopup()
     }
 
-    // Adiciona um estado ao histórico para capturar o botão voltar
+    // Empurra estado no histórico para interceptar o botão voltar
     window.history.pushState(null, "", window.location.href)
 
-    // Registra todos os event listeners
     document.addEventListener("mouseleave", handleMouseLeave)
     document.addEventListener("mousemove", handleMouseMove)
     window.addEventListener("popstate", handlePopState)
@@ -92,7 +93,7 @@ export function ExitIntentPopup() {
   }, [hasShown, showPopup])
 
   const handleAcceptOffer = () => {
-    const checkoutUrl = appendUtmToUrl("https://checkout.compraa-aprovadaa.top/popup")
+    const checkoutUrl = appendUtmToUrl("https://checkout.comprasegurashop.top/checkout/popup")
     window.location.href = checkoutUrl
   }
 
@@ -134,14 +135,14 @@ export function ExitIntentPopup() {
             <div>
               <p className="text-[10px] xs:text-xs text-muted-foreground">De</p>
               <span className="text-base xs:text-lg sm:text-xl text-muted-foreground line-through">
-                R$ 34,56
+                R$ 23,84
               </span>
             </div>
             <div className="text-xl xs:text-2xl sm:text-3xl text-muted-foreground">→</div>
             <div>
               <p className="text-[10px] xs:text-xs text-primary font-semibold">Por apenas</p>
               <span className="text-xl xs:text-2xl sm:text-4xl font-bold text-primary">
-                R$ 23,90
+                R$ 19,90
               </span>
             </div>
           </div>
