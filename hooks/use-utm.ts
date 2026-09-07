@@ -10,25 +10,9 @@ export function useUtmParams() {
       const searchParams = new URLSearchParams(window.location.search)
       const utmParams: string[] = []
 
-      // Captura todos os parâmetros UTM comuns
-      const utmKeys = [
-        "utm_source",
-        "utm_medium", 
-        "utm_campaign",
-        "utm_term",
-        "utm_content",
-        "utm_id",
-        "fbclid",
-        "gclid",
-        "ttclid",
-        "ref",
-        "src"
-      ]
-
-      utmKeys.forEach((key) => {
-        const value = searchParams.get(key)
+      searchParams.forEach((value, key) => {
         if (value) {
-          utmParams.push(`${key}=${encodeURIComponent(value)}`)
+          utmParams.push(`${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
         }
       })
 

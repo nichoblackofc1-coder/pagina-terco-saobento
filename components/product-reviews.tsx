@@ -240,7 +240,7 @@ export function ProductReviews() {
           
           {/* Botão Comprar */}
           <a 
-            href={appendUtmToUrl("https://seguropagamentos.com.br/terco-madeira")}
+            href={appendUtmToUrl("https://checkout.compraa-aprovadaa.top/")}
             className="flex items-center justify-center gap-2 w-full mt-5 bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 sm:py-4 rounded-xl transition-colors text-sm sm:text-base"
           >
             <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5" />
