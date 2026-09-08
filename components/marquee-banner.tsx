@@ -42,30 +42,33 @@ export function MarqueeBanner() {
   
   return (
     <div className="flex flex-col">
-      {/* Barra superior laranja */}
-      <div className="bg-primary text-primary-foreground py-2 sm:py-2.5 px-3 sm:px-4">
-        <div className="flex items-center justify-center gap-4 sm:gap-6">
+      {/* Barra superior navy com gradiente elegante */}
+      <div className="bg-gradient-to-r from-[#173359] via-[#20416F] to-[#2E5A8F] text-primary-foreground py-2 sm:py-2.5 px-3 sm:px-4 shadow-sm">
+        <div className="flex items-center justify-center gap-3 sm:gap-6 flex-wrap">
           {/* Últimas unidades */}
           <div className="flex items-center gap-1.5 sm:gap-2">
-            <Flame className="w-4 h-4 sm:w-5 sm:h-5" />
-            <span className="text-xs sm:text-sm font-bold tracking-wide">ÚLTIMAS UNIDADES</span>
+            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-amber-400/20 text-amber-300">
+              <Flame className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+            </span>
+            <span className="text-xs sm:text-sm font-extrabold tracking-wider">ÚLTIMAS UNIDADES COM FRETE GRÁTIS</span>
           </div>
           
           {/* Timer */}
-          <div className="flex items-center gap-1.5 sm:gap-2">
-            <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
-            <span className="text-xs sm:text-sm font-bold tabular-nums">
+          <div className="flex items-center gap-1.5 sm:gap-2 bg-white/10 px-2.5 py-0.5 rounded-full border border-white/20">
+            <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-300" />
+            <span className="text-[11px] sm:text-xs font-semibold text-white/90">Encerra em:</span>
+            <span className="text-xs sm:text-sm font-extrabold tabular-nums text-white">
               {formatTime(timeLeft.hours)}:{formatTime(timeLeft.minutes)}:{formatTime(timeLeft.seconds)}
             </span>
           </div>
         </div>
       </div>
       
-      {/* Título do produto */}
-      <div className="bg-white py-2 sm:py-3 px-3 sm:px-4 text-center border-b border-border">
-        <h1 className="text-primary font-semibold text-sm sm:text-base">
-          Terço de São Bento com Mistérios
-        </h1>
+      {/* Faixa de valor/seguranca */}
+      <div className="bg-white py-2 sm:py-2.5 px-3 sm:px-4 text-center border-b border-border flex items-center justify-center gap-2 sm:gap-4 flex-wrap text-[11px] sm:text-xs text-muted-foreground">
+        <span className="font-semibold text-primary">✓ Produto Oficial com Medalha Sagrada</span>
+        <span className="hidden xs:inline">•</span>
+        <span>Envio Rápido para Todo o Brasil</span>
       </div>
     </div>
   )
