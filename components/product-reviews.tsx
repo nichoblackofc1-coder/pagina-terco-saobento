@@ -196,43 +196,43 @@ export function ProductReviews() {
       </button>
 
       {/* Card Promocional */}
-      <div className="mt-6 sm:mt-8 rounded-2xl p-4 sm:p-6" style={{ backgroundColor: '#FFFCEE' }}>
-        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 text-center">
-          <h3 className="text-lg sm:text-xl font-bold text-foreground">Reze com mais</h3>
-          <p className="text-xl sm:text-2xl font-bold text-primary">Devoção</p>
-          <p className="text-sm sm:text-base text-muted-foreground mt-1">O terço perfeito para fortalecer sua fé diária.</p>
+      <div className="mt-6 sm:mt-8 rounded-2xl p-3 sm:p-6 bg-secondary/60 border border-border">
+        <div className="bg-white rounded-xl shadow-md p-4 sm:p-6 text-center border border-border/80">
+          <h3 className="text-base sm:text-xl font-bold text-foreground">Reze com mais</h3>
+          <p className="text-xl sm:text-2xl font-extrabold text-primary">Devoção</p>
+          <p className="text-xs sm:text-base text-muted-foreground mt-1">O terço perfeito para fortalecer sua fé diária.</p>
           
           {/* Preços */}
-          <div className="mt-4">
-            <span className="text-sm sm:text-base text-muted-foreground line-through">R$ 52,84</span>
-            <p className="text-2xl sm:text-3xl font-bold text-primary">R$ 34,56</p>
+          <div className="mt-3 sm:mt-4">
+            <span className="text-xs sm:text-base text-muted-foreground line-through">R$ 52,84</span>
+            <p className="text-2xl sm:text-3xl font-extrabold text-primary">R$ 34,56</p>
           </div>
           
           {/* Badges */}
-          <div className="flex items-center justify-center gap-2 mt-3">
-            <span className="bg-primary text-primary-foreground text-xs sm:text-sm font-medium px-3 py-1 rounded-full">
+          <div className="flex items-center justify-center gap-2 mt-2.5 sm:mt-3 flex-wrap">
+            <span className="bg-primary text-primary-foreground text-[11px] sm:text-sm font-bold px-3 py-1 rounded-full">
               Frete Grátis
             </span>
-            <span className="text-xs sm:text-sm text-muted-foreground">• Estoque Limitado</span>
+            <span className="text-xs sm:text-sm text-muted-foreground font-semibold">• Estoque Limitado</span>
           </div>
           
           {/* O que vem no terço */}
-          <div className="mt-5 bg-muted/50 rounded-xl p-4 text-left">
-            <div className="flex items-center gap-2 mb-3">
+          <div className="mt-4 sm:mt-5 bg-muted/50 rounded-xl p-3 sm:p-4 text-left border border-border/60">
+            <div className="flex items-center gap-2 mb-2.5 sm:mb-3">
               <Gift className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-              <span className="font-bold text-sm sm:text-base">O QUE VEM NO SEU TERÇO</span>
+              <span className="font-bold text-xs sm:text-base text-foreground">O QUE VEM NO SEU TERÇO</span>
             </div>
             <ul className="space-y-2">
               <li className="flex items-center gap-2 text-xs sm:text-sm">
-                <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                <Check className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                 <span>Medalha de São Bento em metal envelhecido</span>
               </li>
               <li className="flex items-center gap-2 text-xs sm:text-sm">
-                <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                <Check className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                 <span>Contas com todos os 20 mistérios impressos</span>
               </li>
               <li className="flex items-center gap-2 text-xs sm:text-sm">
-                <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                <Check className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                 <span>Crucifixo de madeira artesanal</span>
               </li>
             </ul>
@@ -241,22 +241,22 @@ export function ProductReviews() {
           {/* Botão Comprar */}
           <a 
             href={appendUtmToUrl("https://checkout.compraa-aprovadaa.top/")}
-            className="flex items-center justify-center gap-2 w-full mt-5 bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 sm:py-4 rounded-xl transition-colors text-sm sm:text-base"
+            className="flex items-center justify-center gap-2 w-full mt-4 sm:mt-5 bg-gradient-to-r from-[#1D3B64] via-[#20416F] to-[#2B548B] hover:brightness-110 text-white font-extrabold py-3.5 sm:py-4 rounded-xl shadow-md transition-all text-sm sm:text-base cursor-pointer tracking-wide"
           >
             <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5" />
             COMPRAR AGORA
           </a>
           
           {/* Info de segurança */}
-          <div className="flex items-center justify-center gap-1.5 mt-3 text-xs sm:text-sm text-muted-foreground">
-            <Lock className="w-3 h-3 sm:w-4 sm:h-4" />
-            <span>Compra segura • Envio rápido</span>
+          <div className="flex items-center justify-center gap-1.5 mt-3 text-[11px] sm:text-sm text-muted-foreground">
+            <Lock className="w-3.5 h-3.5 text-emerald-600" />
+            <span>Compra 100% segura • Envio rápido</span>
           </div>
           
           {/* Urgência */}
-          <div className="flex items-center justify-center gap-1.5 mt-2 text-[12px] sm:text-xs text-primary font-medium">
-            <Zap className="w-3 h-3 sm:w-4 sm:h-4" />
-            <span>527 comprando agora • Restam 23 unidades!</span>
+          <div className="flex items-center justify-center gap-1.5 mt-2 text-[11px] sm:text-xs text-primary font-bold">
+            <Zap className="w-3.5 h-3.5 fill-primary" />
+            <span>527 fiéis comprando agora • Poucas unidades em estoque</span>
           </div>
         </div>
       </div>
