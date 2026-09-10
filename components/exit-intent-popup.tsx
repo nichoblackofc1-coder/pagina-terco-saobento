@@ -135,14 +135,14 @@ export function ExitIntentPopup() {
             <div>
               <p className="text-[10px] xs:text-xs text-muted-foreground">De</p>
               <span className="text-base xs:text-lg sm:text-xl text-muted-foreground line-through">
-                R$ 23,84
+                R$ 19,90
               </span>
             </div>
             <div className="text-xl xs:text-2xl sm:text-3xl text-muted-foreground">→</div>
             <div>
               <p className="text-[10px] xs:text-xs text-primary font-semibold">Por apenas</p>
               <span className="text-xl xs:text-2xl sm:text-4xl font-bold text-primary">
-                R$ 19,90
+                R$ 15,90
               </span>
             </div>
           </div>

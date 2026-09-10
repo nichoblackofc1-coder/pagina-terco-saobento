@@ -46,15 +46,10 @@ export function ProductInfo() {
 
   return (
     <div className="flex flex-col gap-3 sm:gap-4 bg-white p-3.5 sm:p-5 rounded-2xl border border-border shadow-sm">
-      {/* Selo topo */}
-      <div className="flex items-center justify-between gap-2 flex-wrap">
-        <span className="bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
-          <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Compra Segura • Envio Imediato
-        </span>
-        <span className="text-[10px] sm:text-xs text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full font-semibold">
-          Restam poucas peças
-        </span>
-      </div>
+      {/* Título */}
+      <h1 className="text-lg sm:text-2xl font-bold text-foreground leading-tight tracking-tight">
+        Terço de Madeira de São Bento com os 20 Mistérios
+      </h1>
 
       {/* Preco principal dinâmico */}
       <div className="flex flex-col gap-1 p-3 rounded-xl bg-gradient-to-br from-primary/[0.04] via-transparent to-primary/[0.02] border border-primary/15">
@@ -74,11 +69,6 @@ export function ProductInfo() {
         </p>
       </div>
 
-      {/* Título */}
-      <h1 className="text-lg sm:text-2xl font-bold text-foreground leading-tight tracking-tight">
-        Terço de Madeira de São Bento com os 20 Mistérios
-      </h1>
-
       {/* Avaliações */}
       <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
         <div className="flex items-center">
@@ -89,26 +79,6 @@ export function ProductInfo() {
         <span className="text-xs sm:text-sm font-bold text-foreground">4.9/5.0</span>
         <span className="text-xs sm:text-sm text-muted-foreground">(2.847 fiéis avaliaram)</span>
         <span className="text-xs sm:text-sm font-semibold text-emerald-700">• +17 mil entregues</span>
-      </div>
-
-      {/* Benefícios rápidos */}
-      <div className="grid grid-cols-2 gap-2 bg-secondary/60 p-3 rounded-xl border border-border">
-        <div className="flex items-center gap-1.5 text-[11px] sm:text-sm text-foreground">
-          <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-          <span className="font-medium">Medalha São Bento Original</span>
-        </div>
-        <div className="flex items-center gap-1.5 text-[11px] sm:text-sm text-foreground">
-          <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-          <span className="font-medium">20 Mistérios Gravados</span>
-        </div>
-        <div className="flex items-center gap-1.5 text-[11px] sm:text-sm text-foreground">
-          <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-          <span className="font-medium">Madeira Nobre e Durável</span>
-        </div>
-        <div className="flex items-center gap-1.5 text-[11px] sm:text-sm text-foreground">
-          <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-          <span className="font-medium">Oração com Mais Devoção</span>
-        </div>
       </div>
 
       {/* SELETOR DE OFERTAS */}

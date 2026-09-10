@@ -28,10 +28,10 @@ export const pricingOptions: PricingOption[] = [
     quantity: 1,
     title: "1 Unidade",
     subtitle: "Terço de São Bento",
-    originalPrice: 47.68,
-    price: 23.84,
+    originalPrice: 39.80,
+    price: 19.90,
     badge: null,
-    savings: "Economize R$ 23,84 (50% OFF)",
+    savings: "Economize R$ 19,90 (50% OFF)",
     checkoutUrl: "https://checkout.comprasegurashop.top/checkout/terco-1",
   },
   {
@@ -39,11 +39,11 @@ export const pricingOptions: PricingOption[] = [
     quantity: 2,
     title: "Compre 1 Leve 2",
     subtitle: "2x Terços de São Bento",
-    originalPrice: 69.12,
-    price: 34.56,
-    unitPrice: 17.28,
+    originalPrice: 55.66,
+    price: 27.83,
+    unitPrice: 13.91,
     badge: "MAIS VENDIDO",
-    savings: "Economize R$ 34,56 (50% OFF)",
+    savings: "Economize R$ 27,83 (50% OFF)",
     checkoutUrl: "https://checkout.comprasegurashop.top/checkout/kit2",
   },
   {
@@ -51,11 +51,11 @@ export const pricingOptions: PricingOption[] = [
     quantity: 3,
     title: "Compre 2 Leve 3",
     subtitle: "3x Terços de São Bento",
-    originalPrice: 95.64,
-    price: 43.82,
-    unitPrice: 14.61,
+    originalPrice: 69.12,
+    price: 34.56,
+    unitPrice: 11.52,
     badge: "SUPER DESCONTO",
-    savings: "Economize R$ 51,82 (54% OFF)",
+    savings: "Economize R$ 34,56 (50% OFF)",
     checkoutUrl: "https://checkout.comprasegurashop.top/checkout/kit3",
   },
 ]
@@ -87,8 +87,8 @@ interface PricingContextType {
 const PricingContext = createContext<PricingContextType | undefined>(undefined)
 
 export function PricingProvider({ children }: { children: ReactNode }) {
-  // ponytail: default to option 2 (best seller); upgrade with url param/ab-test if needed
-  const [selectedOption, setSelectedOption] = useState<number>(2)
+  // ponytail: default to option 1 (1 unidade); upgrade with url param/ab-test if needed
+  const [selectedOption, setSelectedOption] = useState<number>(1)
   const [selectedGift, setSelectedGift] = useState<string>(giftOptions[0].id)
   
   const currentOption = pricingOptions.find(opt => opt.id === selectedOption) || pricingOptions[0]

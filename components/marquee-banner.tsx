@@ -67,8 +67,6 @@ export function MarqueeBanner() {
       {/* Faixa de valor/seguranca */}
       <div className="bg-white py-2 sm:py-2.5 px-3 sm:px-4 text-center border-b border-border flex items-center justify-center gap-2 sm:gap-4 flex-wrap text-[11px] sm:text-xs text-muted-foreground">
         <span className="font-semibold text-primary">✓ Produto Oficial com Medalha Sagrada</span>
-        <span className="hidden xs:inline">•</span>
-        <span>Envio Rápido para Todo o Brasil</span>
       </div>
     </div>
   )

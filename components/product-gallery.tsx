@@ -23,6 +23,17 @@ export function ProductGallery({ images }: ProductGalleryProps) {
     preloadNext()
   }, [selectedIndex, images.length])
 
+  // Rotação automática a cada 3 segundos
+  useEffect(() => {
+    if (images.length <= 1) return
+
+    const interval = setInterval(() => {
+      setSelectedIndex((prev) => (prev + 1) % images.length)
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [images.length, selectedIndex])
+
   const minSwipeDistance = 50
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -69,38 +80,30 @@ export function ProductGallery({ images }: ProductGalleryProps) {
           sizes="(max-width: 640px) 95vw, (max-width: 768px) 50vw, 400px"
           draggable={false}
           quality={75}
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIBAAAgIBBAMBAAAAAAAAAAAAAQIDBAAFERIhBhMxQf/EABQBAQAAAAAAAAAAAAAAAAAAAAX/xAAZEQACAwEAAAAAAAAAAAAAAAABAgADESH/2gAMAwEAAhEDEEEAAd2Gpa1BLQjnrW4Y2hBkd+CvZHR/Px+7nwYwxTAuRs//2Q=="
         />
 
-      </div>
-      
-      {/* Thumbnails - visíveis em todas as telas */}
-      {images.length > 1 && (
-        <div className="flex gap-2 sm:gap-2.5 overflow-x-auto pb-1 scrollbar-hide">
-          {images.map((image, index) => (
-            <button
-              key={index}
-              onClick={() => setSelectedIndex(index)}
-              className={`relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 flex-shrink-0 rounded-lg sm:rounded-lg overflow-hidden border-2 transition-all bg-white active:scale-95 shadow-sm ${
-                selectedIndex === index 
-                  ? "border-primary" 
-                  : "border-border"
-              }`}
-            >
-              <Image
-                src={image}
-                alt={`Imagem ${index + 1}`}
-                fill
-                className="object-contain p-0.5"
-                loading={index < 2 ? "eager" : "lazy"}
-                sizes="48px"
-                quality={40}
+        {/* Indicadores de bolinhas estilo Mercado Livre */}
+        {images.length > 1 && (
+          <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 flex items-center gap-1.5 bg-black/20 backdrop-blur-[2px] px-2 py-1 rounded-full z-10 pointer-events-auto">
+            {images.map((_, idx) => (
+              <button
+                key={idx}
+                type="button"
+                aria-label={`Ir para imagem ${idx + 1}`}
+                onClick={(e) => {
+                  e.stopPropagation()
+                  setSelectedIndex(idx)
+                }}
+                className={`transition-all duration-200 rounded-full ${
+                  selectedIndex === idx
+                    ? "w-4 h-1.5 bg-primary"
+                    : "w-1.5 h-1.5 bg-white/70 hover:bg-white"
+                }`}
               />
-            </button>
-          ))}
-        </div>
-      )}
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   )
 }
