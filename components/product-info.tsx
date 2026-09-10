@@ -162,7 +162,9 @@ export function ProductInfo() {
         <Button 
           size="lg" 
           className="w-full bg-gradient-to-r from-[#1D3B64] via-[#20416F] to-[#2B548B] hover:brightness-110 text-white font-extrabold text-base sm:text-lg py-6 sm:py-7 rounded-xl shadow-lg shadow-primary/25 active:scale-[0.98] transition-all cursor-pointer tracking-wide"
-          onClick={() => window.open(appendUtmToUrl(currentOption.checkoutUrl), "_blank")}
+          onClick={() => {
+            window.location.href = appendUtmToUrl(currentOption.checkoutUrl)
+          }}
         >
           COMPRAR AGORA
         </Button>

@@ -35,7 +35,9 @@ export function StickyBuyBar() {
         <Button
           size="lg"
           className="bg-gradient-to-r from-[#1D3B64] to-[#2B548B] hover:brightness-110 text-white font-extrabold px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl shadow-md text-xs sm:text-base whitespace-nowrap active:scale-95 transition-all cursor-pointer tracking-wide"
-          onClick={() => window.open(appendUtmToUrl(currentOption.checkoutUrl), "_blank")}
+          onClick={() => {
+            window.location.href = appendUtmToUrl(currentOption.checkoutUrl)
+          }}
         >
           <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5" />
           COMPRAR AGORA

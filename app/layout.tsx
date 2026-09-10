@@ -47,12 +47,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="bg-background">
       <head>
-        <link rel="preconnect" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" />
         <link rel="preconnect" href="https://connect.facebook.net" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
-        <link rel="preload" as="image" href="/images/colar-nossa-senhora.webp" type="image/webp" fetchPriority="high" />
-        <link rel="preload" as="image" href="/images/colar-compre1-leve2.webp" type="image/webp" />
+        <link rel="preload" as="image" href="/images/terco-mao.png" type="image/png" fetchPriority="high" />
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
