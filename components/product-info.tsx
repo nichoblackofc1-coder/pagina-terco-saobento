@@ -87,9 +87,6 @@ export function ProductInfo() {
           <span className="text-xs sm:text-sm font-bold text-foreground">
             Escolha o melhor kit para você:
           </span>
-          <span className="text-[10px] sm:text-xs text-primary font-bold flex items-center gap-1 bg-primary/10 px-2 py-0.5 rounded-full">
-            <Zap className="w-3 h-3 fill-primary" /> Mais escolhido para presente
-          </span>
         </div>
 
         <div className="flex flex-col gap-2.5">
